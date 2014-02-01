@@ -212,7 +212,6 @@ code {
     height: 30px;
     line-height: 30px;
     margin-bottom: 10px;
-    padding-left: 10px;
     padding-right: 10px
 }
 .contentHeaderWraper h2 .originalLink {
@@ -221,7 +220,7 @@ code {
 }
 
 #mainContent p,#mainContent ul,#mainContent img,#mainContent h4 {
-	margin: 0 10px 10px 10px;
+	margin: 0 0 10px 0;
 }
 #mainContent ul li p,#mainContent ul li img,#mainContent ul li h4 {
 	margin: 0 0 10px 0;
@@ -280,9 +279,6 @@ code {
     margin-left: 200px;
     margin-top: 60px;
     padding-bottom: 40px;
-}
-#footer p {
-    margin-left: 10px;
 }
 #footer .lastLine {
 	margin-top: 10px;
