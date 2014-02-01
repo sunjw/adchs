@@ -69,10 +69,10 @@ code {
     padding-left: 210px;
 	font-size: 48px;
 	border-bottom: 1px solid #33B5E5;
-	background: url('../imgs/android_robot.png') 35px 25px no-repeat;
+	background: url('../imgs/android_robot.png') 35px 10px no-repeat;
 }
 #header a {
-	color: #555555;
+	color: #333333;
     display: block;
     position: relative;
     text-decoration: none;
@@ -277,12 +277,15 @@ code {
 	color: #999999;
     font-size: 12px;
     line-height: 15px;
-    margin-left: 190px;
-    margin-top: 80px;
+    margin-left: 200px;
+    margin-top: 60px;
     padding-bottom: 40px;
 }
-#footer #copyright {
-	margin-bottom: 10px;
+#footer p {
+    margin-left: 10px;
+}
+#footer .lastLine {
+	margin-top: 10px;
 }
 #footer a {
 	color: #777777;
