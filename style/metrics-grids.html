@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 度量单位和网格</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+	
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../index.html">开始</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
+					<li><a href="../get-started/principles.html">设计原则</a></li>
+					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList initShow">
+				<div class="trigger"><a href="../style/index.html">风格</a></div>
+				<ul class="foldingContainer">
+					<li><a href="devices-displays.html">设备和显示</a></li>
+					<li><a href="themes.html">主题</a></li>
+					<li><a href="touch-feedback.html">触摸反馈</a></li>
+					<li><a class="highlight" href="metrics-grids.html">度量单位和网格</a></li>
+					<li><a href="typography.html">字体</a></li>
+					<li><a href="color.html">颜色</a></li>
+					<li><a href="iconography.html">图标</a></li>
+					<li><a href="writing.html">写作风格</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../patterns/index.html">模式</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../patterns/new.html">Android 新特性</a></li>
+					<li><a href="../patterns/gestures.html">手势</a></li>
+					<li><a href="../patterns/app-structure.html">应用结构</a></li>
+					<li><a href="../patterns/navigation.html">导航</a></li>
+					<li><a href="../patterns/actionbar.html">操作栏</a></li>
+					<li><a href="../patterns/multi-pane-layouts.html">多视图布局</a></li>
+					<li><a href="../patterns/swipe-views.html">滑动视图</a></li>
+					<li><a href="../patterns/selection.html">选择</a></li>
+					<li><a href="../patterns/confirming-acknowledging.html">确认和提示</a></li>
+					<li><a href="../patterns/notifications.html">通知</a></li>
+					<li><a href="../patterns/widgets.html">小部件</a></li>
+					<li><a href="../patterns/settings.html">设置</a></li>
+					<li><a href="../patterns/help.html">帮助</a></li>
+					<li><a href="../patterns/compatibility.html">兼容性</a></li>
+					<li><a href="../patterns/accessibility.html">可用性</a></li>
+					<li><a href="../patterns/pure-android.html">纯粹的 Android</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
+					<li><a href="../building-blocks/lists.html">列表</a></li>
+					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
+					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
+					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
+					<li><a href="../building-blocks/buttons.html">按钮</a></li>
+					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
+					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
+					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
+					<li><a href="../building-blocks/switches.html">开关</a></li>
+					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
+					<li><a href="../building-blocks/pickers.html">选择器</a></li>
+				</ul>
+			</div>
+			<br class="clear" />
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>度量单位和网格&nbsp;<a class="originalLink" href="http://developer.android.com/design/style/metrics-grids.html" target="_blank">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="touch-feedback.html">上一页</a><a class="buttonNext" href="typography.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<p>设备之间除了屏幕尺寸不同，屏幕的像素密度 (<acronym title="Dots per inch">DPI</acronym>) 也不一样。为了简化您为不同的屏幕而设计的复杂度，可以将不同的设备按照大小和像素密度分类。按设备大小的两个类别分别是<em>手持设备</em> (小于 600 <acronym title="Density-independent pixels. One dp is one pixel on a 160 dpi screen.">dp</acronym>) 和 <em>平板</em> (大于等于 600dp)。按像素密度分类的类别有 <acronym title="Low density (120 dpi)">LDPI</acronym>、<acronym title="Medium density (160 dpi)">MDPI</acronym>、<acronym title="High density (240 dpi)">HDPI</acronym> 和 <acronym title="Extra-high density (320 dpi)">XHDPI</acronym>。为不同的设备优化您的应用界面，为不同的像素密度提供不同的位图。</p>
+				<div>
+					<div class="column col8">
+						<img class="nomarginLR" src="metrics_diagram.png" />
+					</div>
+					<div class="column col4 nomarginRight">
+						<h4>为了空间而考虑</h4>
+						<p>不同的设备可显示的 dp (density-independent pixels) 数量也不相同。</p>
+						<p>更多信息请访问<a href="http://developer.android.com/resources/dashboard/screens.html" target="_blank">
+						Screen Sizes and Densities Device Dashboard</a>。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>48dp 的设计韵律</h2>
+				</div>
+				<p>总的来说,可触摸控件都是以 48dp 为单位的。</p>
+				<img src="metrics_48.png" />
+				<h4>为什么是 48dp？</h4>
+				<p>一般情况下，48dp 在设备上的物理大小是 9mm (会有一些变化)。这刚好在触摸控件推荐的大小范围 (7-10mm) 内，而且这样的大小，用户用手指触摸起来也比较准确、容易。</p>
+				<p>如果您设计的元素都至少有 48dp 的高度和宽度，那么可以保证:</p>
+				<ul class="circleList">
+					<li>您设计的元素在任何屏幕上显示时，都不会小于最低推荐值 7mm。</li>
+					<li>你可以在信息密度和界面元素的可操控性之间得到较好的平衡。</li>
+				</ul>
+				<img src="metrics_closeup.png" />
+				<h4>注意留白</h4>
+				<p>界面元素之间的留白应当是 8dp。</p>
+				<div class="contentHeaderWraper">
+					<h2>例子</h2>
+				</div>
+				<img src="metrics_forms.png" />
+			</div>
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="touch-feedback.html">上一页</a><a class="buttonNext" href="typography.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
+			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
+			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
+		</div>
+	</div>
+</body>
+</html>

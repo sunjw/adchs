@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 设计原则</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+			<div class="divListwHeader foldingList initShow">
+				<div class="trigger"><a href="../index.html">开始</a></div>
+				<ul class="foldingContainer">
+					<li><a href="create-vistion.html">创新的视觉效果</a></li>
+					<li><a class="highlight" href="principles.html">设计原则</a></li>
+					<li><a href="ui-overview.html">UI 概览</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../style/index.html">风格</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../style/devices-displays.html">设备和显示</a></li>
+					<li><a href="../style/themes.html">主题</a></li>
+					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
+					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
+					<li><a href="../style/typography.html">字体</a></li>
+					<li><a href="../style/color.html">颜色</a></li>
+					<li><a href="../style/iconography.html">图标</a></li>
+					<li><a href="../style/writing.html">写作风格</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../patterns/index.html">模式</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../patterns/new.html">Android 新特性</a></li>
+					<li><a href="../patterns/gestures.html">手势</a></li>
+					<li><a href="../patterns/app-structure.html">应用结构</a></li>
+					<li><a href="../patterns/navigation.html">导航</a></li>
+					<li><a href="../patterns/actionbar.html">操作栏</a></li>
+					<li><a href="../patterns/multi-pane-layouts.html">多视图布局</a></li>
+					<li><a href="../patterns/swipe-views.html">滑动视图</a></li>
+					<li><a href="../patterns/selection.html">选择</a></li>
+					<li><a href="../patterns/confirming-acknowledging.html">确认和提示</a></li>
+					<li><a href="../patterns/notifications.html">通知</a></li>
+					<li><a href="../patterns/widgets.html">小部件</a></li>
+					<li><a href="../patterns/settings.html">设置</a></li>
+					<li><a href="../patterns/help.html">帮助</a></li>
+					<li><a href="../patterns/compatibility.html">兼容性</a></li>
+					<li><a href="../patterns/accessibility.html">可用性</a></li>
+					<li><a href="../patterns/pure-android.html">纯粹的 Android</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
+					<li><a href="../building-blocks/lists.html">列表</a></li>
+					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
+					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
+					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
+					<li><a href="../building-blocks/buttons.html">按钮</a></li>
+					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
+					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
+					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
+					<li><a href="../building-blocks/switches.html">开关</a></li>
+					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
+					<li><a href="../building-blocks/pickers.html">选择器</a></li>
+				</ul>
+			</div>
+			<br class="clear" />
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>设计原则&nbsp;<a class="originalLink" href="http://developer.android.com/design/get-started/principles.html" target="_blank">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="create-vistion.html">上一页</a><a class="buttonNext" href="ui-overview.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<p>这些设计准则由 Android User Experience 团队提出，遵守这些准则可以保证用户的体验始终铭记于心。您应当考虑将这些准则应用在您自己的创意和设计思想中。除非有别的目的，应当不要偏离。</p>
+				<div class="contentHeaderWraper">
+					<h2>使哥着迷</h2>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>惊喜</h4>
+						<p>漂亮的界面，仔细安排的动画或者合适的声音效果是一种愉快的体验。精工细作有助于提高易用性和增强掌控强大功能的感觉。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_delight.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>真实的对象比菜单和按钮更有趣</h4>
+						<p>让人们直接触摸和操控应用中的对象。这样可以降低完成任务时的认知难度，并且使得操作更加人性化。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_real_objects.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>展现哥的个性</h4>
+						<p>人们喜欢个性化，因为这样可以使他们感到自在和掌控力。提供一个合理而漂亮的默认样式，同时考虑到有趣的自定义能力，但不要超过主要的功能。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_make_it_mine.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>了解哥</h4>
+						<p>逐渐认识人们的偏好，而不是询问并让他们一遍又一遍地作出相同的选择。将之前的选择放在明显的地方。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_get_to_know_me.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>简化哥的生活</h2>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>保持简洁</h4>
+						<p>使用简单的短语。如果句子很长，人们总是会忽略它们。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_keep_it_brief.png">
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>图片比文字更容易理解</h4>
+						<p>尽量使用图片去解释想法。图片可以吸引人们注意并且更容易理解。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_pictures.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>帮哥做决定，但让哥来拍板</h4>
+						<p>首先尝试猜测并作出决定，而不是询问用户。太多的选择和决定使人们感到不爽。但是万一猜错了，允许“撤销”操作。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_decide_for_me.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>只展示哥所需要的</h4>
+						<p>人们在同时看到许多选择时就会手足无措。分解任务和信息，使它们更容易理解。将当前不重要的选项隐藏起来，并让人们慢慢学习。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_information_when_need_it.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<ph4>让哥知道现在在哪儿</h4>
+						<p>让人们有信心了解现在的位置。使您应用中的页面看起来都不太一样，同时使用一些变幻动画体现页面之间的关系。任务进行的时候，要提供一些反馈。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_navigation.png">
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>不要弄丢哥的东西</h4>
+						<p>将人们花时间做出来的东西保存起来，并且可以随时随地获取。记住设置和个性化的触摸，在手机、平板和各个电脑间同步。使升级变成地球上最容易的事情。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_never_lose_stuff.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>看起来一样的话，行为也要一样</h4>
+						<p>通过设计的不同，帮助人们认识到在功能上的不同。不要使看起来相同的页面在相同的输入下却得到不同的结果。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_looks_same.png">
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>只在重要的时候打断哥</h4>
+						<p>就像一个好的个人助理，帮助人们摆脱不重要的事情。人们需要专心致志，除非是紧急或者时效性的事情，才打断他们。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_important_interruption.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>让哥感到惊奇</h2>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>告诉哥适用于各处的小技巧</h4>
+						<p>当人们自己搞明白事情的时候，会感觉很好。通过使用其它 Android 应用已有的视觉模式和通用的方法，让您的应用容易学习。例如滑动手势就是一种很好的页面导航方式。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_tricks.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>不是哥的错</h4>
+						<p>当您提示人们做出改正时，要保持和蔼和耐心。当使用您的应用时，他们希望觉得自己很聪明。如果哪里错了，提示清晰的恢复方法，但不要让他们去处理技术上的细节。如果您能悄悄的搞定问题，那最好不过了。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_error.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>给予鼓励</h4>
+						<p>将复杂的任务分割成简单的步骤，这样更容易完成。对操作要给予反馈，哪怕仅仅是个微小的光晕。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_sprinkle_encouragement.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>帮哥做复杂的事情</h4>
+						<p>通过完成他们觉得自己无法完成的任务，让新手觉得自己像个专家一样。例如，通过几个步骤就能将几种照片特效结合起来，使得摄影新手的照片也很出色。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_heavy_lifting.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>迅速完成复杂的事情</h4>
+						<p>不是所有的操作都一样重要。现决定好您的应用中什么是最重要的，并且使这个功能容易使用、反应快速，例如相机的快门和音乐播放器的暂停按钮。</p>
+					</div>
+					<div class="floatRight">
+						<img class="nomarginLR" src="principles_make_important_fast.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="create-vistion.html">上一页</a><a class="buttonNext" href="ui-overview.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
+			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
+			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 确认和提示</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../index.html">开始</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
+					<li><a href="../get-started/principles.html">设计原则</a></li>
+					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../style/index.html">风格</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../style/devices-displays.html">设备和显示</a></li>
+					<li><a href="../style/themes.html">主题</a></li>
+					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
+					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
+					<li><a href="../style/typography.html">字体</a></li>
+					<li><a href="../style/color.html">颜色</a></li>
+					<li><a href="../style/iconography.html">图标</a></li>
+					<li><a href="../style/writing.html">写作风格</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList initShow">
+				<div class="trigger"><a href="index.html">模式</a></div>
+				<ul class="foldingContainer">
+					<li><a href="new.html">Android 新特性</a></li>
+					<li><a href="gestures.html">手势</a></li>
+					<li><a href="app-structure.html">应用结构</a></li>
+					<li><a href="navigation.html">导航</a></li>
+					<li><a href="actionbar.html">操作栏</a></li>
+					<li><a href="multi-pane-layouts.html">多视图布局</a></li>
+					<li><a href="swipe-views.html">滑动视图</a></li>
+					<li><a href="selection.html">选择</a></li>
+					<li><a class="highlight" href="confirming-acknowledging.html">确认和提示</a></li>
+					<li><a href="notifications.html">通知</a></li>
+					<li><a href="widgets.html">小部件</a></li>
+					<li><a href="settings.html">设置</a></li>
+					<li><a href="help.html">帮助</a></li>
+					<li><a href="compatibility.html">兼容性</a></li>
+					<li><a href="accessibility.html">可用性</a></li>
+					<li><a href="pure-android.html">纯粹的 Android</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
+					<li><a href="../building-blocks/lists.html">列表</a></li>
+					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
+					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
+					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
+					<li><a href="../building-blocks/buttons.html">按钮</a></li>
+					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
+					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
+					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
+					<li><a href="../building-blocks/switches.html">开关</a></li>
+					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
+					<li><a href="../building-blocks/pickers.html">选择器</a></li>
+				</ul>
+			</div>
+			<br class="clear" />
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>确认和提示&nbsp;<a class="originalLink" href="http://developer.android.com/design/patterns/confirming-acknowledging.html" target="_blank">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="selection.html">上一页</a><a class="buttonNext" href="notifications.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<p>有些情况下，用户正在您的应用中进行操作，给出文字性的确认或者提示会比较好。</p>
+				<div>
+					<div class="column col6">
+						<img class="nomarginRight bigger" src="confirm_ack_confirming.png" />
+						<p><span class="highlight">确认</span>是确保用户的确想要做出指定的操作。有些情况下，确认是以警告或者重要信息对话框的形式出现的，用户需要考虑在做出选择。</p>
+					</div>
+					<div class="column nomarginRight col6">
+						<img class="nomarginRight bigger" src="confirm_ack_acknowledge.png" />
+						<p><span class="highlight">提示</span>通过显示一些文字来告诉用户刚才的操作完成了。这样做可以避免后台操作带来的不确定性。有些情况下，提示可以提供一个撤销操作的选项。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<p>通过这些方式和用户交流，可以减轻用户对操作的不确定性。同时，确认和提示也能保证用户不会做出令自己后悔的举动。</p>
+				<div class="contentHeaderWraper">
+					<h2>何时对用户的操作作出确认或者提示</h2>
+				</div>
+				<p>不是所有的操作都需要进行确认或者给出一个提示。根据下面的流程图来指导您的设计。</p>
+				<img class="nomarginLR" src="confirm_ack_flowchart.png" />
+				<div class="contentHeaderWraper">
+					<h2>确认</h2>
+				</div>
+				<div>
+					<div class="column col6">
+						<h4>例子: Google Play Books</h4>
+						<img class="nomarginRight bigger" src="confirm_ack_ex_books.png" />
+						<p>在这个例子里，用户请求在 Google Play 图书库中删除一本书。此时会弹出一个警告以确认此操作，因为这是需要让用户了解到一旦做出操作，所以设备上都将无法访问该图书。</p>
+						<p>设计确认对话框时，确保标题有明确的意义，表达将要进行的操作。</p>
+					</div>
+					<div class="column nomarginRight col6">
+						<h4>例子: Android Beam</h4>
+						<img class="nomarginRight bigger" src="confirm_ack_ex_beam.png" />
+						<p>确认不一定是以警告对话框的形式出现。在 Android Beam 启动后，用户必须点击想要分享的内容 (例子中是一张图片) 才会执行分享。如果用户决定不进行分享，他们可以移开指定的图片。</p>
+						<p>&nbsp;</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>提示</h2>
+				</div>
+				<div>
+					<div class="column col6">
+						<h4>例子: Gmail 自动保存草稿</h4>
+						<img class="nomarginRight bigger" src="confirm_ack_ex_draftsave.png" />
+						<p>在这个例子里，如果用户从 Gmail 写邮件屏幕退出，也许是发生了意外的操作，此时会自动保存当前的草稿。同时屏幕底部会给出提示，并自动淡出。</p>
+						<p>这里并不适合给出撤销操作的选项，因为自动保存是应用作出的操作，不是用户的操作。用户只需要回到草稿箱就能继续编写。</p>
+						<p>&nbsp;</p>
+					</div>
+					<div class="column nomarginRight col6">
+						<h4>例子: Gmail 删除会话</h4>
+						<img class="nomarginRight bigger" src="confirm_ack_draft_deleted.png" />
+						<p>当用户从 Gmail 收件箱中删除会话时，会给出包含撤销选项的提示。该提示会一直显示，直到用户作出和删除不相关的操作，比如滚动列表。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>不需要确认和提示</h2>
+				</div>
+				<div>
+					<div class="column col6">
+						<h4>例子: +1</h4>
+						<img class="nomarginRight bigger" src="confirm_ack_ex_draftsave.png" />
+						<p>这里<span class="highlight">不需要确认</span>。如果用户一不小心按到 +1 按钮，也没有关系，他们可以再按一下取消 +1。</p>
+						<p>这里也<span class="highlight">不需要提示</span>。用户能看到 +1 按钮变成红色，这是很清楚的标志。</p>
+					</div>
+					<div class="column nomarginRight col6">
+						<h4>例子: 从主屏幕上删除应用图标</h4>
+						<img class="nomarginRight bigger" src="confirm_ack_draft_deleted.png" />
+						<p>这里<span class="highlight">不需要确认</span>。这是一个复杂的操作: 用户需要拖动图标到指定且明确的位置。因此不太可能发生误操作。如果用户觉得刚才搞错了，也只需要很简单的操作就可以恢复。</p>
+						<p>这里也<span class="highlight">不需要提示</span>。用户能够看到主屏幕上少了一个图标，因为就是他们拖的。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div><!-- mainContent -->
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="selection.html">上一页</a><a class="buttonNext" href="notifications.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
+			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
+			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
+		</div>
+	</div>
+</body>
+</html>

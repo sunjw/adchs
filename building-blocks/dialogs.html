@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 对话框</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+	
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../index.html">开始</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
+					<li><a href="../get-started/principles.html">设计原则</a></li>
+					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../style/index.html">风格</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../style/devices-displays.html">设备和显示</a></li>
+					<li><a href="../style/themes.html">主题</a></li>
+					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
+					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
+					<li><a href="../style/typography.html">字体</a></li>
+					<li><a href="../style/color.html">颜色</a></li>
+					<li><a href="../style/iconography.html">图标</a></li>
+					<li><a href="../style/writing.html">写作风格</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../patterns/index.html">模式</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../patterns/new.html">Android 新特性</a></li>
+					<li><a href="../patterns/gestures.html">手势</a></li>
+					<li><a href="../patterns/app-structure.html">应用结构</a></li>
+					<li><a href="../patterns/navigation.html">导航</a></li>
+					<li><a href="../patterns/actionbar.html">操作栏</a></li>
+					<li><a href="../patterns/multi-pane-layouts.html">多视图布局</a></li>
+					<li><a href="../patterns/swipe-views.html">滑动视图</a></li>
+					<li><a href="../patterns/selection.html">选择</a></li>
+					<li><a href="../patterns/confirming-acknowledging.html">确认和提示</a></li>
+					<li><a href="../patterns/notifications.html">通知</a></li>
+					<li><a href="../patterns/widgets.html">小部件</a></li>
+					<li><a href="../patterns/settings.html">设置</a></li>
+					<li><a href="../patterns/help.html">帮助</a></li>
+					<li><a href="../patterns/compatibility.html">兼容性</a></li>
+					<li><a href="../patterns/accessibility.html">可用性</a></li>
+					<li><a href="../patterns/pure-android.html">纯粹的 Android</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList initShow">
+				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
+				<ul class="foldingContainer">
+					<li><a href="tabs.html">标签选项卡</a></li>
+					<li><a href="lists.html">列表</a></li>
+					<li><a href="grid-lists.html">网格列表</a></li>
+					<li><a href="scrolling.html">滚动容器</a></li>
+					<li><a href="spinners.html">下拉菜单 (Spinners)</a></li>
+					<li><a href="buttons.html">按钮</a></li>
+					<li><a href="text-fields.html">文本框</a></li>
+					<li><a href="seek-bars.html">滑块</a></li>
+					<li><a href="progress.html">进度条和活动</a></li>
+					<li><a href="switches.html">开关</a></li>
+					<li><a class="highlight" href="dialogs.html">对话框</a></li>
+					<li><a href="pickers.html">选择器</a></li>
+				</ul>
+			</div>
+			<br class="clear" />
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>对话框&nbsp;<a class="originalLink" href="http://developer.android.com/design/building-blocks/dialogs.html" target="_blank">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="switches.html">上一页</a><a class="buttonNext" href="pickers.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<p>应用通过对话框让用户作出决定或者填写一些信息，已完成任务。对话框的形式可以是简单的 确定/取消 或者是复杂一点的比如调整设置或者输入文字。</p>
+				<img class="nomarginLR" src="dialogs_main.png" />
+				<ul>
+					<li>
+						<h4>1. 可选的标题区</h4>
+						<p>标题提示用户对话框的内容。例如用户正在调整的设置名称。</p>
+					</li>
+					<li>
+						<h4>2. 内容区</h4>
+						<p>对话框的内容多种多样。例如设置对话框，它使用了多种 UI 控件，包括滑块、文本框、复选框和单选按钮，通过它们来调整应用或者系统的设置。另外，对于警告对话框，它一般包含了用户所作出决定的进一步信息。</p>
+					</li>
+					<li>
+						<h4>3. 操作按钮</h4>
+						<p>操作按钮一般是确定/取消。确定一般是默认的操作。如果选项中包括了关闭等待等非确定操作，请使用主动动词。一般的规则是将否定操作放在左边，确定操作放在右边。</p>
+					</li>
+				</ul>
+				<img class="nomarginLR" src="dialogs_examples.png" />
+				<p class="caption">Android 中几种典型的对话框用例。</p>
+				<div class="contentHeaderWraper">
+					<h2>警告对话框</h2>
+				</div>
+				<p>警告对话框用于在执行下一步操作前请求用户确认或者提示用户当前的状态。由于内容的不同，警告对话框的布局会有些不同。</p>
+				<div>
+					<div class="column col8">
+						<img class="nomarginLR" src="dialogs_w_no_title.png" />
+					</div>
+					<div class="column col5 nomarginRight">
+						<h4>没有标题栏的警告对话框</h4>
+						<p>大多数警告对话框不需要标题栏。因为通常情况下很难通过一两句话说明白。内容区应当包是一个问句 (例如“删除该会话？”) 或者是一个与操作明显相关的陈述句。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col8">
+						<img class="nomarginLR" src="dialogs_w_title.png" />
+					</div>
+					<div class="column col5 nomarginRight">
+						<h4>有标题栏的警告对话框</h4>
+						<p>谨慎的使用带有标题栏的警告对话框。仅在有可能引起数据丢失、连接断开、收费等高风险的操作时才使用。并且标题应当是一个明确的问题，内容区提供一些解释。</p>
+						<p>保持问题和解释简短明确: 例如“擦出 USB 存储设备？”不要使用道歉语句。用户应当能够不看内容，只通过标题和下面的操作按钮做出决定。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>弹出对话框</h2>
+				</div>
+				<p>弹出对话框是一种轻量级的对话框，一般只让用户做出一个选择。弹出对话框不使用按钮确定或取消操作，而是让用户通过简单的触摸，在整个工作流中做出选择。</p>
+				<img class="nomarginRight" src="dialogs_popups_example.png" />
+				<div class="contentHeaderWraper">
+					<h2>Toasts</h2>
+				</div>
+				<div>
+					<div class="column col6">
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p>Toast 提供了轻量级的反馈信息。例如，当您在发送邮件前跳出撰写页面，“草稿已保存”的 Toast 让用户知道待会儿可以继续编辑。Toast 会在一定时间后自动消失。</p>
+					</div>
+					<div class="column col6 nomarginRight">
+						<img class="nomarginLR" src="dialogs_toasts.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div><!-- mainContent -->
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="switches.html">上一页</a><a class="buttonNext" href="pickers.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
+			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
+			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
+		</div>
+	</div>
+</body>
+</html>

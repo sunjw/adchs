@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 进度条和活动</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+	#content p.wrong {
+		background: url('ico_wrong.png') left 3px no-repeat;
+		padding-left: 20px;
+	}
+	#content p.good {
+		background: url('ico_good.png') left 3px no-repeat;
+		padding-left: 20px;
+	}
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../index.html">开始</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
+					<li><a href="../get-started/principles.html">设计原则</a></li>
+					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../style/index.html">风格</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../style/devices-displays.html">设备和显示</a></li>
+					<li><a href="../style/themes.html">主题</a></li>
+					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
+					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
+					<li><a href="../style/typography.html">字体</a></li>
+					<li><a href="../style/color.html">颜色</a></li>
+					<li><a href="../style/iconography.html">图标</a></li>
+					<li><a href="../style/writing.html">写作风格</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../patterns/index.html">模式</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../patterns/new.html">Android 新特性</a></li>
+					<li><a href="../patterns/gestures.html">手势</a></li>
+					<li><a href="../patterns/app-structure.html">应用结构</a></li>
+					<li><a href="../patterns/navigation.html">导航</a></li>
+					<li><a href="../patterns/actionbar.html">操作栏</a></li>
+					<li><a href="../patterns/multi-pane-layouts.html">多视图布局</a></li>
+					<li><a href="../patterns/swipe-views.html">滑动视图</a></li>
+					<li><a href="../patterns/selection.html">选择</a></li>
+					<li><a href="../patterns/confirming-acknowledging.html">确认和提示</a></li>
+					<li><a href="../patterns/notifications.html">通知</a></li>
+					<li><a href="../patterns/widgets.html">小部件</a></li>
+					<li><a href="../patterns/settings.html">设置</a></li>
+					<li><a href="../patterns/help.html">帮助</a></li>
+					<li><a href="../patterns/compatibility.html">兼容性</a></li>
+					<li><a href="../patterns/accessibility.html">可用性</a></li>
+					<li><a href="../patterns/pure-android.html">纯粹的 Android</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList initShow">
+				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
+				<ul class="foldingContainer">
+					<li><a href="tabs.html">标签选项卡</a></li>
+					<li><a href="lists.html">列表</a></li>
+					<li><a href="grid-lists.html">网格列表</a></li>
+					<li><a href="scrolling.html">滚动容器</a></li>
+					<li><a href="spinners.html">下拉菜单 (Spinners)</a></li>
+					<li><a href="buttons.html">按钮</a></li>
+					<li><a href="text-fields.html">文本框</a></li>
+					<li><a href="seek-bars.html">滑块</a></li>
+					<li><a class="highlight" href="progress.html">进度条和活动</a></li>
+					<li><a href="switches.html">开关</a></li>
+					<li><a href="dialogs.html">对话框</a></li>
+					<li><a href="pickers.html">选择器</a></li>
+				</ul>
+			</div>
+			<br class="clear" />
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>反馈&nbsp;<a class="originalLink" href="http://developer.android.com/design/building-blocks/progress.html" target="_blank">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="seek-bars.html">上一页</a><a class="buttonNext" href="switches.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<p>当某个操作会花费较长的时间才能完成，应当给用户提供视觉反馈，让用户知道正在进行的任务以及是否已经完成。</p>
+				<div class="contentHeaderWraper">
+					<h2>进度条</h2>
+				</div>
+				<p>如果您可以知道当前任务完成的比例，那么使用进度条，让用户了解大约还需要多久才能完成。</p>
+				<img class="nomarginLR" src="progress_download.png" />
+				<p>进度条应当表示从 0% 到 100%。不要把进度条设置到更低的值，也不要用同一个进度条代表多个事件。如果您不确定操作将会花费多少时间，可以使用“不确定进度条”。</p>
+				<img class="nomarginRight" src="progress_themes.png" />
+				<p class="caption">Holo 浅色主题和深色主题中的进度条。</p>
+				<div class="contentHeaderWraper">
+					<h2>活动指示器</h2>
+				</div>
+				<p>活动指示器用于那些不确定时间的操作。它们告诉用户要等一会儿操作才能完成，而不用讲具体的细节说出来。</p>
+				<p>有两种活动指示器: 活动进度条和旋转圆圈。这两种提供了自适应大小和 Holo Light/Holo Dark 两种主题。请选择合适的主题和大小应用在您的应用中。例如较大的旋转圆圈比较适合大面积的空白区域而不是一个小对话框。每一个操作应该只使用一个活动提示器。</p>
+				<div>
+					<div class="column col6">
+						<img class="nomarginLR" src="progress_activity.png" />
+					</div>
+					<div class="column col7 nomarginRight">
+						<ul>
+							<li>
+								<h4>1. 活动进度条</h4>
+								<p>例子中，活动进度条 (Holo Dark 主题) 在用户开始下载时出现。因为连接服务器打开时下载的时间不确定。当下在开始后，则使用有明确百分比的进度条。</p>
+							</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col6">
+						<img class="nomarginLR" src="progress_activity2.png" />
+					</div>
+					<div class="column col7 nomarginRight">
+						<p>&nbsp;</p>
+						<ul>
+							<li>
+								<h4>2. 旋转圆圈</h4>
+								<p>例子中，Gmail 应用在载入消息时使用旋转圆圈 (Holo Light 主题)，因为下载邮件的时间难以确定。</p>
+								<p>当使用旋转圆圈时，不要配以文字标签。旋转的圆圈已经表明了正在进行后台操作。</p>
+							</li>
+						</ul>
+						<div>
+							<div class="column col3">
+								<p class="wrong">不要这样做</p>
+								<img class="nomarginRight" src="progress_activity_dont.png" />
+							</div>
+							<div class="column col3 nomarginRight">
+								<p class="good">应该这样做</p>
+								<img class="nomarginRight" src="progress_activity_do.png" />
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>自定义活动指示器</h2>
+				</div>
+				<p>标准的进度条和活动指示器已经足够满足大多数应用的需要，为了 Android 系统的统一体验，也应当使用这些标准控件。不过有时也可以使用自定义控件。</p>
+				<p>例如:<br />
+				所有的 Google Play 应用 (音乐、图书、电影和杂志) 中，我们需要在顶层视图中标识出当前项目的下载状态，包括:</p>
+				<ul class="circleList">
+					<li>
+						<p>未下载</p>
+					</li>
+					<li>
+						<p>临时下载 (应用缓存中)</p>
+					</li>
+					<li>
+						<p>下载至用户设备</p>
+					</li>
+				</ul>
+				<p>我们还要标识出下载进度，因为下载比较慢。</p>
+				<p>Google Play 有时还要在比较紧凑的布局中表示这些状态，这种情况下我们不希望在封面图片上占用过多的空间。</p>
+				<p>因此我们使用了自定义活动指示器，通过小图钉的变化来表示当前项目的状态。</p>
+				<img class="nomarginRight" src="progress_activity_custom.png" />
+				<p>通过颜色区分下载状态，蓝色表示完成，灰色标识没有下载完成。图钉的状态表示项目的可用情况，竖直的白色图钉表示下载至设备，斜着的灰色图钉表示临时下载。下载进度则通过饼图来显示。</p>
+				<div>
+					<div class="column col9">
+						<img class="nomarginRight bigger" src="progress_activity_custom_app.png" />
+					</div>
+					<div class="column col4 nomarginRight">
+						<p>Google Play 应用使用了不同的布局，但是都使用相同的自定义活动指示器。它表明了下载的状态和进度，通过紧凑的设计使它可以适用于多种屏幕布局中。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<p>&nbsp;</p>
+				<p>如果您觉得标准的活动指示器控件不能满足您的要求，需要自己设计一个。请保证它看起来像是 Android 的风格，可以借鉴一些标准控件中的图标等元素。例如我们的自定义活动指示器使用了圆形标识、相同的蓝色和统一的简单设计。</p>
+			</div><!-- mainContent -->
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="seek-bars.html">上一页</a><a class="buttonNext" href="switches.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
+			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
+			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
+		</div>
+	</div>
+</body>
+</html>

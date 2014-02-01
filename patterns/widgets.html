@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 小部件</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../index.html">开始</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
+					<li><a href="../get-started/principles.html">设计原则</a></li>
+					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../style/index.html">风格</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../style/devices-displays.html">设备和显示</a></li>
+					<li><a href="../style/themes.html">主题</a></li>
+					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
+					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
+					<li><a href="../style/typography.html">字体</a></li>
+					<li><a href="../style/color.html">颜色</a></li>
+					<li><a href="../style/iconography.html">图标</a></li>
+					<li><a href="../style/writing.html">写作风格</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList initShow">
+				<div class="trigger"><a href="index.html">模式</a></div>
+				<ul class="foldingContainer">
+					<li><a href="new.html">Android 新特性</a></li>
+					<li><a href="gestures.html">手势</a></li>
+					<li><a href="app-structure.html">应用结构</a></li>
+					<li><a href="navigation.html">导航</a></li>
+					<li><a href="actionbar.html">操作栏</a></li>
+					<li><a href="multi-pane-layouts.html">多视图布局</a></li>
+					<li><a href="swipe-views.html">滑动视图</a></li>
+					<li><a href="selection.html">选择</a></li>
+					<li><a href="confirming-acknowledging.html">确认和提示</a></li>
+					<li><a href="notifications.html">通知</a></li>
+					<li><a class="highlight" href="widgets.html">小部件</a></li>
+					<li><a href="settings.html">设置</a></li>
+					<li><a href="help.html">帮助</a></li>
+					<li><a href="compatibility.html">兼容性</a></li>
+					<li><a href="accessibility.html">可用性</a></li>
+					<li><a href="pure-android.html">纯粹的 Android</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
+					<li><a href="../building-blocks/lists.html">列表</a></li>
+					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
+					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
+					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
+					<li><a href="../building-blocks/buttons.html">按钮</a></li>
+					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
+					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
+					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
+					<li><a href="../building-blocks/switches.html">开关</a></li>
+					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
+					<li><a href="../building-blocks/pickers.html">选择器</a></li>
+				</ul>
+			</div>
+			<br class="clear" />
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>小部件&nbsp;<a class="originalLink" href="http://developer.android.com/design/patterns/widgets.html" target="_blank">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="notifications.html">上一页</a><a class="buttonNext" href="settings.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<p>窗口小部件是自定义主屏幕的重要部分。你可以在主屏幕上“一眼”就看到应用中的重要信息和功能，并进行操作。用户可以在主屏幕面板之间移动小部件，如果小部件支持，还可以调整大小。</p>
+				<div class="contentHeaderWraper">
+					<h2>小部件类型</h2>
+				</div>
+				<p>当您设计小部件时，请考虑一下您希望使用的是哪一种小部件。小部件一般分为以下几类:</p>
+				<div>
+					<div class="column col6">
+						<h4>信息小部件</h4>
+						<p>信息小部件一般用来显示一些重要的信息，并且会随着时间而改变。最好的例子就是天气小部件、时钟小部件和比分牌小部件。触摸信息小部件一般都是打开关联的应用，显示更加详细的信息。</p>
+					</div>
+					<div class="column col7 nomarginRight">
+						<img class="nomarginRight bigger" src="widgets_info.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<p>&nbsp;</p>
+				<div>
+					<div class="column col6">
+						<h4>列表小部件</h4>
+						<p>列表小部件用于显示一系列信息，例如相册应用中的图片列表、新闻阅读应用中的文章列表或者通信应用中的短消息列表。列表小部件一般有两种用途: 浏览列表和在应用中打开指定项目的详细信息。列表小部件可以纵向滑动。</p>
+					</div>
+					<div class="column col3">
+						<img class="nomarginRight bigger" src="widgets_collection_gmail.png" />
+						<p class="caption">列表视图小部件</p>
+					</div>
+					<div class="column col4 nomarginRight">
+						<img class="nomarginRight bigger" src="widgets_collection_bookmarks.png" />
+						<p class="caption">网格视图小部件</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<p>&nbsp;</p>
+				<div>
+					<div class="column col6">
+						<h4>控制小部件</h4>
+						<p>控制小部件主要是方便用户，让他们在主屏幕上就能开关一些常用的设置而不用进入应用。可以理解为应用的遥控器。</p>
+					</div>
+					<div class="column col7 nomarginRight">
+						<img class="nomarginRight bigger" src="widgets_control.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<p>控制小部件不一定会打开关联应用的详细视图，如果操作会产生结果，那么应该打开，比如搜索小部件要显示结果列表。</p>
+				<p>&nbsp;</p>
+				<div>
+					<div class="column col6">
+						<h4>混合小部件</h4>
+						<p>有些小部件可以综合以上所述的小部件特点，组合成一种新型的小部件。</p>
+						<p>设计您自己的小部件时，应当以一种为基础，根据需要增加其它类型小部件的元素。</p>
+					</div>
+					<div class="column col7 nomarginRight">
+						<img class="nomarginRight bigger" src="widgets_hybrid.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<p>音乐播放器小部件是以控制小部件为基础的，不过小部件上也能显示当前正在播放的音乐。它将控制小部件和信息小部件的元素结合在了一起。</p>
+				<div class="contentHeaderWraper">
+					<h2>小部件的限制</h2>
+				</div>
+				<p>小部件可以被理解为一个“迷你应用”，所以设计小部件是有所限制的:</p>
+				<h4>手势</h4>
+				<p>因为小部件是放在主屏幕上的，所以必须和主屏幕的导航手势共存。小部件手势的限制是相对于全屏应用来说的。全屏应用可以使用多种手势在视图之间切换，但是小部件的手势不能和主屏幕导航用的相同。</p>
+				<p>所以只有两种可用的手势:</p>
+				<ul class="circleList">
+					<li>触摸</li>
+					<li>纵向滑动</li>
+				</ul>
+				<img class="nomarginRight" src="widgets_gestures.png" />
+				<p>&nbsp;</p>
+				<h4>元素</h4>
+				<p>因为上述的操作限制，有些需要特定手势的 UI 元素对于小工具来说是不可用的。请参见 "Creating App Widget Layouts" 的 <a href="http://developer.android.com/guide/topics/appwidgets/index.html" target="_blank">App Widgets</a> API 使用指导。</p>
+				<div class="contentHeaderWraper">
+					<h2>设计指导</h2>
+				</div>
+				<h4>小部件内容</h4>
+				<p>小部件可以吸引用户关注您的应用，可以作为您应用中的新内容的“广告”。</p>
+				<p>就像报纸头版的大幅广告，小部件可以展示应用中的信息，并与应用中的详细信息建立联系。或者换句话说: 小部件相对于应用来说就是一道“甜品”。请保证应用显示的内容比小部件已经显示的更多。</p>
+				<h4>小部件导航</h4>
+				<p>除了纯粹的信息内容，您还应该考虑在小部件上增加应用中常用操作的导航。这样可以使用户直接从主屏幕进入常用功能，更快的完成操作。</p>
+				<p>可以摆在小部件上的导航链接是:</p>
+				<ul class="circleList">
+					<li>创建功能: 有些操作使用户在应用中新建内容，例如新建文档或者编写新信息。</li>
+					<li>打开应用的顶层视图: 触摸信息元素一般将用户带到详细信息视图。应该提供一个导航到您应用顶层视图的按钮，这样用户就不用摆一个应用的图标在主屏幕上了。一般将您应用的图标放置在小部件上，以区别信息区域。</li>
+				</ul>
+				<div>
+					<div class="column col6">
+						<h4>调整小部件大小</h4>
+						<p>从 3.1 版开始，Android 就提供了可调整大小的小部件。用户可以调整小部件的宽度和高度。您可以决定您的小部件是可以随意调整大小还是只能在指定方向上调整大小。你不需要为固定大小的小部件提供调节能力。</p>
+						<p>让用户调整大小有一些好处:</p>
+						<ul class="circleList">
+							<li>他们可以调节小部件中显示信息的数量。</li>
+							<li>他们可以自由的调节主屏幕上小部件和图标的布局。</li>
+						</ul>
+					</div>
+					<div class="column col7 nomarginRight">
+						<img class="nomarginRight bigger" src="widgets_resizing01.png" />
+						<p class="caption">长按之后可以进入小部件的大小调整模式。用户可以通过拖拽边框，将小部件调整到合适的大小。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<p>&nbsp;</p>
+				<p>是否可以调整大小取决于小部件的设计目的。列表或者网格形式的小部件比较容易处理，调整大小仅仅变化滚动区域，小部件中的内容用户仍然可以通过滑动来看到。信息小部件则比较难处理，因为这种小部件需要可操作的空间，而且由于不能滑动，内容需要自适应调整后的大小。您需要动态的调整小部件中的内容和布局，以适应新的大小。</p>
+				<img class="nomarginRight bigger" src="widgets_resizing02.png" />
+				<p>例子中，用户可以在横向的 4 个档位上调整天气小部件的大小，小部件会随着不断变大而自动显示更加丰富的天气内容。</p>
+				<p>不同的大小决定了小部件显示不同的内容。较小的大小时，小部件应当显示重要的信息，当体积较大时，可以显示更加华丽的内容。</p>
+				<h4>考虑布局</h4>
+				<p>根据不同的设备和显示模式的大小，为您的小部件进行布局是比较复杂的。通过不断的实验来调整布局，但是请记住以下几点:</p>
+				<ul class="circleList">
+					<li>不同设备屏幕上可容纳的内容数量和大小是千差万别的，因此您的小部件最好能自适应不同于预期的空间大小。</li>
+					<li>实际上，当用户调整小部件大小时，系统提供给小部件的是以 dp 为单位的大小范围。所以按照“大小档位 (size buckets)”来设计您的小部件自适应策略会比较可靠。</li>
+				</ul>
+				<h4>小部件设置</h4>
+				<div>
+					<div class="column col6">
+						<p>有时小部件需要先设置才能使用。以 email 小部件为例，您需要首先提供一个帐号，才能显示收件箱的内容。或者对于照片小部件来说，需要首先指定显示哪个相册。</p>
+						<p>Android 小部件应当在被放置到主屏幕上时，就显示设置界面。保持小部件的设置简洁，不要超过 2-3 设置项。应当使用对话框而不是全屏幕应用的视图，使用户在设置的同时能看到其它内容，哪怕这样做需要多个对话框。</p>
+					</div>
+					<div class="column col6 nomarginRight">
+						<img class="nomarginRight" src="widgets_config.png" />
+						<p class="caption">当放置了 Play 小部件到主屏幕之后，小部件就会询问需要显示哪些内容。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>检查清单</h2>
+				</div>
+				<ul class="circleList">
+					<li>
+						<p>小部件应当关注于少量可快速辨别的信息。详细的信息在您的应用中显示。</p>
+					</li>
+					<li>
+						<p>选择合适的小部件类型。</p>
+					</li>
+					<li>
+						<p>如果可以调整大小，仔细考虑小部件应当如何适应不同的大小。</p>
+					</li>
+					<li>
+						<p>使您的小部件有自适应性，这样小部件就能独立于屏幕方向和设备。</p>
+					</li>
+				</ul>
+			</div><!-- mainContent -->
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="notifications.html">上一页</a><a class="buttonNext" href="settings.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
+			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
+			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
+		</div>
+	</div>
+</body>
+</html>

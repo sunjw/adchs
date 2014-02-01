@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 可用性</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../index.html">开始</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
+					<li><a href="../get-started/principles.html">设计原则</a></li>
+					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../style/index.html">风格</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../style/devices-displays.html">设备和显示</a></li>
+					<li><a href="../style/themes.html">主题</a></li>
+					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
+					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
+					<li><a href="../style/typography.html">字体</a></li>
+					<li><a href="../style/color.html">颜色</a></li>
+					<li><a href="../style/iconography.html">图标</a></li>
+					<li><a href="../style/writing.html">写作风格</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList initShow">
+				<div class="trigger"><a href="index.html">模式</a></div>
+				<ul class="foldingContainer">
+					<li><a href="new.html">Android 新特性</a></li>
+					<li><a href="gestures.html">手势</a></li>
+					<li><a href="app-structure.html">应用结构</a></li>
+					<li><a href="navigation.html">导航</a></li>
+					<li><a href="actionbar.html">操作栏</a></li>
+					<li><a href="multi-pane-layouts.html">多视图布局</a></li>
+					<li><a href="swipe-views.html">滑动视图</a></li>
+					<li><a href="selection.html">选择</a></li>
+					<li><a href="confirming-acknowledging.html">确认和提示</a></li>
+					<li><a href="notifications.html">通知</a></li>
+					<li><a href="widgets.html">小部件</a></li>
+					<li><a href="settings.html">设置</a></li>
+					<li><a href="help.html">帮助</a></li>
+					<li><a href="compatibility.html">兼容性</a></li>
+					<li><a class="highlight" href="accessibility.html">可用性</a></li>
+					<li><a href="pure-android.html">纯粹的 Android</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
+					<li><a href="../building-blocks/lists.html">列表</a></li>
+					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
+					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
+					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
+					<li><a href="../building-blocks/buttons.html">按钮</a></li>
+					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
+					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
+					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
+					<li><a href="../building-blocks/switches.html">开关</a></li>
+					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
+					<li><a href="../building-blocks/pickers.html">选择器</a></li>
+				</ul>
+			</div>
+			<br class="clear" />
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>可用性&nbsp;<a class="originalLink" href="http://developer.android.com/design/patterns/accessibility.html" target="_blank">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="compatibility.html">上一页</a><a class="buttonNext" href="pure-android.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<p>这一节比较专业，有些内容不能完整翻译。。。</p>
+				<p>Android 的一大使命就是整理全世界的信息，并使其可以被所有人访问。我们的使命不会因为用户有所残疾而改变，无论是视觉障碍、色盲、听力损失或者其他不便。</p>
+				<p>通用型设计使得产品可以被所有人使用。Android 设计模式依照了通用型设计要求，根据这些要求也能使您的应用满足基本的可用性标准。这样的设计也使得您的应用能被更多的人使用。</p>
+				<p><a href="http://www.google.com/accessibility/" target="_blank">阅读 Google and accessibility了解更多信息</a>。</p>
+				<div class="contentHeaderWraper">
+					<h2>Android 可用性工具</h2>
+				</div>
+				<p>Android 包含了一些功能为视觉障碍人士提供方便，这样就不需要您的应用作出较强烈的视觉变化。</p>
+				<ul class="circleList">
+					<li>
+						<p><span class="highlight"><a href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback" target="_blank">TalkBack</a></span> 是一个预安装的 Google 屏幕阅读器。通过阅读来反馈操作的结果，例如运行应用或者事件通知。</p>
+					</li>
+					<li>
+						<p><span class="highlight">Explore by Touch</span> 是与 TalkBack 结合使用的一个系统功能，您可以触摸屏幕，并且听到触摸的内容。</p>
+					</li>
+					<li>
+						<p><span class="highlight">辅助功能设置</span>让您可以设置设备的显示和声音，例如大号字体、语音阅读速度等。</p>
+					</li>
+				</ul>
+				<p>有些用户的设备上有方向控制器 (例如 D-pad、轨迹球或者键盘)，通过方向控制器可以在屏幕控件之间切换选择。这种控制方式有点像电视遥控器上的方向控制器。</p>
+				<div class="contentHeaderWraper">
+					<h2>设计指导</h2>
+				</div>
+				<p>Android <a href="../get-started/principles.html">设计原则</a>中“让哥知道现在在哪儿”是可用性的关键。当用户在应用中浏览时，他们需要通过一定的反馈来知道自己的位置。设计一个合理的应用的结构是关键。大多数用户可以通过视觉和振动反馈了解浏览的位置 (例如文字标签、颜色、图标和触摸反馈)，视觉障碍的用户则需要通过语音提示和高对比视觉效果来了解位置。</p>
+				<p>当您设计应用时，请记住有时文字标签是需要通过语音进行提示的。当使用 Explore by Touch 时，用户可以通过声音来了解您的应用结构，它们应当是简洁、清楚且明了的。请按照下面的指导进行设计，以满足各种用户的需求。</p>
+				<h4>使导航符合直觉</h4>
+				<p>设计一个清晰且明确的工作流程，减少导航步骤，尤其是对于重要的任务。保证各种任务都能通过控件进行操作。</p>
+				<h4>使用推荐的触摸控件大小</h4>
+				<p>48 dp 是推荐的触摸控件大小。阅读 <a href="../style/metrics-grids.html">度量单位和网格</a> 一节，了解如何帮助您的用户使用。对于一些特别的用户，可能需要使用更大一些的控件。例如对于教育应用，更大的控件会比较适合儿童或者有行动障碍的人士使用。</p>
+				<h4>视觉元素的文字标签要有意义</h4>
+				<p>在您做设计时，<a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#label-ui" target="_blank">label functional UI</a> 控件可能没有文字标签，例如按钮、图标、图标标签和状态图标。开发者可以通过阅读 <code><a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#label-ui" target="_blank">contentDescription</a></code> 了解如何设置这些控件的文字标签属性。</p>
+				<div>
+					<div class="column col8">
+						<img class="nomarginRight bigger" src="accessibility_contentdesc.png" />
+					</div>
+					<div class="column col5 nomarginRight">
+						<ul>
+							<li><p>1. 联系人群组</p></li>
+							<li><p>2. 所有联系人</p></li>
+							<li><p>3. 常用联系人</p></li>
+							<li><p>4. 搜索</p></li>
+							<li><p>5. 弹出菜单</p></li>
+							<li><p>6. 点亮时: 移除常用联系人<br />
+							没有点亮时:加入常用联系人</p></li>
+							<li><p>7. 弹出菜单</p></li>
+							<li><p>8. 短信</p></li>
+							<li><p>9. 视频聊天</p></li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<h4>Provide alternatives to affordances that time out</h4>
+				<p>Your app may have icons or controls that disappear after a certain amount of time. For example, five seconds after starting a video, playback controls may fade from the screen.</p>
+				<p>Due to the way that TalkBack works, those controls are not read out loud unless they are focused on. If they fade out from the screen quickly, your user may not even be aware that they are available. Therefore, make sure that you are not relying on timed out controls for high priority task flows. (This is a good universal design guideline too.) If the controls enable an important function, make sure that the user can turn on the controls again and/or their function is duplicated elsewhere. You can also change the behavior of your app when accessibility services are turned on. Your developer may be able to make sure that timed-out controls won't disappear.</p>
+				<h4>使用标准的开发框架控件或者让自定义控件支持 TalkBack</h4>
+				<p>标准的 Android 开发框架控件自动支持可用性服务，并且已经包含了 ContentDescriptions 属性。</p>
+				<p>An oft-overlooked system control is font size. Users can turn on a system-wide large font size in Settings; using the default system font size in your application will enable the user's preferences in your app as well. To enable system font size in your app, mark text and their associated containers to be measured in <a href="http://developer.android.com/guide/practices/screens_support.html#screen-independence" target="_blank">scale pixels</a>.</p>
+				<p>Also, keep in mind that when users have large fonts enabled or speak a different language than you, their type might be larger than the space you've allotted for it. Read <a href="../style/devices-displays.html">Devices and Displays</a> and <a href="http://developer.android.com/guide/practices/screens_support.html" target="_blank">Supporting Multiple Screens</a> for design strategies.</p>
+				<p>If you use custom controls, Android has the developer tools in place to allow adherence to the above guidelines and provide meaningful descriptions about the UI. Provide adequate notation on your wireframes and direct your developer to the <a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#custom-views" target="_blank">Custom Views</a> documentation.</p>
+				<h4>请自己试试看</h4>
+				<p>通过<span class="highlight">设置 > 辅助功能</span>打开 TalkBack 服务，进入您的应用，测试方向控制器或者进行盲目操作。</p>
+				<div class="contentHeaderWraper">
+					<h2>检查清单</h2>
+				</div>
+				<ul class="circleList">
+					<li>
+						<p>使导航符合直觉</p>
+					</li>
+					<li>
+						<p>使用推荐的控件大小</p>
+					</li>
+					<li>
+						<p>视觉元素的文字标签要有意义</p>
+					</li>
+					<li>
+						<p>Provide alternatives to affordances that time out</p>
+					</li>
+					<li>
+						<p>使用标准的开发框架控件或者让自定义控件支持 TalkBack</p>
+					</li>
+					<li>
+						<p>请自己试试看</p>
+					</li>
+				</ul>
+			</div><!-- mainContent -->
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="compatibility.html">上一页</a><a class="buttonNext" href="pure-android.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
+			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
+			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
+		</div>
+	</div>
+</body>
+</html>

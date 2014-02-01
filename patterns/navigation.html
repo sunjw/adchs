@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 导航</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+	
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../index.html">开始</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
+					<li><a href="../get-started/principles.html">设计原则</a></li>
+					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../style/index.html">风格</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../style/devices-displays.html">设备和显示</a></li>
+					<li><a href="../style/themes.html">主题</a></li>
+					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
+					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
+					<li><a href="../style/typography.html">字体</a></li>
+					<li><a href="../style/color.html">颜色</a></li>
+					<li><a href="../style/iconography.html">图标</a></li>
+					<li><a href="../style/writing.html">写作风格</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList initShow">
+				<div class="trigger"><a href="index.html">模式</a></div>
+				<ul class="foldingContainer">
+					<li><a href="new.html">Android 新特性</a></li>
+					<li><a href="gestures.html">手势</a></li>
+					<li><a href="app-structure.html">应用结构</a></li>
+					<li><a class="highlight" href="navigation.html">导航</a></li>
+					<li><a href="actionbar.html">操作栏</a></li>
+					<li><a href="multi-pane-layouts.html">多视图布局</a></li>
+					<li><a href="swipe-views.html">滑动视图</a></li>
+					<li><a href="selection.html">选择</a></li>
+					<li><a href="confirming-acknowledging.html">确认和提示</a></li>
+					<li><a href="notifications.html">通知</a></li>
+					<li><a href="widgets.html">小部件</a></li>
+					<li><a href="settings.html">设置</a></li>
+					<li><a href="help.html">帮助</a></li>
+					<li><a href="compatibility.html">兼容性</a></li>
+					<li><a href="accessibility.html">可用性</a></li>
+					<li><a href="pure-android.html">纯粹的 Android</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
+					<li><a href="../building-blocks/lists.html">列表</a></li>
+					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
+					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
+					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
+					<li><a href="../building-blocks/buttons.html">按钮</a></li>
+					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
+					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
+					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
+					<li><a href="../building-blocks/switches.html">开关</a></li>
+					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
+					<li><a href="../building-blocks/pickers.html">选择器</a></li>
+				</ul>
+			</div>
+			<br class="clear" />
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>导航&nbsp;<a class="originalLink" href="http://developer.android.com/design/patterns/navigation.html" target="_blank">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="app-structure.html">上一页</a><a class="buttonNext" href="actionbar.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<p>考虑到导航是用户体验的重要一环。很少有比不一致或者错误的导航更加困扰的用户的。Android 3.0 对系统的全局导航行为做出了较大的改变。根据向上 (Up) 和返回 (Back) 的设计原则，仔细考虑您的应用程序行为，使得您的应用可以做出准确一致的导航。</p>
+				<p>Android 2.3 以及更早版本的系统使用设备上的<span class="highlight">返回</span>键在应用内导航。Android 3.0 引入了操作栏之后，第二种导航方式就出现了: <span class="highlight">向上</span>按钮，它由应用图标和向左的箭头组成。</p>
+				<img class="nomarginRight" src="navigation_with_back_and_up.png" />
+				<div class="contentHeaderWraper">
+					<h2>向上 vs. 返回</h2>
+				</div>
+				<p>“向上”按钮用来在应用内，根据应用的逻辑层级进行导航。举例来说，屏幕 A 显示了一个项目列表，点击其中一项到达屏幕 B (显示该项目的详细信息)，那么屏幕 B 应当提供一个“向上”按钮，让用户可以回到屏幕 A。</p>
+				<p>如果某个屏幕已经是该应用的顶层了 (例如，应用的主页)，那不需要“向上”按钮。</p>
+				<p>系统的“返回”键则用于按照切换历史返回到之前的屏幕。这种导航基于当前的状态，而不是不是基于应用的逻辑层级。</p>
+				<p>如果之前的屏幕就是逻辑层次的上一层，那么“返回”和“向上”的行为是一样的。不过和“向上”不同的是，“返回”可能回到“主屏幕”或者其它的应用，“向上”回到的屏幕总是在您的应用中。
+				</p>
+				<img class="nomarginRight" src="navigation_up_vs_back_gmail.png" />
+				<p>“返回”键还支持一些不是屏幕和屏幕之间的导航的行为:</p>
+				<ul class="circleList">
+					<li>“返回”键可以关闭弹出窗口 (对话框或者弹出信息)</li>
+					<li>“返回”键可以关闭上下文操作栏，还可以清除当前的选择</li>
+					<li>“返回”键可以关闭屏幕键盘 (IME)</li>
+				</ul>
+				<div class="contentHeaderWraper">
+					<h2>应用内的导航</h2>
+				</div>
+				<h4>导航到有多个入口的屏幕</h4>
+				<p>有时，某个屏幕在应用的逻辑结构中的位置并不固定，可以从多个地方进入该屏幕，例如设置页面就可以从您应用中的任何位置进入。这种情况下，“向上”按钮会回到之前的屏幕，行为和“返回”完全一致。</p>
+				<h4>在屏幕中切换试图</h4>
+				<p>同一屏幕中的视图切换不会影响“向上”和“返回”按钮的行为，因为视图的切换不会影响当前屏幕在你应用中的位置，也不会影响屏幕的导航历史。</p>
+				<p>例如:</p>
+				<ul class="circleList">
+					<li>通过标签或者左右滑动切换视图</li>
+					<li>使用下拉列表 (collapsed tabs) 切换视图</li>
+					<li>过滤列表</li>
+					<li>对列表进行排序</li>
+					<li>调整显示特性 (例如缩放)</li>
+				</ul>
+				<h4>在同级屏幕之间导航</h4>
+				<p>如果您的应用可以从一个列表中进入某个条目的详细信息页面，那么应当考虑提供在相邻条目的详细信息页面之间的直接导航。例如在 Gmail 应用中，通过左右滑动邮件对话视图，可以在相同收件箱的上一条和下一条邮件对话之间导航。由于是在同一个屏幕中变换视图，所以这样的操作不会影响“向上”和“返回”的行为。</p>
+				<img class="nomarginLR" src="navigation_between_siblings_gmail.png" />
+				<p>但是要注意到，浏览“相关”但是不是相邻的详细信息时，“向上”和“返回”的行为会发生变化。例如，在电子市场中浏览同一开发者的其它应用或者同一位歌手的不同专辑。这样的操作会导致屏幕历史发生变化，那么“返回”按钮就会回到上一个浏览的项目，而不是项目列表。“向上”按钮则仍然会回到项目列表。</p>
+				<img class="nomarginLR" src="navigation_between_siblings_market1.png" />
+				<p>您还可以使“向上”的行为根据当前的页面内容变化，使它更加聪明 (译者: 更加复杂了-_-)。我们扩展一下之前电子市场的例子，如果用户从一本图书的详细信息页面跳转到某部电影。这时“向上”应当返回到电影列表而不是之前的图书列表。</p>
+				<img class="nomarginLR" src="navigation_between_siblings_market2.png" />
+				<div class="contentHeaderWraper">
+					<h2>从主屏幕或者通知进入您的应用</h2>
+				</div>
+				<p>您可以通过主屏幕或者通知让您的用户直接进入应用的深层次屏幕。例如 Gmail 的收件箱小部件和新消息通知都可以跳过收件箱，直接进入会话视图。</p>
+				<p>这两种情况下，都按照下面的指导处理“向上”:</p>
+				<ul class="circleList">
+					<li><em>如果目标屏幕一般都通过您应用的某个特定屏幕进入</em>，那么“向上”应当返回那个屏幕。</li>
+					<li><em>其它情况下</em>，向上都应当返回顶层屏幕，比如您应用的首页。</li>
+				</ul>
+				<p>对于“返回”按钮，您应当在任务栈中插入一些屏幕，使导航行为更合理，可以通过“返回”一直回到应用的主屏幕。这样可以使用户在退出应用前可以返回到应用的主屏幕。</p>
+				<p>例如，Gmail 的窗口小部件提供了一个按钮可以直接进入撰写屏幕。“向上”和“返回”都会先让用户回到收件箱，“返回”还可以一直回到主屏幕。</p>
+				<img class="nomarginRigh" src="navigation_from_outside_back.png" />
+				<h4>间接通知</h4>
+				<p>当您的应用需要同时通知多条信息时，可以通过单条通知将用户带入一个列表屏幕。这个屏幕列出所有的事件，并且可以让用户直接进入应用。这种通知叫做<span class="highlight">间接通知</span>。</p>
+				<p>不同于标准的 (直接) 通知，在间接通知的列表屏幕按“返回”键将回到开启通知之前的屏幕。一旦用户触摸通知进入应用后，“向上”和“返回”的行为应当和之前的指导一样: 在应用中导航，而不是跳回到之前的屏幕。</p>
+				<p>例如，用户在 Gmail 应用中收到了日历应用的间接通知。通过通知进入列表屏幕后，触摸“返回”将回到 Gmail 应用。如果用户触摸了某条事件，从而进入了日历应用的详细信息屏幕，此时“向上”和“返回”都会回到日历应用的顶层视图。</p>
+				<img class="nomarginLR" src="navigation_indirect_notification.png" />
+				<h4>弹出通知</h4>
+				<p><span class="highlight">弹出通知</span>跳过通知抽屉，直接将通知呈现在用户面前。不要滥用这种通知，除非<span class="highlight">用户必须立刻对信息做出响应</span>时，才使用弹出通知。例如，Talk 应用使用弹出通知告知用户有来自朋友的视频聊天邀请，如果不做出响应的话，邀请将会很快失效。</p>
+				<p>弹出通知的导航行为和间接通知比较接近。“返回”可以关闭当前的弹出邀请。如果用户从弹出通知进入了应用，“向上”和“返回”都应当按照之前的指导，在应用中导航。</p>
+				<img class="nomarginLR" src="navigation_popup_notification.png" />
+				<div class="contentHeaderWraper">
+					<h2>应用间的导航</h2>
+				</div>
+				<p>Android 系统一个基础的优势就在于应用之间有能力互相调用，用户可以直接从一个应用进入另一个应用。例如，一个应用需要捕捉照片时，将会进入相机应用，相机应用之后会将拍摄的照片返回给该应用。对于开发者来说，这样可以避免重复劳动，同时用户也能享受到一致的体验。</p>
+				<p>为了理解应用间的导航，必须了解一下 Android 的框架体系。</p>
+				<h4>Activity, Task 和 Intent</h4>
+				<p>Android 系统中，<span class="highlight">activity</span> 在应用组件中用户定义屏幕及其信息和能够执行的操作。您的应用就是一个 activity 的集合。包括了您编写的 activity 和从其它应用中复用的 activity。</p>
+				<p><span class="highlight">Task</span> 用于表示用户完成一个任务需要执行的 activity 队列。一个 task 可以只使用来自同一个应用的 activity，或者也可以使用来自不同应用的 activity。</p>
+				<p><span class="highlight">Intent</span> 作为一种机制，表示一个应用希望其它应用帮助它完成一个操作。应用中的 activity 可以向系统告知自己可以响应哪些 intent。例如比较常见的 intent “分享”，用户安装的许多应用可能都可以响应这个 intent 完成操作。</p>
+				<h4>例子: 在支持分享的应用之间导航</h4>
+				<p>为了了解 activity, task 和 intent 如何一起工作，我们来观察一个应用如何通过其它应用分享内容。例如，从主屏幕启动 Play 商店应用后，将会开始一个新的 Task A (如下图所示)。在 Play 商店中浏览并进入了一本图书的详细信息屏幕后，用户仍然处于同一个 task 之中，只是通过 activity 扩展了它。触摸分享，将会弹出一个列表，显示了其它应用注册的可以响应 Share intent 的 activity。</p>
+				<img class="nomarginLR" src="navigation_between_apps_inward.png" />
+				<p>当用户选择通过 Gmail 分享后，Gmail 的撰写 activity 将会被加入 Task A，此时仍然没有创建新的 task。如果 Gamil 此时在后台已经有 task 在运行的话，将没有任何影响。</p>
+				<p>在撰写 activity 中，发送消息或者触摸“返回”后，用户将回答图书详细信息 activity 中。如果一直触摸“返回”，将在 Play 商店中导航，直至返回主屏幕。</p>
+				<img class="nomarginRight" src="navigation_between_apps_back.png" />
+				<p>不过，如果在撰写 activity 触摸了“向上”，那么表示用户想留在 Gmail 应用中。此时将会显示 Gmail 的绘画列表，同时启动一个新的 Task B。新的 Task 的顶层总是主屏幕，所以在绘画列表一直触摸“返回”将会回到主屏幕，而不会回到 Play 商店。</p>
+				<img class="nomarginRight" src="navigation_between_apps_up.png" />
+				<p>Task A 将被保持在后台，用户可能待会儿还会回到 Play 应用商店。如果 Gamil 已经有个在后台运行的 task 的话，那么会被 Task B 取代，以保持新的用户操作状态。</p>
+				<p>当您的应用注册响应了某些 intent，并且直接进入应用的深层次 activity，请参考上面的“从主屏幕或者通知进入您的应用”，处理“向上”导航。</p>
+			</div><!-- mainContent -->
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="app-structure.html">上一页</a><a class="buttonNext" href="actionbar.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
+			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
+			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
+		</div>
+	</div>
+</body>
+</html>

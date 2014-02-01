@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 应用结构</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../index.html">开始</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
+					<li><a href="../get-started/principles.html">设计原则</a></li>
+					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../style/index.html">风格</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../style/devices-displays.html">设备和显示</a></li>
+					<li><a href="../style/themes.html">主题</a></li>
+					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
+					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
+					<li><a href="../style/typography.html">字体</a></li>
+					<li><a href="../style/color.html">颜色</a></li>
+					<li><a href="../style/iconography.html">图标</a></li>
+					<li><a href="../style/writing.html">写作风格</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList initShow">
+				<div class="trigger"><a href="index.html">模式</a></div>
+				<ul class="foldingContainer">
+					<li><a href="new.html">Android 新特性</a></li>
+					<li><a href="gestures.html">手势</a></li>
+					<li><a class="highlight" href="app-structure.html">应用结构</a></li>
+					<li><a href="navigation.html">导航</a></li>
+					<li><a href="actionbar.html">操作栏</a></li>
+					<li><a href="multi-pane-layouts.html">多视图布局</a></li>
+					<li><a href="swipe-views.html">滑动视图</a></li>
+					<li><a href="selection.html">选择</a></li>
+					<li><a href="confirming-acknowledging.html">确认和提示</a></li>
+					<li><a href="notifications.html">通知</a></li>
+					<li><a href="widgets.html">小部件</a></li>
+					<li><a href="settings.html">设置</a></li>
+					<li><a href="help.html">帮助</a></li>
+					<li><a href="compatibility.html">兼容性</a></li>
+					<li><a href="accessibility.html">可用性</a></li>
+					<li><a href="pure-android.html">纯粹的 Android</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
+					<li><a href="../building-blocks/lists.html">列表</a></li>
+					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
+					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
+					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
+					<li><a href="../building-blocks/buttons.html">按钮</a></li>
+					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
+					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
+					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
+					<li><a href="../building-blocks/switches.html">开关</a></li>
+					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
+					<li><a href="../building-blocks/pickers.html">选择器</a></li>
+				</ul>
+			</div>
+			<br class="clear" />
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>应用结构&nbsp;<a class="originalLink" href="http://developer.android.com/design/patterns/app-structure.html" target="_blank">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="gestures.html">上一页</a><a class="buttonNext" href="navigation.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<p>不同的应用对于界面结构的需求是不同的。例如:</p>
+				<ul class="circleList">
+					<li>像计算器和相机应用，构建在一个主要的活动 (activity) 上，主要是这个单一的活动处理各种操作</li>
+					<li>像拨号应用，主要的是在几个不同的活动中切换，没有很深的导航</li>
+					<li>像 Gmail 和电子市场，包括了多个数据视图和深度的导航</li>
+				</ul>
+				<p>您应用的结构主要由内容和展示给用户的功能决定。</p>
+				<div class="contentHeaderWraper">
+					<h2>基本结构</h2>
+				</div>
+				<p>典型的 Android 应用由顶层视图和详细信息/编辑视图组成。如果出现深度且复杂的层级结构，使用分类目录视图连接顶层和详细信息。</p>
+				<div>
+					<div class="column col9">
+						<img class="nomarginLR" src="app_structure_overview.png" />
+					</div>
+					<div class="column col4 nomarginRight">
+						<h4>顶层视图</h4>
+						<p>顶层包含了您的应用中几个不同的视图。这些视图可以是对于相同数据的不同展示方式，也可以是您应用中各种功能的集合。</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<h4>分类目录视图</h4>
+						<p>分类目录可以进一步显示数据。</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<p>&nbsp;</p>
+						<h4>详细信息/编辑视图</h4>
+						<p>在详细信息/编辑视图中，用户创造或者编辑数据。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>顶层</h2>
+				</div>
+				<p>您应用的主页设计需要仔细推敲。人们第一次启动您的应用时，将会看到这个界面，所以应当考虑到新用户和老用户。</p>
+				<p>考虑一下: “哥应用的典型用户主要用它来做什么？”，根据这个来设计您应用的主页。</p>
+				<div>
+					<div class="column col5">
+						<h4>首先显示内容</h4>
+						<p>许多应用主要是用来展示内容的。那么不要使用只有分类导航的界面，而是直接将内容展示在您的主页上，让人们可以立即看到你应用的核心。选择一个视觉上适于所需要展示的数据类型的布局，还要考虑屏幕尺寸。</p>
+					</div>
+					<div class="column col8 nomarginRight">
+						<img class="nomarginLR" src="app_structure_market.png" />
+						<p class="caption">电子市场的主页可以使用户导航到应用、音乐、图书、电影或者游戏。同时在界面上展示了个性化的推荐和促销内容。操作栏中包含了搜索功能。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col5">
+						<h4>设计操作栏，用于导航和操作</h4>
+						<p>你应用的每一个屏幕都要显示操作栏，这样能保持统一的导航体验并且一直显示重要的操作。</p>
+						<p>顶层的操作栏设计需要考虑以下的要求:</p>
+						<ul class="circleList">
+							<li>用操作栏显示您应用的图标或者标题。</li>
+							<li>如果顶层是由多个视图组成的，或者当前视图需要在不同的用户账户间切换，那么应当在操作栏加入视图切换菜单，使用户更容易导航。</li>
+							<li>如果您的应用让人们编写内容，那么应当在顶层就可以直接访问这些内容。</li>
+							<li>如果要提供搜索，那么把搜索放在操作栏中，这样人们可以不用导航而是直接搜索。</li>
+						</ul>
+					</div>
+					<div class="column col8 nomarginRight">
+						<img class="nomarginLR" src="app_structure_gmail.png" />
+						<p class="caption">Email 应用关乎生产效率，所以一个高效的、容易浏览的高密度列表比较好。导航栏支持在不同账户以及最近的目录之间切换。副操作栏包含了编写新邮件和搜索图标。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col5">
+						<h4>为您的应用设计一个标志性的界面</h4>
+						<p>除了操作栏，设计一个标志性的界面也很重要。您的应用通过显示数据，让人们操作这些数据来展示其独特性。特别是富媒体应用，应当设计一个特别的界面来展现信息，而不是使用单调的列表 (list view)。</p>
+					</div>
+					<div class="column col8 nomarginRight">
+						<img class="nomarginLR" src="app_structure_music_lndscp.png" />
+						<p class="caption">3D 旋转式的封面展示方式为音乐应用带来了独特的效果。默认显示最近播放的音乐使用户可以保持最近的收听习惯。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>分类目录</h2>
+				</div>
+				<p>由数据驱动的应用都是现在整理好的分类目录中浏览，之后再进入详细信息进行查看和管理。可以通过扁平化您应用的深度，降低导航的难度。</p>
+				<p>虽然从顶层到详细信息视图的垂直步骤是根据您应用的内容而定的，但是仍然有几种方式可以简化认知的难度。</p>
+				<h4>使用标签整合多个分类类别和数据视图</h4>
+				<p>如果分类是相似的或者类别比较少的时候，这样做比较好。因为使用标签可以减少一层的导航，并且使数据一直保持在用户关注的中心。在丰富的内容中导航更像是一种随意的浏览而不是有明确目的导航。</p>
+				<div>
+					<div class="column col8">
+						<p>如果分类之间是相似的、可预见的或者关系接近的，可以使用滚动标签 (scrolling tabs，不是所有的项目都直接显示出来)。保证滚动标签中项目的数量不要太多，否则难以操作。常见的规则是 5 到 7 个标签。</p>
+						<img class="nomarginLR" src="app_structure_scrolltabs.png" />
+						<p class="caption">电子市场使用标签同时展示分类和内容。需要在分类中导航时，用户可以在内容区域左右滑动。</p>
+					</div>
+					<div class="column col5 nomarginRight">
+						<p>如果分类的类别之间不是很接近，应当使用固定标签 (fixed tabs)，这样就可以同时看到所有的分类。</p>
+						<img class="nomarginLR" src="app_structure_fixedtabs.png" />
+						<p class="caption">YouTube 应用使用固定标签 (fixed tabs) 在不同的功能区域间切换。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<p>阅读 <a href="../building-blocks/tabs.html">标签选项卡</a> 一节，了解更多信息。</p>
+				<h4>允许穿过多个层级的操作</h4>
+				<p>用快捷的方式使用户可以轻松地完成他们所要执行的操作。为了能够控制顶层列表中的数据项，在数据项边上显示一个明显的指示，点击后显示下拉菜单。这样使得人们不需要进入多个层级就可以直接执行操作。</p>
+				<img class="nomarginLR" src="app_structure_shortcut_on_item.png" />
+				<p class="caption">音乐应用允许用户在分类视图 (专辑) 中直接操作数据项 (歌曲)，这样就不需要进入歌曲详细信息视图，简化了操作。</p>
+				<h4>同时对多个项目进行操作</h4>
+				<p>尽管分类视图一般是给人们导航到详细信息用的，但是记住，提供一些操作可以直接控制多条数据也是有必要的。</p>
+				<p>例如，如果您允许用户在详细信息视图删除某个项目，那么您应当允许用户在分类视图中一次性删除多个项目。仔细考虑那些操作可以作用于多个项目，通过多选界面提供这些操作，让用户可以在分类视图中直接使用。</p>
+				<p>阅读 <a href="selection.html">选择</a> 一节，了解更多信息。</p>
+				<div class="contentHeaderWraper">
+					<h2>详细信息</h2>
+				</div>
+				<p>详细信息视图让您显示和处理数据。详细信息视图的布局根据需要显示的数据不同而不同。</p>
+				<div>
+					<div class="column col4">
+						<h4>布局</h4>
+						<p>考虑一下联系人应用所进行的操作，并进行布局。</p>
+					</div>
+					<div class="column col9 nomarginRight">
+						<img class="nomarginLR" src="app_structure_people_detail.png" />
+						<p class="caption">联系人应用的详细信息视图需要展示联系信息。列表控件 (list view) 是快速查看电话号码、email 地址和其它联系信息的最佳选择。分割项 (split items) 将拨号和发送信息排列在了同一行。</p>
+						<p>&nbsp;</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col4">
+						<h4>沉浸模式</h4>
+						<p>对于沉浸式的内容，例如多媒体和游戏，最好的体验式全屏且没有打扰的。同时沉浸模式并不代表你不能提供例如分享、评论或者搜索之类的操作。如果用户一段时间没有操作任何控件，那么可以自动淡出操作栏和所有的系统 UI 元素，使用户可以享受内容。这种模式被称之为沉浸模式。之后如果用户想进行一些操作，只需要触摸屏幕的任何位置，就会退出沉浸模式并显示控件。</p>
+					</div>
+					<div class="column col9 nomarginRight">
+						<img class="nomarginRight" src="app_structure_book_detail_page_flip.png" />
+						<p class="caption">Google 图书应用的详细信息视图想要复制阅读一本真是图书的体验。翻页动画加强了这一效果。为了达到沉浸式的效果，应用进入了沉浸模式 (lights-out mode) 隐藏了所有的系统界面元素。</p>
+						<p>&nbsp;</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<h4>使详细信息视图之间导航的变得简单</h4>
+				<p>如果用户经常顺序浏览多个项目，那么应当让他们在详细信息视图中直接做到。考虑使用滑动视图 (swipe view) 或者其它替代方法实现这种操作。</p>
+				<img class="nomarginLR" src="app_structure_gmail_swipe.png" />
+				<p class="caption">Gmail 应用使用滑动视图 (swipe view) 在不同的详细信息之间导航。</p>
+				<img class="nomarginRight" src="app_structure_gallery_filmstrip.png" />
+				<p class="caption">除了提供左右滑动翻页的功能，杂志应用还提供了缩略图控件，使用户可以快速的跳转到指定页面。</p>
+				<p>阅读 <a href="swipe-views.html">滑动视图</a> 一节，了解更多信息。</p>
+				<div class="contentHeaderWraper">
+					<h2>清单</h2>
+				</div>
+				<ul class="circleList">
+					<li>
+						<p>在主页上显示有用的信息。</p>
+					</li>
+					<li>
+						<p>使用操作栏提供统一的导航体验。</p>
+					</li>
+					<li>
+						<p>通过水平导航和快捷方式压缩导航层次。</p>
+					</li>
+					<li>
+						<p>通过多选使用户可以操作多条数据。</p>
+					</li>
+					<li>
+						<p>使用滑动视图 (swipe views) 在不同的详细信息视图中导航。</p>
+					</li>
+				</ul>
+			</div><!-- mainContent -->
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="gestures.html">上一页</a><a class="buttonNext" href="navigation.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
+			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
+			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
+		</div>
+	</div>
+</body>
+</html>

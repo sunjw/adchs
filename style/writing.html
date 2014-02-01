@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 写作风格</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+	#content div.wrong {
+		background: url('ico_wrong.png') left 3px no-repeat;
+		padding-left: 20px;
+	}
+	#content div.good {
+		background: url('ico_good.png') left 3px no-repeat;
+		padding-left: 20px;
+	}
+	#content .exampleItem {
+		padding-left: 15px;
+		margin: 0 10px 20px 10px;
+	}
+	#content .exampleItem table {
+		margin-top: 10px;
+		background: #282828;
+		border-collapse: separate;
+		border-spacing: 0;
+		border-radius: 2px 2px 2px 2px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+		color: #FFFFFF;
+		width: 100%;
+	}
+	#content .exampleItem table th, #content .exampleItem table td {
+		padding: 5px 10px;
+	}
+	#content .exampleItem table th {
+		text-align: left;
+	}
+	#content .exampleItem table td.button {
+		border-right: 1px solid #494949;
+		border-top: 1px solid #494949;
+		text-align: center;
+	}
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../index.html">开始</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
+					<li><a href="../get-started/principles.html">设计原则</a></li>
+					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList initShow">
+				<div class="trigger"><a href="../style/index.html">风格</a></div>
+				<ul class="foldingContainer">
+					<li><a href="devices-displays.html">设备和显示</a></li>
+					<li><a href="themes.html">主题</a></li>
+					<li><a href="touch-feedback.html">触摸反馈</a></li>
+					<li><a href="metrics-grids.html">度量单位和网格</a></li>
+					<li><a href="typography.html">字体</a></li>
+					<li><a href="color.html">颜色</a></li>
+					<li><a href="iconography.html">图标</a></li>
+					<li><a class="highlight" href="writing.html">写作风格</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../patterns/index.html">模式</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../patterns/new.html">Android 新特性</a></li>
+					<li><a href="../patterns/gestures.html">手势</a></li>
+					<li><a href="../patterns/app-structure.html">应用结构</a></li>
+					<li><a href="../patterns/navigation.html">导航</a></li>
+					<li><a href="../patterns/actionbar.html">操作栏</a></li>
+					<li><a href="../patterns/multi-pane-layouts.html">多视图布局</a></li>
+					<li><a href="../patterns/swipe-views.html">滑动视图</a></li>
+					<li><a href="../patterns/selection.html">选择</a></li>
+					<li><a href="../patterns/confirming-acknowledging.html">确认和提示</a></li>
+					<li><a href="../patterns/notifications.html">通知</a></li>
+					<li><a href="../patterns/widgets.html">小部件</a></li>
+					<li><a href="../patterns/settings.html">设置</a></li>
+					<li><a href="../patterns/help.html">帮助</a></li>
+					<li><a href="../patterns/compatibility.html">兼容性</a></li>
+					<li><a href="../patterns/accessibility.html">可用性</a></li>
+					<li><a href="../patterns/pure-android.html">纯粹的 Android</a></li>
+				</ul>
+			</div>
+			<div class="divListwHeader foldingList">
+				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
+				<ul class="foldingContainer">
+					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
+					<li><a href="../building-blocks/lists.html">列表</a></li>
+					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
+					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
+					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
+					<li><a href="../building-blocks/buttons.html">按钮</a></li>
+					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
+					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
+					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
+					<li><a href="../building-blocks/switches.html">开关</a></li>
+					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
+					<li><a href="../building-blocks/pickers.html">选择器</a></li>
+				</ul>
+			</div>
+			<br class="clear" />
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>写作风格&nbsp;<a class="originalLink" href="http://developer.android.com/design/style/writing.html">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="iconography.html">上一页</a><a class="buttonNext" href="../patterns/index.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<p>为您的应用选择文字说明时 (以下内容是为英语而编写，中文应当酌情考虑):</p>
+				<ul>
+					<li>
+						<p>1. <span class="highlight">保持简短。</span>简明、简单和精确。30 个字符以内 (包括空格)，除非必要不要使用更多文字。</p>
+					</li>
+					<li>
+						<p>2. <span class="highlight">保持简单。</span>假设您的用户是聪明且有能力理解，但是不要熬述技术细节并且考虑到英语不好的同志。使用短词语、主动词和简单名词。</p>
+					</li>
+					<li>
+						<p>3. <span class="highlight">友好。</span>使用缩写。和您的用户对话时使用第二人称 (“您”或者“你”)。如果您的文字在日常对话中不能表示您的意思，您应当重新考虑一下。努力让用户感到安全、高兴和充满活力。</p>
+					</li>
+					<li>
+						<p>4. <span class="highlight">先说重要的事。</span>一句话的开头两个词 (一共大约 11 个字母，包括空格) 应当表达出重要的信息。</p>
+					</li>
+					<li>
+						<p>5. <span class="highlight">仅说明必要的信息。</span>不要费力解释微妙的细节。大部分用户不会去看的。</p>
+					</li>
+					<li>
+						<p>6. <span class="highlight">避免重复。</span>表达某个意思的单词在同一屏或同一块文字中尽量只出现一次。多次表达该意思应当使用不同的单词。</p>
+					</li>
+				</ul>
+				<div class="contentHeaderWraper">
+					<h2>例子</h2>
+				</div>
+				<p>下面的翻译可能和一些 Android 版本的翻译不一样。</p>
+				<p>1. <span class="highlight">保持简短</span>:</p>
+				<div class="exampleItem">
+					<div>
+						<div class="column col6">
+							<div class="wrong">太正式</div>
+							<table>
+								<tr><td>Consult the documentation that came with your phone for further instructions.</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<div class="good">这样更好</div>
+							<table>
+								<tr><td>Read the instructions that came with your phone.</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div>
+						<div class="column col6">
+							<table>
+								<tr><td>请参考您手机附带的使用手册，以获得进一步的指导</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<table>
+								<tr><td>阅读您手机附带的使用手册</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<p>2. <span class="highlight">保持简单</span>:</p>
+				<div class="exampleItem">
+					<div>
+						<div class="column col6">
+							<div class="wrong">迷惑</div>
+							<table>
+								<tr><th>Use GPS satellites</th></tr>
+								<tr><td>When locating, accurate to street level.</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<div class="good">这样更好</div>
+							<table>
+								<tr><th>GPS</th></tr>
+								<tr><td>Let apps use satellites to pinpoint your location.</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div>
+						<div class="column col6">
+							<table>
+								<tr><th>使用 GPS 卫星</th></tr>
+								<tr><td>定位到街道级别</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<table>
+								<tr><th>GPS 卫星</th></tr>
+								<tr><td>允许应用程序使用 GPS 对您进行定位</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<p>3. <span class="highlight">友好</span>:</p>
+				<div class="exampleItem">
+					<div>
+						<div class="column col6">
+							<div class="wrong">迷惑且复杂，“对不起！”更是火上浇油。</div>
+							<table>
+								<tr><th colspan="3">Sorry!</th></tr>
+								<tr><td colspan="3">Activity MyAppActivity (in application MyApp) is not responding.</td></tr>
+								<tr>
+									<td class="button" width="33%">Force close</td>
+									<td class="button" width="33%">Wait</td>
+									<td class="button" width="33%">Report</td>
+								</tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<div class="good">简短、直接没有恼人的标题:</div>
+							<table>
+								<tr><th colspan="3">MyApp isn't responding.</th></tr>
+								<tr><td colspan="3">Do you want to close it?</td></tr>
+								<tr>
+									<td class="button" width="33%">Wait</td>
+									<td class="button" width="33%">Report</td>
+									<td class="button" width="33%">Close</td>
+								</tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div>
+						<div class="column col6">
+							<table>
+								<tr><th colspan="3">很抱歉！</th></tr>
+								<tr><td colspan="3">“MyAppActivity”活动 (在“MyApp”应用程序中) 无响应。</td></tr>
+								<tr>
+									<td class="button" width="33%">强行关闭</td>
+									<td class="button" width="33%">等待</td>
+									<td class="button" width="33%">报告问题</td>
+								</tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<table>
+								<tr><th colspan="3">MyApp 无响应。</th></tr>
+								<tr><td colspan="3">要关闭吗？</td></tr>
+								<tr>
+									<td class="button" width="33%">等待</td>
+									<td class="button" width="33%">报告问题</td>
+									<td class="button" width="33%">关闭</td>
+								</tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<p>4. <span class="highlight">先说重要的事。</span></p>
+				<div class="exampleItem">
+					<div>
+						<div class="column col6">
+							<div class="wrong">重要信息在句子末尾</div>
+							<table>
+								<tr><td>77 other people +1'd this, including Larry Page.</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<div class="good">重要信息在句子开始</div>
+							<table>
+								<tr><td>Larry Page and 77 others +1'd this.</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div>
+						<div class="column col6">
+							<table>
+								<tr><td>其他 77 人为此 +1 了，包括 Larry Page。</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<table>
+								<tr><td>Larry Page 和其他 77 人为此 +1 了。</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="exampleItem">
+					<div>
+						<div class="column col6">
+							<div class="wrong">任务出现在句子末尾</div>
+							<table>
+								<tr><td>Touch Next to complete setup using a Wi-Fi connection.</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<div class="good">任务出现在句子开始</div>
+							<table>
+								<tr><td>To finish setup using Wi-Fi, touch Next.</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div>
+						<div class="column col6">
+							<table>
+								<tr><td>点击下一步，完成 Wi-Fi 连接设置。</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<table>
+								<tr><td>完成 Wi-Fi 连接设置，点击下一步。</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<p>5. <span class="highlight">仅说明必要的信息。</span></p>
+				<div class="exampleItem">
+					<div>
+						<div class="column col6">
+							<div class="wrong">不好</div>
+							<table>
+								<tr><th>Signing in...</th></tr>
+								<tr>
+									<td>Your phone needs to communicate with<br />Google servers to sign in to your account.<br />This may take up to five minutes.</td>
+								</tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<div class="good">这样更好</div>
+							<table>
+								<tr><th>Signing in...</th></tr>
+								<tr><td>Your phone is contacting Google.<br />This can take up to 5 minutes.</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div>
+						<div class="column col6">
+							<table>
+								<tr><th>登录...</th></tr>
+								<tr>
+									<td>您的手机将会和 Google 服务器通信<br />登录您的帐户<br />这会花费几分钟。</td>
+								</tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<table>
+								<tr><th>登录...</th></tr>
+								<tr><td>您的手机正在和 Google 通信。<br />这会花费几分钟。</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="iconography.html">上一页</a><a class="buttonNext" href="../patterns/index.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
+			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
+			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
+		</div>
+	</div>
+</body>
+</html>
