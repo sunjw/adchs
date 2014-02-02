@@ -176,15 +176,14 @@ code {
 	height: 30px;
 	line-height: 30px;
 	margin-bottom: 10px;
-	border-bottom: 1px solid #33B5E5;
-	overflow: hidden;
 }
-.contentNav,.contentHeaderWraper,.topNav {
-	border-bottom: 1px solid #CCCCCC;
+.topNav {
+	margin-bottom: 35px;
 }
 .bottomNav {
 	border-top: 1px solid #CCCCCC;
 	border-bottom: none;
+	margin-top: 10px;
 }
 .contentNav .contentHeaderWraper {
 	float: left;
@@ -205,6 +204,9 @@ code {
 }
 #content a.buttonNext,#content a.buttonPrev {
 	color: #258AAF;
+}
+#mainContent .contentHeaderWraper {
+	border-bottom: 1px solid #CCCCCC;
 }
 .contentHeaderWraper h2 {
 	color: black;
@@ -272,6 +274,49 @@ code {
 	width: 640px;
 }
 
+#content .noteInfo,#content .noteDev {
+	padding-left: 10px;
+	margin-bottom: 15px;
+}
+#content .noteInfo {
+	border-left: 4px solid #258AAF;
+}
+#content .noteDev {
+	border-left: 4px solid #FF8800;
+}
+#content .noteDev p {
+	margin: 0 0 5px 0;
+}
+
+#content a.noticeDev {
+	border: 1px solid #DDDDDD;
+    clear: right;
+    float: right;
+    margin: 0 0 20px 20px;
+    min-height: 50px;
+    width: 238px;
+	text-decoration: none;
+}
+#content a.noticeDevLeft {
+	float: left;
+	margin-left: 0;
+}
+#content a.noticeDev div {
+	background: url("../imgs/notice-developers.png") 10px 10px no-repeat;
+    min-height: 40px;
+    padding: 10px 10px 10px 60px;
+}
+#content a.noticeDev h3 {
+	color: #000000 !important;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 18px;
+}
+#content a.noticeDev p {
+	line-height: 14px;
+	margin: 0;
+}
+
 #footer {
 	color: #999999;
     font-size: 12px;
@@ -282,6 +327,7 @@ code {
 }
 #footer .lastLine {
 	margin-top: 10px;
+	height: 65px;
 }
 #footer a {
 	color: #777777;
