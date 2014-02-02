@@ -297,6 +297,10 @@ code {
     width: 238px;
 	text-decoration: none;
 }
+#content a.noticeDevLeft {
+	float: left;
+	margin-left: 0;
+}
 #content a.noticeDev div {
 	background: url("../imgs/notice-developers.png") 10px 10px no-repeat;
     min-height: 40px;
