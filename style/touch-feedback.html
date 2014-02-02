@@ -34,10 +34,21 @@
 				<div>
 					<div class="column col7">
 						<p>使用颜色和光晕效果来反馈触摸，强调手势的效果以及表明哪些操作是可用的。</p>
-						<p>任何时候，用户触摸您应用中的可操作区域，都应当给予视觉上的响应。这样可以使得用户了解他触摸了啥，并且表明您的应用一直在工作。</p>
+						<p><strong>用优雅的方式进行触摸反馈。</strong>任何时候，用户触摸应用中的可操作区域，都应当给予视觉上的响应。微小的反馈就能取得良好的效果。这样做有两个好处：</p>
+						<ul>
+							<li><a href="/design/get-started/principles.html#sprinkle-encouragement">给予鼓励</a>总是比给予惊吓要好。</li>
+							<li><a href="design/style/branding.html">your branding</a>，因为无论与何种色调配合，默认的触摸反馈都能很好的工作。</li>
+						</ul>
 					</div>
 					<div class="column col6 nomarginRight">
-						<img class="nomarginLR" src="touch_feedback_reaction_response.png" />
+						<video  class="play-on-hover" width="268" height="442" autoplay style="border:1px solid #ddd;background-color:#f9f9f9;" poster="">
+    						<source src="http://developer.android.com/design/media/touch_feedback.mp4" type="video/mp4">
+    						<source src="http://developer.android.com//design/media/touch_feedback.webm" type="video/webm">
+    						<source src="http://developer.android.com//design/media/touch_feedback.ogv" type="video/ogg">
+  						</video>
+  						<div class="figure-caption">
+							<div style="color:#a3a3a3;margin-left:170px;"><em>点击图片重放...</em></div>
+  						</div>
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -59,10 +70,12 @@
 				<div>
 					<div class="column col6">
 						<img class="nomarginLR" src="touch_feedback_communication.png" />
+						<p class="caption">当用户试图从主屏幕的最后一屏向右滑动时，屏幕就会向右倾斜表明不能再往这边移动了。</p>
+
 					</div>
 					<div class="column col6 nomarginRight">
 						<h4>边界</h4>
-						<p>当用户试图将可滑动的区域滑动出上下边界时，应当在边界提供视觉的反馈。例如，当用户试图从主屏幕的第一屏向左滑动时，屏幕就会向右倾斜表明不能再往这边移动了。许多 Android 的可滑动空间 (例如列表 lists 和网格列表 grid lists) 都已经内置了边界反馈。如果您需要自定义界面时，记住要提供边界反馈哦。</p>
+						<p>当用户试图将可滑动的区域滑动出上下边界时，应当在边界提供视觉的反馈。许多 Android 的可滑动控件 (例如列表 lists 和网格列表 grid lists) 都已经内置了边界反馈。如果需要使用自定义控件，记住要提供边界反馈哦。</p>
 					</div>
 					<div class="clear"></div>
 				</div>
