@@ -152,7 +152,10 @@ function fillMenu() {
 	var menuCont = $("#navWrapper");
 	var curPage = curUrl.split("/");
 	curPage = curPage[curPage.length - 1]; // *.html
-	for(i = 0; i < secondLevPathCount; ++i) {
+	if (curPage.search(".html") == -1) {
+		curPage = "index.html"; // fix default page.
+	}
+	for (i = 0; i < secondLevPathCount; ++i) {
 		if (curUrl.search(secondLevPath[i]) != -1) {
 			curPage = secondLevPath[i] + curPage;
 		}
