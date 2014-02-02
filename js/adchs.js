@@ -148,7 +148,8 @@ var menuContent = [
 ];
 
 function fillMenu() {
-	var i = 0, j = 0;
+	var i = 0,
+	j = 0;
 	var menuCont = $("#navWrapper");
 	var curPage = curUrl.split("/");
 	curPage = curPage[curPage.length - 1]; // *.html
@@ -162,7 +163,7 @@ function fillMenu() {
 	}
 
 	var firstLevCount = menuContent.length;
-	
+
 	for (i = 0; i < firstLevCount; ++i) {
 		var foldingList = $("<div/>");
 		foldingList.addClass("divListwHeader");
@@ -313,14 +314,14 @@ function fillFooter() {
 	var i = 0;
 
 	var secondLevel = 0;
-	for(i = 0; i < secondLevPathCount; ++i) {
+	for (i = 0; i < secondLevPathCount; ++i) {
 		if (curUrl.search(secondLevPath[i]) != -1) {
 			secondLevel = 1;
 		}
 	}
 
 	var lines = footerLines.length;
-	
+
 	for (i = 0; i < lines; ++i) {
 		var line = footerLines[i];
 		if (secondLevel) {
