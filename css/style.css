@@ -176,7 +176,6 @@ code {
 	height: 30px;
 	line-height: 30px;
 	margin-bottom: 10px;
-	overflow: hidden;
 }
 .topNav {
 	margin-bottom: 35px;
@@ -206,7 +205,7 @@ code {
 #content a.buttonNext,#content a.buttonPrev {
 	color: #258AAF;
 }
-.contentHeaderWraper {
+#mainContent .contentHeaderWraper {
 	border-bottom: 1px solid #CCCCCC;
 }
 .contentHeaderWraper h2 {
@@ -287,6 +286,31 @@ code {
 }
 #content .noteDev p {
 	margin: 0 0 5px 0;
+}
+
+#content a.noticeDev {
+	border: 1px solid #DDDDDD;
+    clear: right;
+    float: right;
+    margin: 0 0 20px 20px;
+    min-height: 50px;
+    width: 238px;
+	text-decoration: none;
+}
+#content a.noticeDev div {
+	background: url("../imgs/notice-developers.png") 10px 10px no-repeat;
+    min-height: 40px;
+    padding: 10px 10px 10px 60px;
+}
+#content a.noticeDev h3 {
+	color: #000000 !important;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 18px;
+}
+#content a.noticeDev p {
+	line-height: 14px;
+	margin: 0;
 }
 
 #footer {
