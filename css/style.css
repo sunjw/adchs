@@ -184,6 +184,7 @@ code {
 .bottomNav {
 	border-top: 1px solid #CCCCCC;
 	border-bottom: none;
+	margin-top: 10px;
 }
 .contentNav .contentHeaderWraper {
 	float: left;
@@ -204,6 +205,9 @@ code {
 }
 #content a.buttonNext,#content a.buttonPrev {
 	color: #258AAF;
+}
+.contentHeaderWraper {
+	border-bottom: 1px solid #CCCCCC;
 }
 .contentHeaderWraper h2 {
 	color: black;
@@ -271,12 +275,17 @@ code {
 	width: 640px;
 }
 
-#content .note {
-	border-left: 4px solid #FF8800;
+#content .noteInfo,#content .noteDev {
 	padding-left: 10px;
 	margin-bottom: 15px;
 }
-#content .note p {
+#content .noteInfo {
+	border-left: 4px solid #258AAF;
+}
+#content .noteDev {
+	border-left: 4px solid #FF8800;
+}
+#content .noteDev p {
 	margin: 0 0 5px 0;
 }
 
