@@ -282,6 +282,7 @@ code {
 }
 #footer .lastLine {
 	margin-top: 10px;
+	height: 65px;
 }
 #footer a {
 	color: #777777;
