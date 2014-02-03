@@ -7,7 +7,33 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
 	<style type="text/css">
-	
+	#content div.wrong {
+		background: url('ico_wrong.png') left 3px no-repeat;
+		padding-left: 20px;
+	}
+	#content div.good {
+		background: url('ico_good.png') left 3px no-repeat;
+		padding-left: 20px;
+	}
+	#content .exampleItem {
+		margin: 0 0 20px 0;
+	}
+	#content .exampleItem table {
+		margin-top: 10px;
+		background: #282828;
+		border-collapse: separate;
+		border-spacing: 0;
+		border-radius: 2px 2px 2px 2px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+		color: #FFFFFF;
+		width: 100%;
+	}
+	#content .exampleItem table th, #content .exampleItem table td {
+		padding: 5px 10px;
+	}
+	#content .exampleItem table th {
+		text-align: left;
+	}
 	</style>
 	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
@@ -79,6 +105,47 @@
 						<p>保持问题和解释简短明确: 例如“擦出 USB 存储设备？”不要使用道歉语句。用户应当能够不看内容，只通过标题和下面的操作按钮做出决定。</p>
 					</div>
 					<div class="clear"></div>
+					<div class="exampleItem">
+						<div>
+							<div class="column col4">
+								<div class="wrong">不要这样做</div>
+								<table>
+									<tr><td>Are you sure?</td></tr>
+								</table>
+							</div>
+							<div class="column col4">
+								<div class="wrong">不要这样做</div>
+								<table>
+									<tr><td>Warning!</td></tr>
+								</table>
+							</div>
+							<div class="column col5 nomarginRight">
+								<div class="good">这样做</div>
+								<table>
+									<tr><td>Erase USB storage?</td></tr>
+								</table>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div>
+							<div class="column col4">
+								<table>
+									<tr><td>你确定么？</td></tr>
+								</table>
+							</div>
+							<div class="column col4">
+								<table>
+									<tr><td>警告！</td></tr>
+								</table>
+							</div>
+							<div class="column col5 nomarginRight">
+								<table>
+									<tr><td>擦出 USB 存储设备？</td></tr>
+								</table>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
 				</div>
 				<div class="contentHeaderWraper">
 					<h2>弹出对话框</h2>

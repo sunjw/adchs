@@ -7,6 +7,14 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
 	<style type="text/css">
+	#content div.good {
+		background: url("ico_good.png") no-repeat scroll left 3px transparent;
+		padding-left: 20px;
+	}
+	#content div.wrong {
+		background: url("ico_wrong.png") no-repeat scroll left 3px transparent;
+		padding-left: 20px;
+	}
 	</style>
 	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
@@ -30,29 +38,66 @@
 				</div>
 			</div>
 			<div id="mainContent">
-				<p>按钮包含了文本和图片，明确的表明了当用户触摸时会触发的操作。Android 提供了两种按钮:&nbsp;<span class="highlight">基础按钮</span>和<span class="highlight">无边框按钮</span>。这两种都支持文字和图片。</p>
-				<div>
-					<img class="nomarginRight" src="buttons_basic.png" />
-				</div>
-				<div class="contentHeaderWraper">
-					<h2>基础按钮</h2>
-				</div>
-				<p>基础按钮就像传统的按钮，有边框和背景色。Android 为基础按钮提供了两种样式:&nbsp;默认大小和小按钮。默认大小的按钮有较大的字号，适合在表单外使用。小按钮则适合于表单内的其它控件配合使用。它有较小的字号和较低的高度。需要和其它控件对齐时，小按钮比较适合。</p>
-				<img class="nomarginRight" src="buttons_default_small.png" />
-				<div>
-					<div class="column col6">
-						<p class="caption">Holo 深色主题和浅色主题中的默认大小按钮。</p>
+				<a class="noticeDev" href="http://developer.android.com/guide/topics/ui/controls/button.html" target="_blank">
+					<div>
+						<h3>开发者文档</h3>
+						<p>Buttons</p>
 					</div>
-					<div class="column col6 nomarginRight">
-						<p class="caption">Holo 深色主题和浅色主题中的小按钮。</p>
+				</a>
+				<p>按钮可以包含文本和图片，并且明确的表明了当用户触摸时会触发的操作。</p>
+				<div class="clear"></div>
+				<div>
+					<div class="column col3 center">
+						<img class="nomarginLR" height="64px" src="icon_magnifying_glass.png" />
+					</div>
+					<div class="column col3">
+						<img class="nomarginLR" width="160px" src="buttons_text.png" />
+					</div>
+					<div class="column col7 nomarginRight">
+						<img class="nomarginLR" width="400px" src="buttons_image_and_text.png" />
 					</div>
 					<div class="clear"></div>
 				</div>
-				<div class="contentHeaderWraper">
-					<h2>无边框按钮</h2>
+				<div>
+					<div class="column col3">
+						<p>通过明确的图片，使得仅包含图标的按钮也很容易理解。</p>
+					</div>
+					<div class="column col3">
+						<p>如果操作难以通过图片表示，或者该操作很重要，不能有任何歧义时，仅包含文本的按钮是不错的选择。</p>
+					</div>
+					<div class="column col7 nomarginRight">
+						<p>合适的图片和文本可以相得益彰，使得按钮的操作更加明晰。</p>
+						<p>例如 Google Now 中的生日贺卡按钮不仅表明了操作，也表明该操作将通过 Google+ 应用完成。</p>
+					</div>
+					<div class="clear"></div>
 				</div>
-				<p>无边框按钮类似于基础按钮，但是没有边框，背景则是透明的。无边框按钮支持文字和图标。无边框按钮视觉上更加轻巧，可以与其它内容融合在一起。</p>
-				<img class="nomarginLR" src="buttons_borderless.png" />
+				<h4>按钮的背景色如何设置</h4>
+				<div>
+					<div class="column col6">
+						<p>对于<strong>仅包含图标</strong>的按钮，不需要使用背景色。</p>
+						<div>
+							<div class="column col2">
+								<div class="wrong">不要这样做</div>
+								<img class="nomarginLR" style="padding-top:3px;" src="buttons_image_bg_dont.png" />
+							</div>
+							<div class="column col2 nomarginRight">
+								<div class="good">这样做</div>
+								<img class="nomarginLR" style="width:30px;padding-top:10px;" src="icon_alarm.png" />
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="column col7 nomarginRight">
+						<p>对于<strong>包含文本</strong>的按钮，也不需要背景色。为了提示用户点击，可以使用清晰的文本说明和不同的颜色、格式。</p>
+						<p>如果一定要选择带有背景色的按钮，请仔细斟酌。因为这种按钮看起来比较沉重，一个屏幕上最好就放一到两个。它们比较适合一下情况:</p>
+						<ul class="circleList">
+							<li>用户一定需要使用的操作 (例如: 注册)。</li>
+							<li>非常重要的操作 (例如: 接受/拒绝)。</li>
+							<li>对用户有很大影响的操作 (例如: 清除所有数据、立即购买)。</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
 			</div><!-- mainContent -->
 			<div class="contentNav bottomNav">
 				<div class="buttonWrapper">
