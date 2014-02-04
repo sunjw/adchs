@@ -35,6 +35,12 @@
 			</div>
 			<div id="mainContent">
 				<img class="nomarginRight" src="action_bar_pattern_overview.png" />
+				<a class="noticeDev" href="http://developer.android.com/guide/topics/ui/actionbar.html" target="_blank">
+					<div>
+						<h3>开发者文档</h3>
+						<p>Action Bar</p>
+					</div>
+				</a>
 				<p>“操作栏”对于 Android 应用来说是最重要的设计元素。它通常在应用运行的所有时间都呆在屏幕顶部。</p>
 				<h4>操作栏的主要目的是:</h4>
 				<ul class="circleList">
@@ -107,94 +113,6 @@
 					<div class="clear"></div>
 				</div>
 				<div class="contentHeaderWraper">
-					<h2>上下文操作栏</h2>
-				</div>
-				<p>“上下文操作栏” (contextual action bar，CAB) 是一个浮于操作栏上的临时操作栏，用来放置一些特定的子任务。“上下文操作栏”一般在项目选择和文字选择时出现。</p>
-				<img class="nomarginLR" src="action_bar_cab.png" />
-				<p class="caption">浏览器和 Gmail 应用中的上下文操作栏</p>
-				<p>长按可选择的内容，进入选择模式，显示上下文操作栏。</p>
-				<p><span class="highlight">此时用户可以</span>:</p>
-				<ul class="circleList">
-					<li>通过触摸选择项目。</li>
-					<li>在上下文操作栏中选择操作，并应用于所有已选项目。之后上下文操作栏自动消失。</li>
-					<li>通过导航栏的“返回”按钮关闭上下文操作栏，也可以通过点击上下文操作栏的选择图标关闭它。关闭上下文操作栏的同时要取消所有的选择。</li>
-				</ul>
-				<p>当您让用户长按来选择项目时，需要使用上下文操作栏。您可以控制上下文操作栏中的图标，使用户可以执行不同的操作。</p>
-				<p>更多信息，请参考 <a href="selection.html">选择</a> 一节。</p>
-				<div class="contentHeaderWraper">
-					<h2>视图控制</h2>
-				</div>
-				<p>如果您的应用在不同的视图中显示内容，操作栏可以提供三种不同的控件让用户在不同的视图之间切换: 标签、弹出菜单和抽屉。</p>
-				<h4>标签</h4>
-				<p>“标签 (tabs)”显示了应用提供的不同视图，通过标签可以在它们之间导航。
-				</p>
-				<img class="nomarginRight" src="tabs_youtube.png" />
-				<p><span class="highlight">在下面的情况中使用标签</span>:</p>
-				<ul class="circleList">
-					<li>用户需要经常在您的应用中切换标签。</li>
-					<li>您希望用户能比较容易看到其它的视图选项。</li>
-				</ul>
-				<div>
-					<div class="column col6">
-						<h4>固定标签</h4>
-						<p>固定标签始终将所有标签显示在屏幕上。当方向改变时可以将固定标签移到顶部栏中。</p>
-						<p>使用固定标签可以使用户快速的在两三个标签之间切换。应当使用户可以通过左右滑动内容区域来切换标签。</p>
-					</div>
-					<div class="column col7 nomarginRight">
-						<img class="nomarginLR" src="action_bar_pattern_default_tabs.png" />
-						<p class="caption">深色和浅色 Holo 主题的固定标签。</p>
-					</div>
-					<div class="clear"></div>
-				</div>
-				<div>
-					<div class="column col6">
-						<h4>滚动标签</h4>
-						<p>滚动标签占满整个顶部栏的空间，将当前的视图放在中间。可以在内容区域左右滑动显示滚动标签中的不同视图。</p>
-						<p>如果您的应用有许多视图，或者视图的数目根据当前的数据而有变化 (例如消息应用中，可以在多个会话中导航)。滚动标签应当始终允许用户通过左右滑动切换视图，无论是在内容区域还是标签区域。</p>
-					</div>
-					<div class="column col7 nomarginRight">
-						<video width="400" class="clickPlay" autoplay>
-							<source src="http://developer.android.com/design/media/tabs_scrolly.mp4" type="video/mp4" />
-							<source src="http://developer.android.com/design/media/tabs_scrolly.webm" type="video/webm" />
-							<source src="http://developer.android.com/design/media/tabs_scrolly.ogv" type="video/ogg" />
-						</video>
-						<p class="caption">电子市场的滚动标签。</p>
-						<p class="videoInstruction">点击重放视频。</p>
-					</div>
-					<div class="clear"></div>
-				</div>
-				<div>
-					<div class="column col6">
-						<h4>弹出菜单</h4>
-						<p>弹出菜单允许用户切换视图。</p>
-						<p><span class="highlight">使用弹出菜单而不是标签</span>:</p>
-						<ul class="circleList">
-							<li>您不希望在垂直方向浪费屏幕空间。</li>
-							<li>您的用户不经常切换视图。</li>
-						</ul>
-					</div>
-					<div class="column col7 nomarginRight">
-						<img class="nomarginLR" src="action_bar_pattern_spinner.png" />
-						<p class="caption">日历应用的弹出菜单。</p>
-					</div>
-					<div class="clear"></div>
-				</div>
-				<h4>抽屉</h4>
-				<div>
-					<div class="column col6">
-						<p>抽屉是一个从侧边滑入滑出的菜单，用户通过抽屉切换您应用中的视图。通过触摸主操作栏上应用的图标 (配以“向上”箭头)。并且抽屉也应该可以通过在侧边滑入的动作打开，并通过在侧边滑出的动作关闭。但是因为抽屉是通过“向上”导航按钮开关的，所以应该只出现在应用的顶层视图中。</p>
-						<p><span class="highlight">在主操作栏使用抽屉</span>:</p>
-						<ul class="circleList">
-							<li>您不希望标签栏占用高度的空间。</li>
-							<li>您希望为几个之间不相互关联的视图提供应用内的导航能力。</li>
-						</ul>
-					</div>
-					<div class="column col7 nomarginRight">
-						<img class="nomarginRight" src="actionbar_drawer.png" />
-					</div>
-					<div class="clear"></div>
-				</div>
-				<div class="contentHeaderWraper">
 					<h2>操作栏按钮</h2>
 				</div>
 				<p>操作栏按钮展示了您应用的重要功能。考虑一下哪些功能最常用，把它们放在操作栏上。由于屏幕尺寸的限制，系统会把一部分按钮移到更多操作菜单中，所以想好这些功能的排列顺序。</p>
@@ -244,12 +162,12 @@
 				<ul class="circleList">
 					<li>操作栏的所有图标不能占用超过 50% 的宽度，底部操作栏则可以使用全部宽度来摆放图标。</li>
 					<li>按 (<acronym title="Density-independent pixels. One dp is one pixel on a 160 dpi screen.">dp</acronym>) 为单位，不同的屏幕宽度在操作栏内能摆放的图标数量如下:
-					<ul class="circleList">
-						<li>小于 360 dp = 2 个图标</li>
-						<li>360-499 dp = 3 个图标</li>
-						<li>500-599 dp = 4 个图标</li>
-						<li>600 dp 或更宽 = 5 个图标</li>
-					</ul>
+						<ul class="circleList">
+							<li>小于 360 dp = 2 个图标</li>
+							<li>360-499 dp = 3 个图标</li>
+							<li>500-599 dp = 4 个图标</li>
+							<li>600 dp 或更宽 = 5 个图标</li>
+						</ul>
 					</li>
 				</ul>
 				<img class="nomarginLR" src="action_bar_pattern_table.png" />
@@ -258,6 +176,21 @@
 				<p>如果您的应用可以分享图片或影片，那么在操作栏上放置一个分享按钮。该按钮会显示最近使用的分享服务，以达到快速分享。这个按钮应当出现在选择时的上下玩操作栏中，放在选择提示的旁边，点击后会弹出菜单，包括了分享的选项。</p>
 				<img class="nomarginRight" src="action_bar_pattern_share_pack.png" />
 				<p class="caption">相册应用提供了扩展的分享选项。</p>
+				<div class="contentHeaderWraper">
+					<h2>上下文操作栏</h2>
+				</div>
+				<p>“上下文操作栏” (contextual action bar，CAB) 是一个浮于操作栏上的临时操作栏，用来放置一些特定的子任务。“上下文操作栏”一般在项目选择和文字选择时出现。</p>
+				<img class="nomarginLR" src="action_bar_cab.png" />
+				<p class="caption">浏览器和 Gmail 应用中的上下文操作栏</p>
+				<p>长按可选择的内容，进入选择模式，显示上下文操作栏。</p>
+				<p><span class="highlight">此时用户可以</span>:</p>
+				<ul class="circleList">
+					<li>通过触摸选择项目。</li>
+					<li>在上下文操作栏中选择操作，并应用于所有已选项目。之后上下文操作栏自动消失。</li>
+					<li>通过导航栏的“返回”按钮关闭上下文操作栏，也可以通过点击上下文操作栏的选择图标关闭它。关闭上下文操作栏的同时要取消所有的选择。</li>
+				</ul>
+				<p>当您让用户长按来选择项目时，需要使用上下文操作栏。您可以控制上下文操作栏中的图标，使用户可以执行不同的操作。</p>
+				<p>更多信息，请参考 <a href="selection.html">选择</a> 一节。</p>
 				<div class="contentHeaderWraper">
 					<h2>操作栏清单</h2>
 				</div>

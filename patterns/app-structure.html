@@ -64,7 +64,7 @@
 					<div class="clear"></div>
 				</div>
 				<div class="contentHeaderWraper">
-					<h2>顶层</h2>
+					<h2>顶层屏幕</h2>
 				</div>
 				<p>您应用的主页设计需要仔细推敲。人们第一次启动您的应用时，将会看到这个界面，所以应当考虑到新用户和老用户。</p>
 				<p>考虑一下: “哥应用的典型用户主要用它来做什么？”，根据这个来设计您应用的主页。</p>
@@ -97,17 +97,64 @@
 					</div>
 					<div class="clear"></div>
 				</div>
+				<div class="contentHeaderWraper">
+					<h2>在顶层屏幕使用视图控件</h2>
+				</div>
+				<p>顶层屏幕向用户展示了应用的主要功能。所以有时顶层屏幕会包含多个不同的视图，请确保用户可以轻松的在多个视图之间切换。Android 提供了多种视图控件帮助您完成设计，下面将一一介绍:</p>
+				<h4>固定标签</h4>
 				<div>
-					<div class="column col5">
-						<h4>为您的应用设计一个标志性的界面</h4>
-						<p>除了操作栏，设计一个标志性的界面也很重要。您的应用通过显示数据，让人们操作这些数据来展示其独特性。特别是富媒体应用，应当设计一个特别的界面来展现信息，而不是使用单调的列表 (list view)。</p>
+					<div class="column col6">
+						<p>固定标签可以同时显示多个顶层视图，并且能够提供很方便的切换。固定的标签总是显示在屏幕上，不像滚动标签会被滑出屏幕。请保证用户可以通过左右滑动在不同视图间切换。</p>
+						<p><strong>适合使用固定标签的情景:</strong></p>
+						<ul class="circleList">
+							<li>您的应用需要频繁的切换视图。</li>
+							<li>您的应用只有最多三个顶层视图。</li>
+							<li>您希望用户清楚的了解还有其它功能视图。</li>
+						</ul>
 					</div>
-					<div class="column col8 nomarginRight">
-						<img class="nomarginLR" src="app_structure_music_lndscp.png" />
-						<p class="caption">3D 旋转式的封面展示方式为音乐应用带来了独特的效果。默认显示最近播放的音乐使用户可以保持最近的收听习惯。</p>
+					<div class="column col7 nomarginRight">
+						<img class="nomarginLR" src="app_structure_default_tabs.png" />
+						<p class="caption">固定标签的 Holo Dark 和 Holo Light 样式。</p>
 					</div>
 					<div class="clear"></div>
 				</div>
+				<h4>下拉菜单 (Spinners)</h4>
+				<div>
+					<div class="column col6">
+						<p>下拉菜单 (Spinners) 通过弹出的菜单让用户选择不同的视图。</p>
+						<p><strong>适合使用下拉菜单 (Spinners) 的情景:</strong></p>
+						<ul class="circleList">
+							<li>您不希望标签栏占用过多的垂直空间。</li>
+							<li>用户切换视图时，数据集不发生变化，或者数据集的类型一样。</li>
+						</ul>
+					</div>
+					<div class="column col7 nomarginRight">
+						<img class="nomarginLR" src="app_structure_spinner.png" />
+						<p class="caption">日历应用操作栏中的下拉菜单 (Spinners)。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<h4>导航抽屉</h4>
+				<div>
+					<div class="column col6">
+						<p>导航抽屉从屏幕旁边滑入，为用户提供不同视图的选择。它可以放置很多项目，并且可以从屏幕的任何位置调用滑入。导航抽屉可以显示您应用的多个顶层视图，还可以显示下一级视图，所比较适合复杂的应用。</p>
+						<p><strong>适合使用导航抽屉的情景:</strong></p>
+						<ul class="circleList">
+							<li>您不希望标签栏占用过多的垂直空间。</li>
+							<li>您的应用有很多顶层视图。</li>
+							<li>您的应用需要从低层视图直接切换到其它顶层视图。</li>
+							<li>您的应用需要在多个没有直接联系的视图之间切换。</li>
+							<li>您的应用可能会有较深的导航路径。</li>
+						</ul>
+					</div>
+					<div class="column col7 nomarginRight">
+						<img class="nomarginLR" src="app_structure_drawer.png" />
+						<p class="caption">Keep 应用中的导航抽屉。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<h4>不要混合使用多种模式</h4>
+				<p>请仔细斟酌您应用的顶层视图设计，不要混合使用多种不同的模式。例如使用了固定标签，就不要为应用添加导航抽屉，否则用户可能会觉得复杂且混乱。</p>
 				<div class="contentHeaderWraper">
 					<h2>分类目录</h2>
 				</div>
@@ -153,7 +200,7 @@
 					</div>
 					<div class="clear"></div>
 				</div>
-				<div>
+				<!--<div>
 					<div class="column col4">
 						<h4>沉浸模式</h4>
 						<p>对于沉浸式的内容，例如多媒体和游戏，最好的体验式全屏且没有打扰的。同时沉浸模式并不代表你不能提供例如分享、评论或者搜索之类的操作。如果用户一段时间没有操作任何控件，那么可以自动淡出操作栏和所有的系统 UI 元素，使用户可以享受内容。这种模式被称之为沉浸模式。之后如果用户想进行一些操作，只需要触摸屏幕的任何位置，就会退出沉浸模式并显示控件。</p>
@@ -164,7 +211,7 @@
 						<p>&nbsp;</p>
 					</div>
 					<div class="clear"></div>
-				</div>
+				</div>-->
 				<h4>使详细信息视图之间导航的变得简单</h4>
 				<p>如果用户经常顺序浏览多个项目，那么应当让他们在详细信息视图中直接做到。考虑使用滑动视图 (swipe view) 或者其它替代方法实现这种操作。</p>
 				<img class="nomarginLR" src="app_structure_gmail_swipe.png" />
