@@ -49,6 +49,9 @@ var menuContent = [
 			text : "图标",
 			url : "style/iconography.html"
 		}, {
+			text : "自我标识",
+			url : "style/branding.html"
+		}, {
 			text : "写作风格",
 			url : "style/writing.html"
 		}
@@ -70,6 +73,9 @@ var menuContent = [
 		}, {
 			text : "操作栏",
 			url : "patterns/actionbar.html"
+		}, {
+			text : "导航抽屉",
+			url : "patterns/navigation-drawer.html"
 		}, {
 			text : "多视图布局",
 			url : "patterns/multi-pane-layouts.html"

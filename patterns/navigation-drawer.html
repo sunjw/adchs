@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 导航抽屉</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>导航抽屉&nbsp;<a class="originalLink" href="http://developer.android.com/design/patterns/navigation-drawer.html" target="_blank">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="actionbar.html">上一页</a><a class="buttonNext" href="multi-pane-layouts.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<a class="noticeDev" href="http://developer.android.com/training/implementing-navigation/nav-drawer.html" target="_blank">
+					<div>
+						<h3>开发者文档</h3>
+						<p>Creating a Navigation Drawer</p>
+					</div>
+				</a>
+				<p>The navigation drawer is a panel that transitions in from the left edge of the screen and displays the app’s main navigation options.</p>
+				<h4>Displaying the navigation drawer</h4>
+				<p>The user can bring the navigation drawer onto the screen by swiping from the left edge of the screen or by touching the application icon on the action bar.</p>
+				<p>As the navigation drawer expands, it overlays the content but not the action bar. When the drawer is fully extended, the action bar adjusts its content by replacing the current action bar title with the app name and removing all actions that are contextual to the view underneath the navigation drawer. The overflow menu with the standard action items for Settings and Help remains visible.</p>
+				<img class="nomarginLR" src="navigation_drawer_overview.png" />
+				<p class="caption">The user can open the drawer panel by touching the 导航抽屉提示.</p>
+				<p>Because they are transient, navigation drawers make views less cluttered. You can also use them at deeper levels in the navigation hierarchy, allowing users to switch to your app's most important screens from anywhere in the app.</p>
+				<img class="nomarginLR" src="navigation_drawer_open_from_lower.png" />
+				<p class="caption">Open the drawer from anywhere in your app by swiping from the left edge of the screen. </p>
+				<h4>Dismissing the navigation drawer</h4>
+				<p>When the navigation drawer is expanded, the user can dismiss it in one of four ways:</p>
+				<ul class="circleList">
+					<li>Touching the content outside the navigation drawer</li>
+					<li>Swiping to the left anywhere on the screen (including edge swipe from right)</li>
+					<li>Touching the app icon/title in the action bar</li>
+					<li>Pressing Back</li>
+				</ul>
+				<div class="contentHeaderWraper">
+					<h2>When to Use the Navigation Drawer</h2>
+				</div>
+				<p>The navigation drawer is not a general replacement for top-level navigation via spinners or tabs. The structure of your app should guide your choice of which pattern to use for top-level switching. For more information on top-level switching mechanisms, see the Application Structure design pattern.</p>
+				<p>Here are some examples of where navigation drawers work best:</p>
+				<h4>More than 3 top-level views</h4>
+				<p>Navigation drawers are great for displaying a large number of navigation targets concurrently. Use the navigation drawer if you have more than 3 unique top-level views. If not, use fixed tabs for top-level organization to ease discovery and interaction.</p>
+				<h4>Cross-navigation from lower levels</h4>
+				<p>If your app requires cross-navigating between lower-level screens, consider using the navigation drawer. Because it is accessible from anywhere in the app, the drawer enables efficient navigation from lower-level screens to other important places in your app.</p>
+				<img class="nomarginLR" src="navigation_drawer_cross_nav.png" />
+				<p class="caption">The navigation drawer makes cross-navigation at lower levels possible.</p>
+				<h4>Deep navigation branches</h4>
+				<p>If you have particularly deep branches, navigating to the top-level of your app can become repetitive and cumbersome with Up and Back alone. Since navigation drawers are accessible from anywhere in the app, navigation up to the top level is faster and more efficient.</p>
+				<img class="nomarginLR" src="navigation_drawer_quick_to_top.png" />
+				<p class="caption">The navigation drawer allows for quick jumps to the top-level of your app, removing the need for repetitive Back or Up sequences.</p>
+				<div class="contentHeaderWraper">
+					<h2>Navigation Hub</h2>
+				</div>
+				<p>The navigation drawer is a reflection of your app’s structure and displays its major navigation hubs. Think of navigation hubs as those places in your app that a user will want to visit frequently or use as a jumping-off point to other parts of the app. At a minimum, the navigation hubs are the top-level views, since they correspond to your app’s major functional areas.</p>
+				<p>If your app’s structure is deep, you can add screens from lower levels that your users will likely visit often and make those navigation hubs as well.</p>
+				<img class="nomarginLR" src="navigation_drawer_navigation_hubs.png" />
+				<p class="caption">The navigation drawer contains all of your app's navigation hubs. Include your top level screens as well as important lower-level screens.</p>
+				<div>
+					<div class="column col8">
+						<p>To facilitate access to the navigation drawer on navigation hubs, all screens that correspond to an entry in your navigation drawer should show 导航抽屉提示 next to the application icon in the action bar. Touching the app icon causes the navigation drawer to slide in from the left. </p>
+						<p>All other lower-level screens show the traditional Up indicator next to the application icon. The drawer is still accessible with an edge-swipe, but is not featured in the action bar.</p>
+					</div>
+					<div class="column col5 nomarginRight">
+						<img class="nomarginLR" src="navigation_drawer_indicator_big.png" />
+						<p class="caption">App icon with 导航抽屉提示.</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>Content of the Navigation Drawer</h2>
+				</div>
+				<p>Keep the content of the navigation drawer focused on app navigation. Expose the navigation hubs of your app as list items inside the navigation drawer - one item per row. </p>
+				<div>
+					<div class="column col8">
+						<h4>Titles, icons, and counters</h4>
+						<p>You can structure navigation targets by adding titles. The titles are not interactive, but just organize navigation targets into functional topics. If you have many navigation targets, use titles to orient the user within the drawer.</p>
+						<p>Navigation targets can have optional leading icons as well as trailing counters. Use the counters to inform users about a changed state of data in the corresponding view.</p>
+					</div>
+					<div class="column col5 nomarginRight">
+						<img class="nomarginLR" src="navigation_drawer_titles_icons.png" />
+						<p class="caption">Use titles and icons to organize your drawer.</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col8">
+						<img class="nomarginLR" src="navigation_drawer_collapse.png" />
+						<p class="caption">Collapsible navigation items are split. Use the left side for navigation and the right to collapse and expand items.</p>
+					</div>
+					<div class="column col5 nomarginRight">
+						<h4>Collapsible navigation items</h4>
+						<p>If you have many views with some subordinate to others, consider collapsing them into one expandable item to conserve space. The parent in the navigation drawer then turns into a split item. The left side allows navigation to the parent item’s view, and the right side collapses or expands the list of child items.</p>
+						<p>At launch, the initial state of the collapsible items is up to you. As a rule, all top-level view entries of the navigation drawer should be visible. If you have many collapsible items, consider collapsing all items to allow the user to see the top-level views in their entirety.</p>
+						<p>When the user opens the drawer from a lower-level screen, expand the associated branch of the top-level view to give a stronger sense of place and highlight navigation opportunities close to the user’s current location in the app.</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>Navigation Drawers and Action Bars</h2>
+				</div>
+				<p>When the user expands the navigation drawer, the task focus switches to selecting an item from the drawer. Because the drawer does not overlay the action bar, users may not realize that the items in the action bar do not pertain to the navigation drawer.</p>
+				<p>To reduce confusion, adjust the content of the action bar to the following, once the drawer is fully expanded:</p>
+				<ul class="circleList">
+					<li>App icon</li>
+					<li>App name</li>
+					<li>Remove actions from the action bar that are contextual to the underlying view (such as Create new, Refresh). You may retain actions with global scope, such as “Search”.</li>
+					<li>Overflow menu with expected navigation targets, such as Settings and Help.</li>
+				</ul>
+				<img class="nomarginLR" src="navigation_drawer_open_overflow.png" />
+				<p class="caption">Clean up the action bar when the drawer is fully expanded. Remove actions that are not needed and display your app's name in the title area.</p>
+				<div>
+					<div class="column col6">
+						<img class="nomarginLR" src="navigation_drawer_nav_and_actions.png" />
+						<p class="caption">Keep actions on the right side of the action bar and in the overflow.</p>
+					</div>
+					<div class="column col6 nomarginRight">
+						<p>Don’t place actions in the navigation drawer. Actions belong in the action bar, and the user expects to see them there. Keep in mind that not all applications use the navigation drawer pattern. It may be tempting to expose all your app’s capabilities in a single place, but keep the bigger picture in mind. Place your actions where all apps display them.</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col6">
+						<p>This also applies to common navigation targets, such as access to Help or the app’s Settings. As per style guide convention Help and Settings are always located in the action overflow.</p>
+					</div>
+					<div class="column col6 nomarginRight">
+						<img class="nomarginLR" src="navigation_drawer_settings_help.png" />
+						<p class="caption">Keep Help and Settings in the overflow.</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<h4>Contextual action bars</h4>
+				<p>Sometimes the user will be in a state where a contextual action bar (CAB) appears instead of the app’s action bar. This typically happens when the user selects text or selects multiple items after a press-and-hold gesture. While the CAB is visible, you should still allow the user to open the navigation drawer using an edge swipe. However, replace the CAB with the standard action bar while the navigation drawer is open. When the user dismisses the drawer, re-display the CAB.</p>
+				<img class="nomarginLR" src="navigation_drawer_CAB.png" />
+				<p class="caption">Hide contextual action bars while the drawer is visible.</p>
+				<p>If the user navigates away from a view with selected content, deselect the content before before navigating to the new view.</p>
+				<div class="contentHeaderWraper">
+					<h2>Interaction Details</h2>
+				</div>
+				<h4>Introduce the user to the drawer at first use</h4>
+				<p>Upon first launch of your app, introduce the user to the navigation drawer by automatically opening it. This ensures that users know about the navigation drawer and prompts them to learn about the structure of your app by exploring its content. Continue showing the drawer upon subsequent launches until the user actively expands the navigation drawer manually. Once you know that the user understands how to open the drawer, launch the app with the navigation drawer closed.</p>
+				<img class="nomarginLR" src="navigation_drawer_first_run.png" />
+				<p class="caption">At first use, show the navigation drawer automatically to help the user learn the functionality and structure of your app.</p>
+				<h4>Give the user a quick peek</h4>
+				<p>If the user touches the very left edge of the screen (within 20 dp from the left), have the drawer peek out as soon as the finger makes contact with the display. This promotes accidental discovery and provides richer feedback.</p>
+				<img class="nomarginLR" src="navigation_drawer_peek.png" />
+				<p class="caption">The navigation drawer peeks out when the user touches the very left edge of the screen.</p>
+				<h4>Highlights</h4>
+				<p>When you open the navigation drawer from a screen that is represented inside the drawer, highlight its entry in the drawer. Vice versa, if you open the drawer from a screen that is not listed in the drawer, none of the items of the drawer should be highlighted.</p>
+				<div class="contentHeaderWraper">
+					<h2>Impact of Drawer on Overall App Navigation</h2>
+				</div>
+				<p>The navigation drawer is an alternative to other top-level navigation patterns. To make apps with navigation drawers work consistently with apps that use a tab or spinner pattern, remember that all navigation requirements for system Back and Up apply.</p>
+				<p>Pay special attention to the following situations:</p>
+				<h4>System Back at the top level of the app</h4>
+				<p>Touching System Back at the app’s top level never opens the navigation drawer. Instead, System Back behaves according to the navigation rules for the top level, such as navigating to the previous app within the task or navigating to the Home screen.</p>
+				<img class="nomarginLR" src="navigation_drawer_top_out.png" />
+				<p class="caption">System Back does not show the drawer, but behaves according to the navigation rules for the top level.</p>
+				<h4>System Back after cross navigation to lower hierarchy levels</h4>
+				<p>If the user navigates to a lower hierarchy screen from the navigation drawer and the screen has a direct parent, then the Back stack is reset and Back points to the target screen’s parent. This Back behavior is the same as when a user navigates into an app from a notification.</p>
+				<img class="nomarginLR" src="navigation_drawer_reset_backstack.png" />
+				<p class="caption">Reset the Back stack if your lower-level navigation target has direct parents.</p>
+				<div class="contentHeaderWraper">
+					<h2>Style</h2>
+				</div>
+				<p>The width of the navigation drawer depends on the content you want to display, but should be between a minimum of 240 dp and a maximum of 320 dp. The height of the individual line items should not fall below 48 dp. See the layout guideline below for recommendations on padding and spacing.</p>
+				<img class="nomarginLR" src="navigation_drawer_layout.png" />
+				<p class="caption">Layout guidelines for the navigation drawer.</p>
+				<p>Pick the drawer background to best match your app’s theme. See the following examples for a Holo light and a Holo dark themed drawer.</p>
+				<img class="nomarginLR" src="navigation_drawer_holo_dark_light.png" />
+				<p class="caption">Navigation drawers in Holo light and Holo dark themed apps. </p>
+				<div class="contentHeaderWraper">
+					<h2>检查清单</h2>
+				</div>
+				<p>无论您使用标准的导航抽屉还是自己实现的类似导航栏，请注意保持以下的设计模式:</p>
+				<ul class="circleList">
+					<li>
+						<p>始终显示操作栏，并根据需要调整内容。</p>
+					</li>
+					<li>
+						<p>导航抽屉覆盖在内容之上。</p>
+					</li>
+					<li>
+						<p>导航抽屉中的所有视图都在操作栏提供带有导航抽屉提示的应用图标，并可以通过触摸图标打开导航抽屉。</p>
+					</li>
+					<li>
+						<p>使用新设计的滑入滑出动画。</p>
+					</li>
+					<li>
+						<p>不包含在导航抽屉中的视图都在操作栏提供标准的“向上”按钮。</p>
+					</li>
+					<li>
+						<p>保持标准的“向上”和“返回”按钮行为。</p>
+					</li>
+				</ul>
+			</div><!-- mainContent -->
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="actionbar.html">上一页</a><a class="buttonNext" href="multi-pane-layouts.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+		</div>
+	</div>
+</body>
+</html>
