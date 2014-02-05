@@ -15,6 +15,27 @@
 		background: url('ico_web.png') left top no-repeat;
 		padding-left: 40px;
 	}
+	#mainContent table {
+		margin: 0 0 10px 0;
+	}
+	table {
+		background-color: #F7F7F7;
+		border: 0 none;
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	th,td {
+		padding: 4px 12px;
+		text-align: left;
+		border: 1px solid #DDDDDD;
+	}
+	th {
+		background-color: #999999;
+		color: #FFFFFF;
+	}
+	td {
+		vertical-align: top;
+	}
 	</style>
 	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
@@ -31,7 +52,7 @@
 		<div id="content">
 			<div class="contentNav topNav">
 				<div class="contentHeaderWraper">
-					<h2>图标&nbsp;<a class="originalLink" href="http://developer.android.com/design/style/iconography.html">Original Version</a></h2>
+					<h2>图标&nbsp;<a class="originalLink" href="http://developer.android.com/design/style/iconography.html" target="_blank">Original Version</a></h2>
 				</div>
 				<div class="buttonWrapper">
 					<a class="buttonPrev" href="color.html">上一页</a><a class="buttonNext" href="writing.html">下一页</a>
@@ -259,15 +280,15 @@
 					<h2>设计小技巧</h2>
 				</div>
 				<p>以下这些小技巧可能对你创建图标或其他图片资源有所帮助。这里我们假定你也使用诸如 Adobe® Photoshop® 这类的位图或矢量图编辑程序。</p>
-				<h3>尽可能使用矢量图</h3>
+				<h4>尽可能使用矢量图</h4>
 				<p>Adobe® Photoshop® 这类图像编辑工具运行用户混合使用矢量图和位图。尽可能的使用使用矢量图，这样在需要放大图标时就可以避免细节上的损失。使用矢量图的另一个好处是为能更方便的为像素密度低的屏幕剪裁图标元素。</p>
-				<h3>使用更大的画布</h3>
+				<h4>使用更大的画布</h4>
 				<p>为了更好的适配不同的像素密度，最好使用数倍于目标图标尺寸的画布。例如，启动图标在 MDPI、HDPI、XHDPI 和 XXHDPI 下的宽度为 48、72、96 和 144 px，使用 864x864 px 的画板可以降低缩放图标时的工作量。</p>
 
-				<h3>缩放时，按需重绘位图图层</h3>
+				<h4>缩放时，按需重绘位图图层</h4>
 				<p>如果需要放大的图标中包含位图图层，这些图层需要进行手动重绘，以便在更高的像素密度下获得更好的显示效果。例如，为 MDPI 所绘制的 60x60 px 的圆，在适配 HDPI 屏幕时需重绘成 90x90 px。</p>
 
-				<h3>图标命名约定</h3>
+				<h4>图标命名约定</h4>
 				<p>遵守一定的图标命名约定有助于图标文件的管理。我们可以为不同类型的图标指定不同的命名前缀：</p>
 				<table>
 					<tr>
@@ -307,7 +328,7 @@
 					</tr>
 				</table>
 				<p>此处给出的命名约定只是作为示例，您可以根据需求建立自己的命名约定。</p>
-				<h3>按像素密度对图标进行归档</h3>
+				<h4>按像素密度对图标进行归档</h4>
 				<p>支持多像素密度意味着同一图标会有不同的版本。为了方便管理，我们建议按照像素密度对相应的图标文件进行归档保存。例如：</p>
 				<pre class="prettyprint">
 					art/...
@@ -346,9 +367,8 @@
 					<em>finished_asset</em>.png
 				</pre>
 				<p>关于应用内资源文件保存方式的更多内容，参见 <a href="http://developer.android.com/guide/topics/resources/providing-resources.html" target="_blank">Providing Resources</a> .</p>
-				<h3>删除最终版本中无关的元信息</h3>
+				<h4>删除最终版本中无关的元信息</h4>
 				<p>虽然 Android SDK 工具在打包应用时会自动压缩 PNG 文件，我们应该养成删除无关元信息的良好习惯。借助 <a href="http://optipng.sourceforge.net/" target="_blank">OptiPNG</a> 和 <a href="http://pmt.sourceforge.net/pngcrush/" target="_blank">Pngcrush</a> 这样的工具，可以实现元信息删除和文件尺寸压缩这样的操作。</p>
-				</div>						
 			</div>
 			<div class="contentNav bottomNav">
 				<div class="buttonWrapper">
