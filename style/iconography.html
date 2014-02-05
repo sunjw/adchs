@@ -40,6 +40,13 @@
 			<div id="mainContent">
 				<img class="nomarginLR" src="iconography_overview.png" />
 				<p>图标就是一个表示屏幕内容并为操作、状态和应用提供第一印象的小图片。</p>
+				<p>在为应用设计图标时，需要牢记设备是多种多样的，这就带来了不同的像素密度（详见设备与显示）。为了应对这一问题，提供不同尺寸的图标是个不错的主意。Android 会根据你提供的图标来针对不同设备优化选择。</p>
+				<p>由于所有图标都需要适配不同的像素密度，这里引入 <acronym titlex="density-independent pixels">dp</acronym> 这一单位，它以中等尺寸，MDPI的屏幕为基准提供像素密度无关的表示。</p>
+				<img src="devices_displays_density@2x.png" alt="" height="160">
+				<p>在设计图标时，对于五种主流的像素密度（MDPI、HDPI、XHDPI、XXHDPI 和 XXXHDPI）应按照 <strong>2:3:4:6:8 的比例进行缩放</strong>。例如，一个启动图标的尺寸为48x48 dp，这表示在 MDPI 的屏幕上其实际尺寸应为 48x48 px，在 HDPI 的屏幕上其实际大小是 MDPI 的 1.5 倍 (72x72 px)，在 XDPI 的屏幕上其实际大小是 MDPI 的 2 倍 (96x96 px)，依此类推。</p>
+				<div class="noteInfo">
+					<p><strong>提示：</strong>虽然 Android 也支持低像素密度 (LDPI) 的屏幕，但无需为此费神，系统会自动将 HDPI 尺寸的图标缩小到 1/2 进行匹配。
+				</div>
 				<div class="contentHeaderWraper">
 					<h2>启动图标</h2>
 				</div>
@@ -95,7 +102,7 @@
 				</div>
 				<p>操作栏图标是一个图像按钮，用来表示用户在应用中可以执行的重要操作。每一个图标都使用一个简单的隐喻来代表将要执行的操作，用户应当一目了然。</p>
 				<p>内置的图标应当用来表示一些确定的通用操作，例如“刷新”和“分享”。下载链接提供了一个图标包，其中的图标可以缩放到多种屏幕分辨率，并且适合于浅色和深色的 Holo 主题。图标包中还有没有样式化的图标，可以和您自己的主题搭配，并且提供了 Adobe&reg; Illustrator&reg; 源文件，您可以自己修改。</p>
-				<p><a href="https://dl-ssl.google.com/android/design/Android_Design_Icons_20120229.zip" target="_blank">下载操作栏图标包</a></p>
+				<p><a href="http://developer.android.com/downloads/design/Android_Design_Icons_20131106.zip" target="_blank">下载操作栏图标包</a></p>
 				<div>
 					<div class="column col4">
 						<img class="nomarginLR" src="iconography_actionbar_size.png" />
@@ -245,9 +252,103 @@
 					</div>
 					<div class="column col8">
 						<img class="nomarginLR" src="iconography_notification_example.png" />
-					</div>
+					</div>			
 					<div class="clear"></div>
 				</div>
+				<div class="contentHeaderWraper">
+					<h2>设计小技巧</h2>
+				</div>
+				<p>以下这些小技巧可能对你创建图标或其他图片资源有所帮助。这里我们假定你也使用诸如 Adobe® Photoshop® 这类的位图或矢量图编辑程序。</p>
+				<h3>尽可能使用矢量图</h3>
+				<p>Adobe® Photoshop® 这类图像编辑工具运行用户混合使用矢量图和位图。尽可能的使用使用矢量图，这样在需要放大图标时就可以避免细节上的损失。使用矢量图的另一个好处是为能更方便的为像素密度低的屏幕剪裁图标元素。</p>
+				<h3>使用更大的画布</h3>
+				<p>为了更好的适配不同的像素密度，最好使用数倍于目标图标尺寸的画布。例如，启动图标在 MDPI、HDPI、XHDPI 和 XXHDPI 下的宽度为 48、72、96 和 144 px，使用 864x864 px 的画板可以降低缩放图标时的工作量。</p>
+
+				<h3>缩放时，按需重绘位图图层</h3>
+				<p>如果需要放大的图标中包含位图图层，这些图层需要进行手动重绘，以便在更高的像素密度下获得更好的显示效果。例如，为 MDPI 所绘制的 60x60 px 的圆，在适配 HDPI 屏幕时需重绘成 90x90 px。</p>
+
+				<h3>图标命名约定</h3>
+				<p>遵守一定的图标命名约定有助于图标文件的管理。我们可以为不同类型的图标指定不同的命名前缀：</p>
+				<table>
+					<tr>
+						<th>图标类型</th>
+						<th>命名前缀</th>
+						<th>例</th>
+					</tr>
+					<tr>
+						<td>图标</td>
+						<td><code>ic_</code></td>
+						<td><code>ic_star.png</code></td>
+					</tr>
+					<tr>
+						<td>启动图标</td>
+						<td><code>ic_launcher</code></td>
+						<td><code>ic_launcher_calendar.png</code></td>
+					</tr>
+					<tr>
+						<td>菜单图标和操作栏图标</td>
+						<td><code>ic_menu</code></td>
+						<td><code>ic_menu_archive.png</code></td>
+					</tr>
+					<tr>
+						<td>状态栏图标</td>
+						<td><code>ic_stat_notify</code></td>
+						<td><code>ic_stat_notify_msg.png</code></td>
+					</tr>
+					<tr>
+						<td>标签选项卡图标</td>
+						<td><code>ic_tab</code></td>
+						<td><code>ic_tab_recent.png</code></td>
+					</tr>
+					<tr>
+						<td>对话框图标</td>
+						<td><code>ic_dialog</code></td>
+						<td><code>ic_dialog_info.png</code></td>
+					</tr>
+				</table>
+				<p>此处给出的命名约定只是作为示例，您可以根据需求建立自己的命名约定。</p>
+				<h3>按像素密度对图标进行归档</h3>
+				<p>支持多像素密度意味着同一图标会有不同的版本。为了方便管理，我们建议按照像素密度对相应的图标文件进行归档保存。例如：</p>
+				<pre class="prettyprint">
+					art/...
+					mdpi/...
+					_pre_production/...
+					<em>working_file</em>.psd
+					<em>finished_asset</em>.png
+					hdpi/...
+					_pre_production/...
+					<em>working_file</em>.psd
+					<em>finished_asset</em>.png
+					xhdpi/...
+					_pre_production/...
+					<em>working_file</em>.psd
+					<em>finished_asset</em>.png
+					xxhdpi/...
+					_pre_production/...
+					<em>working_file</em>.psd
+					<em>finished_asset</em>.png
+					xxhdpi/...
+					_pre_production/...
+					<em>working_file</em>.psd
+					<em>finished_asset</em>.png
+				</pre>
+				<p>这一归档方式与应用内保存图标文件的方式相似，可以方便的进行文件复制。此外由于不同像素密度下的同一图标文件必须使用同一个文件名，借助这一归档方式我们可以方便的检查文件命名的一致性。</p>
+				<p>作为参考，这里也给出应用内保存图标文件的方式：</p>
+				<pre class="prettyprint">
+					res/...
+					drawable-ldpi/...
+					<em>finished_asset</em>.png
+					drawable-mdpi/...
+					<em>finished_asset</em>.png
+					drawable-hdpi/...
+					<em>finished_asset</em>.png
+					drawable-xhdpi/...
+					<em>finished_asset</em>.png
+				</pre>
+				<p>关于应用内资源文件保存方式的更多内容，参见 <a href="http://developer.android.com/guide/topics/resources/providing-resources.html" target="_blank">Providing Resources</a> .</p>
+				<h3>删除最终版本中无关的元信息</h3>
+				<p>虽然 Android SDK 工具在打包应用时会自动压缩 PNG 文件，我们应该养成删除无关元信息的良好习惯。借助 <a href="http://optipng.sourceforge.net/" target="_blank">OptiPNG</a> 和 <a href="http://pmt.sourceforge.net/pngcrush/" target="_blank">Pngcrush</a> 这样的工具，可以实现元信息删除和文件尺寸压缩这样的操作。</p>
+				</div>						
 			</div>
 			<div class="contentNav bottomNav">
 				<div class="buttonWrapper">
