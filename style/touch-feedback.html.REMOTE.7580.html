@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 触摸反馈</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>触摸反馈&nbsp;<a class="originalLink" href="http://developer.android.com/design/style/touch-feedback.html" target="_blank">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="themes.html">上一页</a><a class="buttonNext" href="metrics-grids.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<div>
+					<div class="column col7">
+						<p>使用颜色和光晕效果来反馈触摸，强调手势的效果以及表明哪些操作是可用的。</p>
+						<p><strong>用优雅的方式进行触摸反馈。</strong>任何时候，用户触摸应用中的可操作区域，都应当给予视觉上的响应。微小的反馈就能取得良好的效果。这样做有两个好处：</p>
+						<ul class="circleList">
+							<li><a href="/design/get-started/principles.html#sprinkle-encouragement">给予鼓励</a>总是比给予惊吓要好。</li>
+							<li><a href="design/style/branding.html">your branding</a>，因为无论与何种色调配合，默认的触摸反馈都能很好的工作。</li>
+						</ul>
+					</div>
+					<div class="column col6 nomarginRight">
+						<video class="clickPlay" width="268" height="442" autoplay>
+    						<source src="http://developer.android.com/design/media/touch_feedback.mp4" type="video/mp4">
+    						<source src="http://developer.android.com/design/media/touch_feedback.webm" type="video/webm">
+    						<source src="http://developer.android.com/design/media/touch_feedback.ogv" type="video/ogg">
+  						</video>
+  						<p class="videoInstruction">点击重放视频。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<h4>状态</h4>
+				<img class="nomarginLR" src="touch_feedback_states.png" />
+				<p class="caption">大多数的 Android UI 元素都有内置的触摸反馈效果，包括可以表明元素是否可以操作的视觉效果。</p>
+				<p>&nbsp;</p>
+				<div>
+					<div class="column col4">
+						<h4>交流</h4>
+						<p>当您的对象需要对复杂的手势做出响应时，应当能够帮助用户了解该操作的结果将会是什么。例如，当您开始左右滑动缩略图的时候，它就开始变得暗淡。这样做可以使得用户明白滑动可以移除该缩略图。</p>
+					</div>
+					<div class="column col9 nomarginRight">
+						<img class="nomarginLR" src="touch_feedback_manipulation.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<p>&nbsp;</p>
+				<div>
+					<div class="column col6">
+						<img class="nomarginLR" src="touch_feedback_communication.png" />
+						<p class="caption">当用户试图从主屏幕的最后一屏向右滑动时，屏幕就会向右倾斜表明不能再往这边移动了。</p>
+
+					</div>
+					<div class="column col6 nomarginRight">
+						<h4>边界</h4>
+						<p>当用户试图将可滑动的区域滑动出上下边界时，应当在边界提供视觉的反馈。许多 Android 的可滑动控件 (例如列表 lists 和网格列表 grid lists) 都已经内置了边界反馈。如果需要使用自定义控件，记住要提供边界反馈哦。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="themes.html">上一页</a><a class="buttonNext" href="metrics-grids.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+		</div>
+	</div>
+</body>
+</html>
