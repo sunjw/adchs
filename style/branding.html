@@ -7,7 +7,14 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
 	<style type="text/css">
-
+	#content div.wrong {
+		background: url('ico_wrong.png') left 3px no-repeat;
+		padding-left: 20px;
+	}
+	#content div.good {
+		background: url('ico_good.png') left 3px no-repeat;
+		padding-left: 20px;
+	}
 	</style>
 	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
@@ -24,10 +31,10 @@
 		<div id="content">
 			<div class="contentNav topNav">
 				<div class="contentHeaderWraper">
-					<h2>自我标识&nbsp;<a class="originalLink" href="http://developer.android.com/design/style/branding.html">Original Version</a></h2>
+					<h2>自我标识&nbsp;<a class="originalLink" href="http://developer.android.com/design/style/branding.html" target="_blank">Original Version</a></h2>
 				</div>
 				<div class="buttonWrapper">
-					<a class="buttonPrev" href="metrics-grids.html">上一页</a><a class="buttonNext" href="color.html">下一页</a>
+					<a class="buttonPrev" href="iconography.html">上一页</a><a class="buttonNext" href="writing.html">下一页</a>
 				</div>
 			</div>
 			<div id="mainContent">
@@ -47,24 +54,21 @@
 						<img src="branding_googlemusic.png" style="width:94%">
 						<p class="caption">Google Play Music 应用使用一种橙色主题来强调操作栏、当前标签页选项卡、滚动指示和超链接。</p>
 					</div>
+					<div class="clear"></div>
 				</div>
-				<div class="clear"></div>
 				<div class="contentHeaderWraper">
-					<h2>logo</h2>
+					<h2>Logo</h2>
 				</div>
-				<p>应用的 <a href="iconography.html#launcher">启动图标</a> 作为启动应用的入口是展示 logo 的最佳场所。你也可以将启动图标放置在 <a href="../patterns/actionbar.html">操作栏</a> 上，从而保证在应用内的所有页面上都能看到它。</p>
-				<p>另一种选择是用您的 logo 取代启动图标和应用名放置在操作栏。
-				</p>
+				<p>应用的 <a href="iconography.html">启动图标</a> 作为启动应用的入口是展示 logo 的最佳场所。你也可以将启动图标放置在 <a href="../patterns/actionbar.html">操作栏</a> 上，从而保证在应用内的所有页面上都能看到它。</p>
+				<p>另一种选择是用您的 logo 取代启动图标和应用名放置在操作栏。</p>
 				<div>
-					<div class="column col6" style="padding-top:24px;">
+					<div class="column col6">
 						<img src="branding_launcher_icon.png" style="width:60px;float:left;padding-right:1em;">	
-						<div class="caption" style="width:290px;margin-left:20px;">
-							Google+ 通过将启动图标放置在操作栏来进行自我标识。
-						</div>
+						<p class="caption">Google+ 通过将启动图标放置在操作栏来进行自我标识。</p>
 						<img src="branding_logo_icon_action_bar.png" style="width:320px;float:left;padding-right:1em;">
 					</div>
 					<div class="column col6 nomarginRight">
-						<img src="yourbranding_app.png" style="width:320px;">
+						<img src="yourbranding_app.png" width="320px">
 						<p class="caption">一个直接将 logo 放置于操作栏的例子，适用于 logo 显性表示了应用名的场合。</p>
 					</div>
 					<div class="clear"></div>
@@ -72,32 +76,41 @@
 				<div class="contentHeaderWraper">
 					<h2>图标</h2>
 				</div>
-				<div class="column col6">
-					<p>如果有一些图标在其他平台上已被用于您的应用并且反映良好，将它们移用到 Android 应用中并没有问题。<strong>需要注意的是，请务必保持应用中所有图标的风格一致。</strong></p>
+				<div>
+					<div class="column col6">
+						<p>如果有一些图标在其他平台上已被用于您的应用并且反映良好，将它们移用到 Android 应用中并没有问题。<strong>需要注意的是，请务必保持应用中所有图标的风格一致。</strong></p>
+					</div>
+					<div class="column col6 nomarginRight">
+						<img src="yourbranding_in-app-icons.png" width="300px" />
+					</div>
+					<div class="clear"></div>
 				</div>
-			</div>
-			<div class="column col6 nomarginRight">
-				<img src="yourbranding_in-app-icons.png" style="width:300px;margin:12px 48px 0 16px;">
-			</div>
-			<div class="clear"></div>
-			<p>例外情况：当您现有的图标集中存在符号标识和 Android 冲突时，请根据 Android 的符号标识重绘符合您风格的图标。这样，用户才能够移用在其他应用中学习到的内容 (设计原则： <a href="../get-started/principles.html#give-me-tricks">告诉哥适用于各处的小技巧</a> )。并且不会破坏应用中图标的一致性。</p>
-			<p><strong>例子：</strong></p>
-			<div class="column col6">
-				<p>其他平台的分享图标是一个向右的箭头</p>
-			</div>
-			<div class="column col6 nomarginRight">
-				<div style="margin-bottom:1em;">
-					<class="wrong" style="margin-left:12px">Don't</span>
-					<class="good"><strong>Do</strong></span>
+				<p>例外情况：当您现有的图标集中存在符号标识和 Android 冲突时，请根据 Android 的符号标识重绘符合您风格的图标。这样，用户才能够移用在其他应用中学习到的内容 (设计原则： <a href="../get-started/principles.html">告诉哥适用于各处的小技巧</a> )。并且不会破坏应用中图标的一致性。</p>
+				<p><strong>例子：</strong></p>
+				<div>
+					<div class="column col6">
+						<p>其他平台的分享图标是一个向右的箭头</p>
+					</div>
+					<div class="column col6 nomarginRight">
+						<div>
+							<div class="column col2">
+								<div class="wrong">Don't</div>
+							</div>
+							<div class="column col3 nomarginRight">
+								<div class="good">Do</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<img src="yourbranding_sharing.png" width="180px" />
+					</div>
+					<div class="clear"></div>
 				</div>
-				<img src="yourbranding_sharing.png" style="width:180px;">
+				<p>如果你没有现成的图标可用呢？比如，你在创造一个 Android only 的全新应用。这种情况下，使用 Android 的标准图标，通过配色和 logo 来进行自我标识。您可以在 <a href="http://developer.android.com/design/downloads/index.html" target="_blank">Downloads</a> 中找到供免费下载的 Action Bar Icon Pack.</p>
 			</div>
-			<div class="clear"></div>
-			<p>如果你没有现成的图标可用呢？比如，你在创造一个 Android only 的全新应用。这种情况下，使用 Android 的标准图标，通过配色和 logo 来进行自我标识。您可以在 <a href="http://developer.android.com/design/downloads/index.html" target="_blank">Downloads</a> 中找到供免费下载的 Action Bar Icon Pack.</p>
-		</div>
-		<div class="contentNav bottomNav">
-			<div class="buttonWrapper">
-				<a class="buttonPrev" href="metrics-grids.html">上一页</a><a class="buttonNext" href="color.html">下一页</a>
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="iconography.html">上一页</a><a class="buttonNext" href="writing.html">下一页</a>
+				</div>
 			</div>
 		</div>
 	</div>
