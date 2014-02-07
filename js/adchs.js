@@ -162,7 +162,12 @@ function fillMenu() {
 	if (curPage.search(".html") == -1) {
 		curPage = "index.html"; // fix default page.
 	}
-	var idx = curPage.search("#");
+	var idx = -1;
+	idx = curPage.indexOf("#");
+	if (idx != -1) {
+		curPage = curPage.substring(0, idx);
+	}
+	idx = curPage.indexOf("?");
 	if (idx != -1) {
 		curPage = curPage.substring(0, idx);
 	}
