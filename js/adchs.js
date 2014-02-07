@@ -83,6 +83,9 @@ var menuContent = [
 			text : "滑动视图",
 			url : "patterns/swipe-views.html"
 		}, {
+			text : "全屏模式",
+			url : "patterns/fullscreen.html"
+		}, {
 			text : "选择",
 			url : "patterns/selection.html"
 		}, {
