@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
-    <title>Android Design - 写作风格</title>
+	<title>Android Design - 写作风格</title>
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
@@ -40,6 +40,26 @@
 		border-top: 1px solid #494949;
 		text-align: center;
 	}
+	table {
+		background-color: #F7F7F7;
+		border: 0 none;
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	td {
+		padding: 4px 12px;
+		text-align: left;
+		border: 1px solid #DDDDDD;
+		vertical-align: top;
+	}
+	td.wrong {
+		background: url('ico_wrong.png') left 3px no-repeat;
+		padding-left: 20px;
+	}
+	td.good {
+		background: url('ico_good.png') left 3px no-repeat;
+		padding-left: 20px;
+	}
 	</style>
 	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
@@ -63,42 +83,26 @@
 				</div>
 			</div>
 			<div id="mainContent">
-				<p>为您的应用选择文字说明时 (以下内容是为英语而编写，中文应当酌情考虑):</p>
-				<ul>
-					<li>
-						<p>1. <span class="highlight">保持简短。</span>简明、简单和精确。30 个字符以内 (包括空格)，除非必要不要使用更多文字。</p>
-					</li>
-					<li>
-						<p>2. <span class="highlight">保持简单。</span>假设您的用户是聪明且有能力理解，但是不要熬述技术细节并且考虑到英语不好的同志。使用短词语、主动词和简单名词。</p>
-					</li>
-					<li>
-						<p>3. <span class="highlight">友好。</span>使用缩写。和您的用户对话时使用第二人称 (“您”或者“你”)。如果您的文字在日常对话中不能表示您的意思，您应当重新考虑一下。努力让用户感到安全、高兴和充满活力。</p>
-					</li>
-					<li>
-						<p>4. <span class="highlight">先说重要的事。</span>一句话的开头两个词 (一共大约 11 个字母，包括空格) 应当表达出重要的信息。</p>
-					</li>
-					<li>
-						<p>5. <span class="highlight">仅说明必要的信息。</span>不要费力解释微妙的细节。大部分用户不会去看的。</p>
-					</li>
-					<li>
-						<p>6. <span class="highlight">避免重复。</span>表达某个意思的单词在同一屏或同一块文字中尽量只出现一次。多次表达该意思应当使用不同的单词。</p>
-					</li>
-				</ul>
 				<div class="contentHeaderWraper">
-					<h2>例子</h2>
+					<h2>要有 Android 的腔调</h2>
 				</div>
-				<p>下面的翻译可能和一些 Android 版本的翻译不一样。</p>
-				<p>1. <span class="highlight">保持简短</span>:</p>
+				<p>撰写应用相关文本时应保持简短、简明和友好。 (以下内容是为英语而编写，中文应当酌情考虑。下面的翻译可能和一些 Android 版本的翻译不一致)</p>
+				<h4>简短</h4>
+				<ul class="circleList">
+					<li>只告知用户最必要的信息。</li>
+					<li>避免冗余的表述。</li>
+					<li>尽可能的缩短文本长度。</li>
+				</ul>
 				<div class="exampleItem">
 					<div>
 						<div class="column col6">
-							<div class="wrong">太正式</div>
+							<div class="wrong">Don't</div>
 							<table>
 								<tr><td>Consult the documentation that came with your phone for further instructions.</td></tr>
 							</table>
 						</div>
 						<div class="column col6 nomarginRight">
-							<div class="good">这样更好</div>
+							<div class="good">Do</div>
 							<table>
 								<tr><td>Read the instructions that came with your phone.</td></tr>
 							</table>
@@ -119,162 +123,10 @@
 						<div class="clear"></div>
 					</div>
 				</div>
-				<p>2. <span class="highlight">保持简单</span>:</p>
 				<div class="exampleItem">
 					<div>
 						<div class="column col6">
-							<div class="wrong">迷惑</div>
-							<table>
-								<tr><th>Use GPS satellites</th></tr>
-								<tr><td>When locating, accurate to street level.</td></tr>
-							</table>
-						</div>
-						<div class="column col6 nomarginRight">
-							<div class="good">这样更好</div>
-							<table>
-								<tr><th>GPS</th></tr>
-								<tr><td>Let apps use satellites to pinpoint your location.</td></tr>
-							</table>
-						</div>
-						<div class="clear"></div>
-					</div>
-					<div>
-						<div class="column col6">
-							<table>
-								<tr><th>使用 GPS 卫星</th></tr>
-								<tr><td>定位到街道级别</td></tr>
-							</table>
-						</div>
-						<div class="column col6 nomarginRight">
-							<table>
-								<tr><th>GPS 卫星</th></tr>
-								<tr><td>允许应用程序使用 GPS 对您进行定位</td></tr>
-							</table>
-						</div>
-						<div class="clear"></div>
-					</div>
-				</div>
-				<p>3. <span class="highlight">友好</span>:</p>
-				<div class="exampleItem">
-					<div>
-						<div class="column col6">
-							<div class="wrong">迷惑且复杂，“对不起！”更是火上浇油。</div>
-							<table>
-								<tr><th colspan="3">Sorry!</th></tr>
-								<tr><td colspan="3">Activity MyAppActivity (in application MyApp) is not responding.</td></tr>
-								<tr>
-									<td class="button" width="33%">Force close</td>
-									<td class="button" width="33%">Wait</td>
-									<td class="button" width="33%">Report</td>
-								</tr>
-							</table>
-						</div>
-						<div class="column col6 nomarginRight">
-							<div class="good">简短、直接没有恼人的标题:</div>
-							<table>
-								<tr><th colspan="3">MyApp isn't responding.</th></tr>
-								<tr><td colspan="3">Do you want to close it?</td></tr>
-								<tr>
-									<td class="button" width="33%">Wait</td>
-									<td class="button" width="33%">Report</td>
-									<td class="button" width="33%">Close</td>
-								</tr>
-							</table>
-						</div>
-						<div class="clear"></div>
-					</div>
-					<div>
-						<div class="column col6">
-							<table>
-								<tr><th colspan="3">很抱歉！</th></tr>
-								<tr><td colspan="3">“MyAppActivity”活动 (在“MyApp”应用程序中) 无响应。</td></tr>
-								<tr>
-									<td class="button" width="33%">强行关闭</td>
-									<td class="button" width="33%">等待</td>
-									<td class="button" width="33%">报告问题</td>
-								</tr>
-							</table>
-						</div>
-						<div class="column col6 nomarginRight">
-							<table>
-								<tr><th colspan="3">MyApp 无响应。</th></tr>
-								<tr><td colspan="3">要关闭吗？</td></tr>
-								<tr>
-									<td class="button" width="33%">等待</td>
-									<td class="button" width="33%">报告问题</td>
-									<td class="button" width="33%">关闭</td>
-								</tr>
-							</table>
-						</div>
-						<div class="clear"></div>
-					</div>
-				</div>
-				<p>4. <span class="highlight">先说重要的事。</span></p>
-				<div class="exampleItem">
-					<div>
-						<div class="column col6">
-							<div class="wrong">重要信息在句子末尾</div>
-							<table>
-								<tr><td>77 other people +1'd this, including Larry Page.</td></tr>
-							</table>
-						</div>
-						<div class="column col6 nomarginRight">
-							<div class="good">重要信息在句子开始</div>
-							<table>
-								<tr><td>Larry Page and 77 others +1'd this.</td></tr>
-							</table>
-						</div>
-						<div class="clear"></div>
-					</div>
-					<div>
-						<div class="column col6">
-							<table>
-								<tr><td>其他 77 人为此 +1 了，包括 Larry Page。</td></tr>
-							</table>
-						</div>
-						<div class="column col6 nomarginRight">
-							<table>
-								<tr><td>Larry Page 和其他 77 人为此 +1 了。</td></tr>
-							</table>
-						</div>
-						<div class="clear"></div>
-					</div>
-				</div>
-				<div class="exampleItem">
-					<div>
-						<div class="column col6">
-							<div class="wrong">任务出现在句子末尾</div>
-							<table>
-								<tr><td>Touch Next to complete setup using a Wi-Fi connection.</td></tr>
-							</table>
-						</div>
-						<div class="column col6 nomarginRight">
-							<div class="good">任务出现在句子开始</div>
-							<table>
-								<tr><td>To finish setup using Wi-Fi, touch Next.</td></tr>
-							</table>
-						</div>
-						<div class="clear"></div>
-					</div>
-					<div>
-						<div class="column col6">
-							<table>
-								<tr><td>点击下一步，完成 Wi-Fi 连接设置。</td></tr>
-							</table>
-						</div>
-						<div class="column col6 nomarginRight">
-							<table>
-								<tr><td>完成 Wi-Fi 连接设置，点击下一步。</td></tr>
-							</table>
-						</div>
-						<div class="clear"></div>
-					</div>
-				</div>
-				<p>5. <span class="highlight">仅说明必要的信息。</span></p>
-				<div class="exampleItem">
-					<div>
-						<div class="column col6">
-							<div class="wrong">不好</div>
+							<div class="wrong">Don't</div>
 							<table>
 								<tr><th>Signing in...</th></tr>
 								<tr>
@@ -283,7 +135,7 @@
 							</table>
 						</div>
 						<div class="column col6 nomarginRight">
-							<div class="good">这样更好</div>
+							<div class="good">Do</div>
 							<table>
 								<tr><th>Signing in...</th></tr>
 								<tr><td>Your phone is contacting Google.<br />This can take up to 5 minutes.</td></tr>
@@ -309,16 +161,241 @@
 						<div class="clear"></div>
 					</div>
 				</div>
-			</div>
-			<div class="contentNav bottomNav">
-				<div class="buttonWrapper">
-					<a class="buttonPrev" href="branding.html">上一页</a><a class="buttonNext" href="../patterns/index.html">下一页</a>
+				<h4>简明</h4>
+				<ul class="circleList">
+					<li>使用短词语、主动词和简单名词。</li>
+					<li>先说重要的事。一句话的开头两个词 (一共大约 11 个字母，包括空格) 应当表达出重要的信息。</li>
+					<li>仅说明必要的信息。不要费力解释细枝末节。大部分用户不关心那些。</li>
+				</ul>
+				<div class="exampleItem">
+					<div>
+						<div class="column col6">
+							<div class="wrong">Don't</div>
+							<table>
+								<tr><td>Manually control GPS to prevent other apps from using it</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<div class="good">Do</div>
+							<table>
+								<tr><td>To save power, switch Location mode to Battery saving</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div>
+						<div class="column col6">
+							<table>
+								<tr><td>手动控制 GPS，避免应用滥用</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<table>
+								<tr><td>为了节省电量，将定位系统切换到省电模式</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div class="clear"></div>
-		<div id="footer">
-		</div>
-	</div>
-</body>
-</html>
+				<div class="exampleItem">
+					<div>
+						<div class="column col6">
+							<div class="wrong">Don't</div>
+							<table>
+								<tr><td>77 other people +1'd this, including Larry Page</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<div class="good">Do</div>
+							<table>
+								<tr><td>Larry Page and 77 others +1'd this</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div>
+						<div class="column col6">
+							<table>
+								<tr><td>其他 77 人为此 +1 了，包括 Larry Page</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<table>
+								<tr><td>Larry Page 和其他 77 人为此 +1 了</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="exampleItem">
+					<div>
+						<div class="column col6">
+							<div class="wrong">Don't</div>
+							<table>
+								<tr><td>Touch Next to complete setup using a Wi-Fi connection</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<div class="good">Do</div>
+							<table>
+								<tr><td>To finish setup using Wi-Fi, touch Next</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div>
+						<div class="column col6">
+							<table>
+								<tr><td>点击下一步，完成 Wi-Fi 连接设置</td></tr>
+							</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<table>
+								<tr><td>完成 Wi-Fi 连接设置，点击下一步</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<h4>友好</h4>
+				<ul class="circleList">
+					<li>使用缩写。</li>
+					<li>使用第二人称和用户对话 (“您”或“你”)。</li>
+					<li>保持随意、轻松的腔调，但避免使用俚语。</li>
+				</ul>
+				<div class="exampleItem">
+					<div>
+						<div class="column col6">
+							<div class="wrong">Don't</div>
+							<table>
+								<tr><th>Sorry!</th></tr>
+								<tr><td>Activity MyAppActivity (in application
+									MyApp) is not responding</td></tr>
+								</table>
+							</div>
+							<div class="column col6 nomarginRight">
+								<div class="good">Do</div>
+								<table>
+									<tr><th>MyApp isn’t responding</th></tr>
+									<tr><td>Do you want to close it?</td></tr>
+								</table>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div>
+							<div class="column col6">
+								<table>
+									<tr><th>抱歉！</th></tr>
+									<tr><td>应用程序 MyApp 中的 Activity MyAppActivity 无响应</td></tr>
+								</table>
+							</div>
+							<div class="column col6 nomarginRight">
+								<table>
+									<tr><th>MyApp 无响应</th></tr>
+									<tr><td>需要关闭它吗？</td></tr>
+								</table>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<h4>Words to avoid</h4>
+					<div style="padding:5px 2.1em;">
+						<table>
+							<tbody><tr>
+								<td class="wrong">Don't use</td>
+								<td class="good">Use</td>
+							</tr>
+							<tr>
+								<td>一, 二, 三, 四, ...</td>
+								<td>1, 2, 3, 4, ...</td>
+							</tr>
+							<tr>
+								<td>应用程序</td>
+								<td>应用</td>
+							</tr>
+							<tr>
+								<td>cannot, could not, do not, did not 
+									will not, you will</td>
+									<td><em>Contractions:</em> can’t, couldn’t, don’t, didn’t won’t, you’ll, and so on</td>
+								</tr>
+								<tr>
+									<td>okay, ok</td>
+									<td>OK</td>
+								</tr>
+								<tr>
+									<td>please, sorry, thank you</td>
+									<td><em>Attempts at politeness can annoy the user, especially in messages that say
+										something has gone wrong.<br>
+										Exception: In Japanese, “please” is mandatory and imperative verbs should
+										be localized accordingly (turn on -&gt; please turn on).
+									</em></td>
+								</tr>
+								<tr>
+									<td>there is, there are, it is<br>
+										<em>and other “disappeared” subjects (grammatical expletives)</em></td>
+										<td><em>Use a noun as the subject</em></td>
+									</tr>
+									<tr>
+										<td>abort, kill, terminate</td>
+										<td>stop, cancel, end, exit</td>
+									</tr>
+									<tr>
+										<td>fail, failed, <em>negative language</em></td>
+										<td><em>In general, use positive phrasing<br>
+											(for example, “do” rather than “don’t,” except in cases such as “Don’t show
+											again,” “Can’t connect,” and so on.)</em></td>
+										</tr>
+										<tr>
+											<td>me, I, my, mine</td>
+											<td>you, your, yours</td>
+										</tr>
+										<tr>
+											<td>Are you sure? Warning!</td>
+											<td><em>Tell user the consequence instead, for example, “You’ll lose all photos 
+												and media”</em></td>
+											</tr>
+										</tbody></table>
+									</div>
+									<div class="contentHeaderWraper">
+										<h2>文本格式约定</h2>
+									</div>
+									<h4>Capitalization</h4>
+									<ul class="circleList">
+										<li>Use sentence-style capitalization for all UI strings: “Words to live by.”</li>
+										<li>Capitalize all important words in: 
+											<ul>
+												<li>App names (Calendar, Google Drive)</li>
+												<li>Named features (Android Beam, Face Unlock)</li>
+												<li>Proper nouns (Statue of Liberty, San Francisco Giants)</li>
+											</ul>
+										</li>
+										<li>Be conservative. Don't capitalize words that aren't part of a formal feature name: 
+											<ul>
+												<li>Sim card lock, Home screen, not Sim Card Lock, Home Screen.</li>
+											</ul>
+										</li>
+									</ul>
+									<h4>标点符号</h4>
+									<ul class="circleList">
+										<li><strong>句号：</strong> 如果toast、标签或通知消息等控件中只包含一句话，无需使用句号作为结尾。如果包含两句或更多，则每一句都需以句号结尾。</li>
+										<li><strong>省略号：</strong> 使用 <acronym titlex="(Option-; on MacOS and &amp;hellip;
+											in HTML)">省略号 (…)</acronym> 表示以下含义：
+											<ul>
+												<li>未完成的状态, 例如表示操作进行中 (“下载中...”) 或是表示文本未能完全显示。</li>
+												<li>菜单中需要进一步 UI 操作的条目 (例如 打印… or 分享…) 。例外：如果该条目的描述文字中已经对进一步的操作进行了一定的描述则无需添加省略号, 例如 <strong>页面内查找</strong> 或 <strong>选定日期</strong>。</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="contentNav bottomNav">
+									<div class="buttonWrapper">
+										<a class="buttonPrev" href="branding.html">上一页</a><a class="buttonNext" href="../patterns/index.html">下一页</a>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+							<div id="footer">
+							</div>
+						</div>
+					</body>
+					</html>
