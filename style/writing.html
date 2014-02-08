@@ -40,25 +40,26 @@
 		border-top: 1px solid #494949;
 		text-align: center;
 	}
-	table {
-		background-color: #F7F7F7;
+	#content table.simple {
 		border: 0 none;
 		border-collapse: collapse;
 		border-spacing: 0;
+		margin: 8px 20px;
 	}
-	td {
+	#content table.simple th,#content table.simple td {
+		border: 1px solid #DDDDDD;
 		padding: 4px 12px;
 		text-align: left;
-		border: 1px solid #DDDDDD;
 		vertical-align: top;
 	}
-	td.wrong {
-		background: url('ico_wrong.png') left 3px no-repeat;
-		padding-left: 20px;
+	#content table.simple th.good,#content table.simple th.wrong {
+		padding-left: 30px;
 	}
-	td.good {
-		background: url('ico_good.png') left 3px no-repeat;
-		padding-left: 20px;
+	#content table.simple th.good {
+		background: url("ico_good.png") 10px center no-repeat;
+	}
+	#content table.simple th.wrong {
+		background: url("ico_wrong.png") 10px center no-repeat;
 	}
 	</style>
 	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
@@ -86,7 +87,7 @@
 				<div class="contentHeaderWraper">
 					<h2>要有 Android 的腔调</h2>
 				</div>
-				<p>撰写应用相关文本时应保持简短、简明和友好。 (以下内容是为英语而编写，中文应当酌情考虑。下面的翻译可能和一些 Android 版本的翻译不一致)</p>
+				<p>撰写应用相关文本时应保持简短、简明和友好。(以下内容是为英语而编写，中文应当酌情考虑。下面的翻译可能和一些 Android 版本的翻译不一致)</p>
 				<h4>简短</h4>
 				<ul class="circleList">
 					<li>只告知用户最必要的信息。</li>
@@ -266,97 +267,94 @@
 				<div class="exampleItem">
 					<div>
 						<div class="column col6">
-							<div class="wrong">Don't</div>
+						<div class="wrong">Don't</div>
+						<table>
+							<tr><th>Sorry!</th></tr>
+							<tr><td>Activity MyAppActivity (in application
+								MyApp) is not responding</td></tr>
+						</table>
+						</div>
+						<div class="column col6 nomarginRight">
+							<div class="good">Do</div>
 							<table>
-								<tr><th>Sorry!</th></tr>
-								<tr><td>Activity MyAppActivity (in application
-									MyApp) is not responding</td></tr>
-								</table>
-							</div>
-							<div class="column col6 nomarginRight">
-								<div class="good">Do</div>
-								<table>
-									<tr><th>MyApp isn’t responding</th></tr>
-									<tr><td>Do you want to close it?</td></tr>
-								</table>
-							</div>
+								<tr><th>MyApp isn’t responding</th></tr>
+								<tr><td>Do you want to close it?</td></tr>
+							</table>
 						</div>
 						<div class="clear"></div>
-						<div>
-							<div class="column col6">
-								<table>
-									<tr><th>抱歉！</th></tr>
-									<tr><td>应用程序 MyApp 中的 Activity MyAppActivity 无响应</td></tr>
-								</table>
-							</div>
-							<div class="column col6 nomarginRight">
-								<table>
-									<tr><th>MyApp 无响应</th></tr>
-									<tr><td>需要关闭它吗？</td></tr>
-								</table>
-							</div>
-							<div class="clear"></div>
+					</div>
+					<div>
+						<div class="column col6">
+							<table>
+								<tr><th>抱歉！</th></tr>
+								<tr><td>应用程序 MyApp 中的 Activity MyAppActivity 无响应</td></tr>
+							</table>
 						</div>
+						<div class="column col6 nomarginRight">
+							<table>
+								<tr><th>MyApp 无响应</th></tr>
+								<tr><td>需要关闭它吗？</td></tr>
+							</table>
+						</div>
+						<div class="clear"></div>
 					</div>
 				</div>
 				<h4>Words to avoid</h4>
-				<div style="padding:5px 2.1em;">
-					<table>
-						<tbody>
-							<tr>
-								<td class="wrong">Don't use</td>
-								<td class="good">Use</td>
-							</tr>
-							<tr>
-								<td>一, 二, 三, 四, ...</td>
-								<td>1, 2, 3, 4, ...</td>
-							</tr>
-							<tr>
-								<td>应用程序</td>
-								<td>应用</td>
-							</tr>
-							<tr>
-								<td>cannot, could not, do not, did not 
-									will not, you will</td>
-								<td><em>Contractions:</em> can’t, couldn’t, don’t, didn’t won’t, you’ll, and so on</td>
-							</tr>
-							<tr>
+				<div>
+					<table class="simple">
+						<tr>
+							<th class="wrong">Don't use</th>
+							<th class="good">Use</th>
+						</tr>
+						<tr>
+							<td>一, 二, 三, 四, ...</td>
+							<td>1, 2, 3, 4, ...</td>
+						</tr>
+						<tr>
+							<td>应用程序</td>
+							<td>应用</td>
+						</tr>
+						<tr>
+							<td>cannot, could not, do not, did not 
+								will not, you will</td>
+							<td><em>Contractions:</em> can’t, couldn’t, don’t, didn’t won’t, you’ll, and so o</td>
+						</tr>
+						<tr>
 								<td>okay, ok</td>
-								<td>OK</td>
-							</tr>
-							<tr>
-								<td>please, sorry, thank you</td>
-								<td><em>Attempts at politeness can annoy the user, especially in messages that say
-									something has gone wrong.<br>
+							<td>OK</td>
+						</tr>
+						<tr>
+							<td>please, sorry, thank you</td>
+							<td><em>Attempts at politeness can annoy the user, especially in messages that say
+										something has gone wrong.<br>
 									Exception: In Japanese, “please” is mandatory and imperative verbs should
 									be localized accordingly (turn on -&gt; please turn on).
-								</em></td>
-							</tr>
-							<tr>
-								<td>there is, there are, it is<br>
-									<em>and other “disappeared” subjects (grammatical expletives)</em></td>
-								<td><em>Use a noun as the subject</em></td>
-							</tr>
-							<tr>
-								<td>abort, kill, terminate</td>
-								<td>stop, cancel, end, exit</td>
-							</tr>
-							<tr>
-								<td>fail, failed, <em>negative language</em></td>
-								<td><em>In general, use positive phrasing<br>
+							</em></td>
+						</tr>
+						<tr>
+							<td>there is, there are, it is<br>
+								<em>and other “disappeared” subjects (grammatical expletives)</em></td>
+							<td><em>Use a noun as the subject</em></td>
+						</tr>
+						<tr>
+							<td>abort, kill, terminate</td>
+							<td>stop, cancel, end, exit</td>
+						</tr>
+						<tr>
+							<td>fail, failed, <em>negative language</em></td>
+							<td><em>In general, use positive phrasing<br>
 									(for example, “do” rather than “don’t,” except in cases such as “Don’t show
 									again,” “Can’t connect,” and so on.)</em></td>
-							</tr>
-							<tr>
-								<td>me, I, my, mine</td>
-								<td>you, your, yours</td>
-							</tr>
-							<tr>
-								<td>Are you sure? Warning!</td>
-								<td><em>Tell user the consequence instead, for example, “You’ll lose all photos 
+						</tr>
+						<tr>
+							<td>me, I, my, mine</td>
+							<td>you, your, yours</td>
+						</tr>
+						<tr>
+							<td>Are you sure? Warning!</td>
+							<td><em>Tell user the consequence instead, for example, “You’ll lose all photos 
 									and media”</em></td>
-							</tr>
-						</tbody>
+						</tr>
 					</table>
 				</div>
 				<div class="contentHeaderWraper">
@@ -395,9 +393,9 @@
 					<a class="buttonPrev" href="branding.html">上一页</a><a class="buttonNext" href="../patterns/index.html">下一页</a>
 				</div>
 			</div>
-			<div class="clear"></div>
-			<div id="footer">
-			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
 		</div>
 	</div>
 </body>

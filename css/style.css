@@ -161,6 +161,9 @@ code {
 	list-style-type: disc;
 	margin-left: 15px;
 }
+#content .circleList li ul li {
+	list-style-type: circle
+}
 #content .caption,#content .videoInstruction {
 	font: 400 14px/20px Roboto,sans-serif,黑体;
 	font-style: italic;
