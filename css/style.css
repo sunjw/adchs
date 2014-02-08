@@ -356,5 +356,5 @@ acronym {
 	display: block;
 	text-decoration: none;
 	width: 160px;
-	background: url('../imgs/gototop.png') center top no-repeat;
+	background: url('../imgs/gototop.png') center -5px no-repeat;
 }
