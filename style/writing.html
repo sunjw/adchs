@@ -280,8 +280,8 @@
 									<tr><td>Do you want to close it?</td></tr>
 								</table>
 							</div>
-							<div class="clear"></div>
 						</div>
+						<div class="clear"></div>
 						<div>
 							<div class="column col6">
 								<table>
@@ -298,10 +298,12 @@
 							<div class="clear"></div>
 						</div>
 					</div>
-					<h4>Words to avoid</h4>
-					<div style="padding:5px 2.1em;">
-						<table>
-							<tbody><tr>
+				</div>
+				<h4>Words to avoid</h4>
+				<div style="padding:5px 2.1em;">
+					<table>
+						<tbody>
+							<tr>
 								<td class="wrong">Don't use</td>
 								<td class="good">Use</td>
 							</tr>
@@ -316,86 +318,87 @@
 							<tr>
 								<td>cannot, could not, do not, did not 
 									will not, you will</td>
-									<td><em>Contractions:</em> can’t, couldn’t, don’t, didn’t won’t, you’ll, and so on</td>
-								</tr>
-								<tr>
-									<td>okay, ok</td>
-									<td>OK</td>
-								</tr>
-								<tr>
-									<td>please, sorry, thank you</td>
-									<td><em>Attempts at politeness can annoy the user, especially in messages that say
-										something has gone wrong.<br>
-										Exception: In Japanese, “please” is mandatory and imperative verbs should
-										be localized accordingly (turn on -&gt; please turn on).
-									</em></td>
-								</tr>
-								<tr>
-									<td>there is, there are, it is<br>
-										<em>and other “disappeared” subjects (grammatical expletives)</em></td>
-										<td><em>Use a noun as the subject</em></td>
-									</tr>
-									<tr>
-										<td>abort, kill, terminate</td>
-										<td>stop, cancel, end, exit</td>
-									</tr>
-									<tr>
-										<td>fail, failed, <em>negative language</em></td>
-										<td><em>In general, use positive phrasing<br>
-											(for example, “do” rather than “don’t,” except in cases such as “Don’t show
-											again,” “Can’t connect,” and so on.)</em></td>
-										</tr>
-										<tr>
-											<td>me, I, my, mine</td>
-											<td>you, your, yours</td>
-										</tr>
-										<tr>
-											<td>Are you sure? Warning!</td>
-											<td><em>Tell user the consequence instead, for example, “You’ll lose all photos 
-												and media”</em></td>
-											</tr>
-										</tbody></table>
-									</div>
-									<div class="contentHeaderWraper">
-										<h2>文本格式约定</h2>
-									</div>
-									<h4>Capitalization</h4>
-									<ul class="circleList">
-										<li>Use sentence-style capitalization for all UI strings: “Words to live by.”</li>
-										<li>Capitalize all important words in: 
-											<ul>
-												<li>App names (Calendar, Google Drive)</li>
-												<li>Named features (Android Beam, Face Unlock)</li>
-												<li>Proper nouns (Statue of Liberty, San Francisco Giants)</li>
-											</ul>
-										</li>
-										<li>Be conservative. Don't capitalize words that aren't part of a formal feature name: 
-											<ul>
-												<li>Sim card lock, Home screen, not Sim Card Lock, Home Screen.</li>
-											</ul>
-										</li>
-									</ul>
-									<h4>标点符号</h4>
-									<ul class="circleList">
-										<li><strong>句号：</strong> 如果toast、标签或通知消息等控件中只包含一句话，无需使用句号作为结尾。如果包含两句或更多，则每一句都需以句号结尾。</li>
-										<li><strong>省略号：</strong> 使用 <acronym title="(Option-; on MacOS and &amp;hellip;
-											in HTML)">省略号 (…)</acronym> 表示以下含义：
-											<ul>
-												<li>未完成的状态, 例如表示操作进行中 (“下载中...”) 或是表示文本未能完全显示。</li>
-												<li>菜单中需要进一步 UI 操作的条目 (例如 打印… or 分享…) 。例外：如果该条目的描述文字中已经对进一步的操作进行了一定的描述则无需添加省略号, 例如 <strong>页面内查找</strong> 或 <strong>选定日期</strong>。</li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-								<div class="contentNav bottomNav">
-									<div class="buttonWrapper">
-										<a class="buttonPrev" href="branding.html">上一页</a><a class="buttonNext" href="../patterns/index.html">下一页</a>
-									</div>
-								</div>
-							</div>
-							<div class="clear"></div>
-							<div id="footer">
-							</div>
-						</div>
-					</body>
-					</html>
+								<td><em>Contractions:</em> can’t, couldn’t, don’t, didn’t won’t, you’ll, and so on</td>
+							</tr>
+							<tr>
+								<td>okay, ok</td>
+								<td>OK</td>
+							</tr>
+							<tr>
+								<td>please, sorry, thank you</td>
+								<td><em>Attempts at politeness can annoy the user, especially in messages that say
+									something has gone wrong.<br>
+									Exception: In Japanese, “please” is mandatory and imperative verbs should
+									be localized accordingly (turn on -&gt; please turn on).
+								</em></td>
+							</tr>
+							<tr>
+								<td>there is, there are, it is<br>
+									<em>and other “disappeared” subjects (grammatical expletives)</em></td>
+								<td><em>Use a noun as the subject</em></td>
+							</tr>
+							<tr>
+								<td>abort, kill, terminate</td>
+								<td>stop, cancel, end, exit</td>
+							</tr>
+							<tr>
+								<td>fail, failed, <em>negative language</em></td>
+								<td><em>In general, use positive phrasing<br>
+									(for example, “do” rather than “don’t,” except in cases such as “Don’t show
+									again,” “Can’t connect,” and so on.)</em></td>
+							</tr>
+							<tr>
+								<td>me, I, my, mine</td>
+								<td>you, your, yours</td>
+							</tr>
+							<tr>
+								<td>Are you sure? Warning!</td>
+								<td><em>Tell user the consequence instead, for example, “You’ll lose all photos 
+									and media”</em></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>文本格式约定</h2>
+				</div>
+				<h4>Capitalization</h4>
+				<ul class="circleList">
+					<li>Use sentence-style capitalization for all UI strings: “Words to live by.”</li>
+					<li>Capitalize all important words in: 
+						<ul>
+							<li>App names (Calendar, Google Drive)</li>
+							<li>Named features (Android Beam, Face Unlock)</li>
+							<li>Proper nouns (Statue of Liberty, San Francisco Giants)</li>
+						</ul>
+					</li>
+					<li>Be conservative. Don't capitalize words that aren't part of a formal feature name: 
+						<ul>
+							<li>Sim card lock, Home screen, not Sim Card Lock, Home Screen.</li>
+						</ul>
+					</li>
+				</ul>
+				<h4>标点符号</h4>
+				<ul class="circleList">
+					<li><strong>句号：</strong> 如果toast、标签或通知消息等控件中只包含一句话，无需使用句号作为结尾。如果包含两句或更多，则每一句都需以句号结尾。</li>
+					<li><strong>省略号：</strong> 使用 <acronym title="(Option-; on MacOS and &amp;hellip;
+						in HTML)">省略号 (…)</acronym> 表示以下含义：
+						<ul>
+							<li>未完成的状态, 例如表示操作进行中 (“下载中...”) 或是表示文本未能完全显示。</li>
+							<li>菜单中需要进一步 UI 操作的条目 (例如 打印… or 分享…) 。例外：如果该条目的描述文字中已经对进一步的操作进行了一定的描述则无需添加省略号, 例如 <strong>页面内查找</strong> 或 <strong>选定日期</strong>。</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="branding.html">上一页</a><a class="buttonNext" href="../patterns/index.html">下一页</a>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div id="footer">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
