@@ -228,6 +228,13 @@ function fillMenu() {
 	}
 
 	menuCont.append($("<br/>").addClass("clear"));
+	
+	// add back to top
+	var pageWrapper = $("#pageWrapper");
+	var backToTop = $("<div/>");
+	backToTop.attr("id", "backToTop");
+	backToTop.append($("<a/>").attr("href", "#top").html("&nbsp;"));
+	pageWrapper.append(backToTop);
 }
 
 function menuFix() {
@@ -241,17 +248,25 @@ function menuFix() {
 	var pageWrapperLeft = $("#pageWrapper").get(0).offsetLeft;
 
 	var navWrapper = $("#navWrapper");
+	var backToTop = $("#backToTop");
 	//navWrapper.css("left", (0 - scrollLeftPos) + "px");
-	if (scrollTopPos < 90) {
+	if (scrollTopPos < 80) {
+		backToTop.hide();
+		
 		navWrapper.css("position", "absolute");
 		navWrapper.css("top", "100px");
 		navWrapper.css("left", "0px");
 		navWrapper.css("height", windowHeight - 110 + "px");
 	} else {
 		navWrapper.css("position", "fixed");
-		navWrapper.css("top", "10px");
+		navWrapper.css("top", "20px");
 		navWrapper.css("left", pageWrapperLeft - scrollLeftPos + "px");
-		navWrapper.css("height", windowHeight - 20 + "px");
+		navWrapper.css("height", windowHeight - 30 + "px");
+		
+		backToTop.css("position", "fixed");
+		backToTop.css("top", "0");
+		backToTop.css("left", pageWrapperLeft - scrollLeftPos + "px");
+		backToTop.show();
 	}
 }
 

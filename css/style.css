@@ -348,3 +348,13 @@ acronym {
 	border-radius: 4px;
 	opacity: 0.9;
 }
+
+#backToTop {
+	display: none;
+}
+#backToTop a {
+	display: block;
+	text-decoration: none;
+	width: 160px;
+	background: url('../imgs/gototop.png') center top no-repeat;
+}
