@@ -323,8 +323,6 @@ code {
 
 #content pre {
 	margin: 0 0 10px 0;
-}
-#content pre,#content code {
 	background-color: #F7F7F7;
     border: 1px solid #DDDDDD;
     padding: 10px;
