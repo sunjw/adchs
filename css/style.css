@@ -321,6 +321,17 @@ code {
 	margin: 0;
 }
 
+#content pre {
+	margin: 0 0 10px 0;
+}
+#content pre,#content code {
+	background-color: #F7F7F7;
+    border: 1px solid #DDDDDD;
+    padding: 10px;
+    color: #000000;
+    font: 13px/1.5 monospace;
+}
+
 #footer {
 	color: #999999;
     font-size: 12px;
