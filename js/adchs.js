@@ -107,7 +107,7 @@ var menuContent = [
 			text : "兼容性",
 			url : "patterns/compatibility.html"
 		}, {
-			text : "可用性",
+			text : "无障碍性",
 			url : "patterns/accessibility.html"
 		}, {
 			text : "纯粹的 Android",
