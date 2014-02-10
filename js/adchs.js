@@ -371,11 +371,11 @@ function fillFooter() {
 
 		footerCont.append(lineCont);
 	}
-	
+
 	var imgCache1 = new Image();
 	var imgCache2 = new Image();
 	var pathPrefix = "";
-	if(secondLevel) {
+	if (secondLevel) {
 		pathPrefix = "../";
 	}
 	imgCache1.src = pathPrefix + "imgs/twitter-color-16.png";
