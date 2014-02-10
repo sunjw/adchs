@@ -232,7 +232,7 @@ function fillMenu() {
 	}
 
 	menuCont.append($("<br/>").addClass("clear"));
-	
+
 	// add back to top
 	var pageWrapper = $("#pageWrapper");
 	var backToTop = $("<div/>");
@@ -256,7 +256,7 @@ function menuFix() {
 	//navWrapper.css("left", (0 - scrollLeftPos) + "px");
 	if (scrollTopPos < 80) {
 		backToTop.hide();
-		
+
 		navWrapper.css("position", "absolute");
 		navWrapper.css("top", "100px");
 		navWrapper.css("left", "0px");
@@ -266,7 +266,7 @@ function menuFix() {
 		navWrapper.css("top", "20px");
 		navWrapper.css("left", pageWrapperLeft - scrollLeftPos + "px");
 		navWrapper.css("height", windowHeight - 30 + "px");
-		
+
 		backToTop.css("position", "fixed");
 		backToTop.css("top", "0");
 		backToTop.css("left", pageWrapperLeft - scrollLeftPos + "px");
@@ -342,7 +342,7 @@ function initTooltip() {
 // footer
 var footerLines = ["<a href=\"http://www.sunjw.us/adchs\">Android 设计指南非官方简体中文版</a>&nbsp;-&nbsp;感谢&nbsp;<a href=\"http://www.topfun.us\" target=\"_blank\">topfun 同学</a>&nbsp;<a href=\"http://www.freemindworld.com\" target=\"_blank\">Li Fanxi</a>&nbsp;<a href=\"http://www.apkbus.com\" target=\"_blank\">安卓巴士</a>&nbsp;提供的&nbsp;<a href=\"http://www.topfun.us/adchs/\">镜像1</a>&nbsp;<a href=\"http://www.freemindworld.com/adchs\">镜像2</a>&nbsp;<a href=\"http://www.apkbus.com/design\">镜像3</a>。",
 	"如无特别说明，所有内容按照 <a href=\"http://creativecommons.org/licenses/by/2.5/\" target=\"_blank\">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href=\"http://developer.android.com/design/\" target=\"_blank\">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href=\"http://developer.android.com/design/\" target=\"_blank\">Android Design</a>。Android 是 Google 的商标。",
-	"2012-2014&nbsp;|&nbsp;<a href=\"http://www.sunjw.us/blog\" target=\"_blank\">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;<a href=\"http://weibo.com/nusjw\" target=\"_blank\" title=\"Follow me on Weibo\"><img src=\"imgs/weibo-small.png\" alt=\"Follow me on Weibo\"/></a>&nbsp;<a href=\"http://www.twitter.com/sunjw\" target=\"_blank\" title=\"Follow me on Twitter\"><img src=\"imgs/twitter-small.png\" alt=\"Follow me on Twitter\"/></a>&nbsp;|&nbsp;<a href=\"http://www.zhangzhibo.net/\" target=\"_blank\">Zhang Zhibo</a>&nbsp;-&nbsp;casparz at gmail.com&nbsp;<a href=\"http://weibo.com/icaspar\" target=\"_blank\" title=\"Follow me on Weibo\"><img src=\"imgs/weibo-small.png\" alt=\"Follow me on Weibo\"/></a>&nbsp;<a href=\"http://www.twitter.com/imcaspar/\" target=\"_blank\" title=\"Follow me on Twitter\"><img src=\"imgs/twitter-small.png\" alt=\"Follow me on Twitter\"/></a>&nbsp;|&nbsp;<a href=\"http://www.sunjw.us/jstoolnpp/\" target=\"_blank\">JSToolNpp</a><br/><br/><g:plusone size=\"large\"></g:plusone>"];
+	"2012-2014&nbsp;|&nbsp;<a href=\"http://www.sunjw.us/blog\" target=\"_blank\">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;&nbsp;<a href=\"http://weibo.com/nusjw\" target=\"_blank\" title=\"Follow me on Weibo\" class=\"imgLink\"><img src=\"imgs/weibo-gray-16.png\" alt=\"Follow me on Weibo\"/></a>&nbsp;<a href=\"http://www.twitter.com/sunjw\" target=\"_blank\" title=\"Follow me on Twitter\" class=\"imgLink\"><img src=\"imgs/twitter-gray-16.png\" alt=\"Follow me on Twitter\"/></a>&nbsp;|&nbsp;<a href=\"http://www.zhangzhibo.net/\" target=\"_blank\">Zhang Zhibo</a>&nbsp;-&nbsp;casparz at gmail.com&nbsp;&nbsp;<a href=\"http://weibo.com/icaspar\" target=\"_blank\" title=\"Follow me on Weibo\" class=\"imgLink\"><img src=\"imgs/weibo-gray-16.png\" alt=\"Follow me on Weibo\"/></a>&nbsp;<a href=\"http://www.twitter.com/imcaspar/\" target=\"_blank\" title=\"Follow me on Twitter\" class=\"imgLink\"><img src=\"imgs/twitter-gray-16.png\" alt=\"Follow me on Twitter\"/></a>&nbsp;|&nbsp;<a href=\"http://www.sunjw.us/jstoolnpp/\" target=\"_blank\">JSToolNpp</a><br/><br/><g:plusone size=\"large\"></g:plusone>"];
 
 function fillFooter() {
 	var footerCont = $("#footer");
@@ -371,6 +371,26 @@ function fillFooter() {
 
 		footerCont.append(lineCont);
 	}
+	
+	var imgCache = $("<img/>");
+	var pathPrefix = "";
+	if(secondLevel) {
+		pathPrefix = "../";
+	}
+	imgCache.attr("src", pathPrefix + "imgs/twitter-color-16.png");
+	imgCache.attr("src", pathPrefix + "imgs/weibo-color-16.png");
+
+	$("#footer a.imgLink").hover(function () {
+		var img = $(this).find("img");
+		var src = img.attr("src");
+		src = replaceAll(src, "gray", "color");
+		img.attr("src", src);
+	}, function () {
+		var img = $(this).find("img");
+		var src = img.attr("src");
+		src = replaceAll(src, "color", "gray");
+		img.attr("src", src);
+	});
 }
 
 // Init
