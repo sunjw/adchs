@@ -39,21 +39,21 @@
 				</a>
 				<p>这一节比较专业，有些内容不能完整翻译。</p>
 				<p>Android 的一大使命就是整理全世界的信息，并使其可以被所有人访问。我们的使命不会因为用户有所残疾而改变，无论是视觉障碍、色盲、听力损失或者其他不便。</p>
-				<p>通用型设计使得产品可以被所有人使用。Android 设计模式依照了通用型设计要求，根据这些要求也能使您的应用满足基本的无障碍性标准。这样的设计也使得您的应用能被更多的人使用。</p>
+				<p>通用型设计使得产品可以被所有人使用。Android 设计模式依照了通用型设计要求，根据这些要求也能使你的应用满足基本的无障碍性标准。这样的设计也使得你的应用能被更多的人使用。</p>
 				<p><a href="http://www.google.com/accessibility/" target="_blank">阅读 Google and accessibility了解更多信息</a>。</p>
 				<div class="contentHeaderWraper">
 					<h2>Android 无障碍性工具</h2>
 				</div>
-				<p>Android 包含了一些功能为视觉障碍人士提供方便，这样就不需要您的应用作出较强烈的视觉变化。</p>
+				<p>Android 包含了一些功能为视觉障碍人士提供方便，这样就不需要你的应用作出较强烈的视觉变化。</p>
 				<ul class="circleList">
 					<li>
 						<p><span class="highlight"><a href="https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback" target="_blank">TalkBack</a></span> 是一个预安装的 Google 屏幕阅读器。通过阅读来反馈操作的结果，例如运行应用或者事件通知。</p>
 					</li>
 					<li>
-						<p><span class="highlight">Explore by Touch</span> 是与 TalkBack 结合使用的一个系统功能，您可以触摸屏幕，并且听到触摸的内容。</p>
+						<p><span class="highlight">Explore by Touch</span> 是与 TalkBack 结合使用的一个系统功能，你可以触摸屏幕，并且听到触摸的内容。</p>
 					</li>
 					<li>
-						<p><span class="highlight">辅助功能设置</span>让您可以设置设备的显示和声音，例如大号字体、语音阅读速度等。</p>
+						<p><span class="highlight">辅助功能设置</span>让你可以设置设备的显示和声音，例如大号字体、语音阅读速度等。</p>
 					</li>
 				</ul>
 				<p>有些用户的设备上有方向控制器 (例如 D-pad、轨迹球或者键盘)，通过方向控制器可以在屏幕控件之间切换选择。这种控制方式有点像电视遥控器上的方向控制器。</p>
@@ -61,13 +61,13 @@
 					<h2>设计指导</h2>
 				</div>
 				<p>Android <a href="../get-started/principles.html">设计原则</a>中“让哥知道现在在哪儿”是无障碍性的关键。当用户在应用中浏览时，他们需要通过一定的反馈来知道自己的位置。设计一个合理的应用的结构是关键。大多数用户可以通过视觉和振动反馈了解浏览的位置 (例如文字标签、颜色、图标和触摸反馈)，视觉障碍的用户则需要通过语音提示和高对比视觉效果来了解位置。</p>
-				<p>当您设计应用时，请记住有时文字标签是需要通过语音进行提示的。当使用 Explore by Touch 时，用户可以通过声音来了解您的应用结构，它们应当是简洁、清楚且明了的。请按照下面的指导进行设计，以满足各种用户的需求。</p>
+				<p>当你设计应用时，请记住有时文字标签是需要通过语音进行提示的。当使用 Explore by Touch 时，用户可以通过声音来了解你的应用结构，它们应当是简洁、清楚且明了的。请按照下面的指导进行设计，以满足各种用户的需求。</p>
 				<h4>使导航符合直觉</h4>
 				<p>设计一个清晰且明确的工作流程，减少导航步骤，尤其是对于重要的任务。保证各种任务都能通过控件进行操作。</p>
 				<h4>使用推荐的触摸控件大小</h4>
-				<p>48 dp 是推荐的触摸控件大小。阅读 <a href="../style/metrics-grids.html">度量单位和网格</a> 一节，了解如何帮助您的用户使用。对于一些特别的用户，可能需要使用更大一些的控件。例如对于教育应用，更大的控件会比较适合儿童或者有行动障碍的人士使用。</p>
+				<p>48 dp 是推荐的触摸控件大小。阅读 <a href="../style/metrics-grids.html">度量单位和网格</a> 一节，了解如何帮助你的用户使用。对于一些特别的用户，可能需要使用更大一些的控件。例如对于教育应用，更大的控件会比较适合儿童或者有行动障碍的人士使用。</p>
 				<h4>视觉元素的文字标签要有意义</h4>
-				<p>在您做设计时，<a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#label-ui" target="_blank">label functional UI</a> 控件可能没有文字标签，例如按钮、图标、图标标签和状态图标。开发者可以通过阅读 <code><a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#label-ui" target="_blank">contentDescription</a></code> 了解如何设置这些控件的文字标签属性。</p>
+				<p>在你做设计时，<a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#label-ui" target="_blank">label functional UI</a> 控件可能没有文字标签，例如按钮、图标、图标标签和状态图标。开发者可以通过阅读 <code><a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#label-ui" target="_blank">contentDescription</a></code> 了解如何设置这些控件的文字标签属性。</p>
 				<div>
 					<div class="column col8">
 						<img class="nomarginRight bigger" src="accessibility_contentdesc.png" />
@@ -97,7 +97,7 @@
 				<p>Also, keep in mind that when users have large fonts enabled or speak a different language than you, their type might be larger than the space you've allotted for it. Read <a href="../style/devices-displays.html">Devices and Displays</a> and <a href="http://developer.android.com/guide/practices/screens_support.html" target="_blank">Supporting Multiple Screens</a> for design strategies.</p>
 				<p>If you use custom controls, Android has the developer tools in place to allow adherence to the above guidelines and provide meaningful descriptions about the UI. Provide adequate notation on your wireframes and direct your developer to the <a href="http://developer.android.com/guide/topics/ui/accessibility/apps.html#custom-views" target="_blank">Custom Views</a> documentation.</p>
 				<h4>请自己试试看</h4>
-				<p>通过<span class="highlight">设置 > 辅助功能</span>打开 TalkBack 服务，进入您的应用，测试方向控制器或者进行盲目操作。</p>
+				<p>通过<span class="highlight">设置 > 辅助功能</span>打开 TalkBack 服务，进入你的应用，测试方向控制器或者进行盲目操作。</p>
 				<div class="contentHeaderWraper">
 					<h2>检查清单</h2>
 				</div>

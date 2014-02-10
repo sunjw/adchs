@@ -31,13 +31,13 @@
 				</div>
 			</div>
 			<div id="mainContent">
-				<p>许多开发者会在多个平台上发布应用。如果您打算为 Android 开发应用，请记住在不同的平台需要遵守不同的要求和惯例。在某个平台上开起来不错的设计，也许在另一个平台上就不合适。“一次设计，到处运行”的想法可能在一开始能节省一些时间，但是和平台不一致的体验最终可能会疏远用户。考虑按照下面的指导进行设计，避免常见的错误和缺陷。</p>
+				<p>许多开发者会在多个平台上发布应用。如果你打算为 Android 开发应用，请记住在不同的平台需要遵守不同的要求和惯例。在某个平台上开起来不错的设计，也许在另一个平台上就不合适。“一次设计，到处运行”的想法可能在一开始能节省一些时间，但是和平台不一致的体验最终可能会疏远用户。考虑按照下面的指导进行设计，避免常见的错误和缺陷。</p>
 				<p>&nbsp;</p>
 				<div>
 					<div class="column col5">
 						<h4>不要模仿其它平台的 UI 元素</h4>
 						<p>不同的平台都会提供别具一格的、精心设计的、主题化的 UI 元素。例如在一些平台上鼓励使用圆角按钮，另一些则鼓励使用渐变标题栏。许多情况下，虽然元素的功能是一样的，但是设计方法截然不同。</p>
-						<p>当您为 Android 设计应用时，不要使用其它平台的 UI 元素，也不要模仿其它平台元素的行为。参考 <a href="../building-blocks/index.html">控件</a> 这一章了解 Android 主要的 UI 元素。同时，观察 Android 系统应用，了解这些元素是如何使用的。如果您要自定义 UI 元素，请按照您品牌的统一设计，不要照搬其它平台的设计。</p>
+						<p>当你为 Android 设计应用时，不要使用其它平台的 UI 元素，也不要模仿其它平台元素的行为。参考 <a href="../building-blocks/index.html">控件</a> 这一章了解 Android 主要的 UI 元素。同时，观察 Android 系统应用，了解这些元素是如何使用的。如果你要自定义 UI 元素，请按照你品牌的统一设计，不要照搬其它平台的设计。</p>
 					</div>
 					<div class="column col8 nomarginRight">
 						<img class="nomarginLR" src="migrating_ui_elements.png" />
@@ -50,8 +50,8 @@
 					<div class="column col5">
 						<h4>不要使用专为其它平台设计的图标</h4>
 						<p>不同的平台都会提供常用功能的图标集，例如分享、新建和删除。</p>
-						<p>如果您正在将应用移植到 Android 平台，请不要使用专为其它平台设计的图标。</p>
-						<p>您可以在 Android SDK 中找到各种用途的图标。</p>
+						<p>如果你正在将应用移植到 Android 平台，请不要使用专为其它平台设计的图标。</p>
+						<p>你可以在 Android SDK 中找到各种用途的图标。</p>
 					</div>
 					<div class="column col8 nomarginRight">
 						<img class="nomarginLR" src="migrating_icons.png" />
@@ -63,8 +63,8 @@
 				<div>
 					<div class="column col5">
 						<h4>不要使用底部的标签栏</h4>
-						<p>其它平台使用底部标签栏在应用中切换视图。Android 标签应当放在顶部的操作栏中。不过您可以在底部放置副操作栏。</p>
-						<p>您应当按照该指导设计应用，提供统一的平台应用体验，区分操作栏和视图切换。</p>
+						<p>其它平台使用底部标签栏在应用中切换视图。Android 标签应当放在顶部的操作栏中。不过你可以在底部放置副操作栏。</p>
+						<p>你应当按照该指导设计应用，提供统一的平台应用体验，区分操作栏和视图切换。</p>
 						<p>请参考 <a href="../patterns/actionbar.html">操作栏</a> 一节，了解如何合理的使用操作栏切换视图。</p>
 					</div>
 					<div class="column col8 nomarginRight">
@@ -77,7 +77,7 @@
 				<div>
 					<div class="column col5">
 						<h4>不要通过硬编码连接其它应用</h4>
-						<p>又是您的应用需要使用其它应用提供的功能。例如通过社交网络或者短消息分享您应用中的内容，或者在浏览器内打开链接。不要硬编码这些操作，否则就只能连接到一个特定的应用。您应该调用 Android 提供的 intent API 打开一个活动选择器 (activity chooser) ，它将会列出所有支持指定操作的应用。这样用户可以选择他们喜欢的应用完成操作。对于“分享”这一特殊操作，您应当考虑在操作栏中使用分享提供器 (Share Action Provider) 来完成操作，它可以使得用户更快的选择最近使用的分享应用。</p>
+						<p>又是你的应用需要使用其它应用提供的功能。例如通过社交网络或者短消息分享应用中的内容，或者在浏览器内打开链接。不要硬编码这些操作，否则就只能连接到一个特定的应用。你应该调用 Android 提供的 intent API 打开一个活动选择器 (activity chooser) ，它将会列出所有支持指定操作的应用。这样用户可以选择他们喜欢的应用完成操作。对于“分享”这一特殊操作，你应当考虑在操作栏中使用分享提供器 (Share Action Provider) 来完成操作，它可以使得用户更快的选择最近使用的分享应用。</p>
 					</div>
 					<div class="column col8 nomarginRight">
 						<img class="nomarginLR" src="migrating_intents.png" />
@@ -115,7 +115,7 @@
 				<div class="contentHeaderWraper">
 					<h2>设备无关性</h2>
 				</div>
-				<p>记住您的应用会运行在各种不同屏幕尺寸的设备上。通过“面板”使您的应用在各种设备上始终能够提供平衡且美观的布局。</p>
+				<p>记住你的应用会运行在各种不同屏幕尺寸的设备上。通过“面板”使你的应用在各种设备上始终能够提供平衡且美观的布局。</p>
 				<p>更多信息，请参考 <a href="../style/devices-displays.html">设备和显示</a> 和 <a href="../patterns/multi-pane-layouts.html">多视图布局</a>。</p>
 			</div><!-- mainContent -->
 			<div class="contentNav bottomNav">
