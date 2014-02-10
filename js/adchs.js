@@ -372,13 +372,14 @@ function fillFooter() {
 		footerCont.append(lineCont);
 	}
 	
-	var imgCache = $("<img/>");
+	var imgCache1 = new Image();
+	var imgCache2 = new Image();
 	var pathPrefix = "";
 	if(secondLevel) {
 		pathPrefix = "../";
 	}
-	imgCache.attr("src", pathPrefix + "imgs/twitter-color-16.png");
-	imgCache.attr("src", pathPrefix + "imgs/weibo-color-16.png");
+	imgCache1.src = pathPrefix + "imgs/twitter-color-16.png";
+	imgCache2.src = pathPrefix + "imgs/weibo-color-16.png";
 
 	$("#footer a.imgLink").hover(function () {
 		var img = $(this).find("img");
