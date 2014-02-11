@@ -3,4 +3,4 @@
 如无特别说明，所有内容按照 [Creative Commons Attribution 2.5](http://creativecommons.org/licenses/by/2.5/) 协议授权。
 
 ##历史版本
-[Android Design for Android 4.1](https://github.com/sunjw/adchs/releases)
+[Android Design for Android 4.1](https://github.com/sunjw/adchs/releases/tag/4.1)
