@@ -16,7 +16,7 @@
 		padding-left: 20px;
 	}
 	#mainContent table {
-		margin: 0 10px 10px 10px;
+		margin: 0 0 10px 0;
 	}
 	table {
 		background-color: #F7F7F7;
@@ -48,66 +48,6 @@
 			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
 		</div>
 		<div id="navWrapper">
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../index.html">开始</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
-					<li><a href="../get-started/principles.html">设计原则</a></li>
-					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../style/index.html">风格</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../style/devices-displays.html">设备和显示</a></li>
-					<li><a href="../style/themes.html">主题</a></li>
-					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
-					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
-					<li><a href="../style/typography.html">字体</a></li>
-					<li><a href="../style/color.html">颜色</a></li>
-					<li><a href="../style/iconography.html">图标</a></li>
-					<li><a href="../style/writing.html">写作风格</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList initShow">
-				<div class="trigger"><a href="index.html">模式</a></div>
-				<ul class="foldingContainer">
-					<li><a href="new.html">Android 新特性</a></li>
-					<li><a href="gestures.html">手势</a></li>
-					<li><a href="app-structure.html">应用结构</a></li>
-					<li><a href="navigation.html">导航</a></li>
-					<li><a href="actionbar.html">操作栏</a></li>
-					<li><a href="multi-pane-layouts.html">多视图布局</a></li>
-					<li><a href="swipe-views.html">滑动视图</a></li>
-					<li><a href="selection.html">选择</a></li>
-					<li><a href="confirming-acknowledging.html">确认和提示</a></li>
-					<li><a class="highlight" href="notifications.html">通知</a></li>
-					<li><a href="widgets.html">小部件</a></li>
-					<li><a href="settings.html">设置</a></li>
-					<li><a href="help.html">帮助</a></li>
-					<li><a href="compatibility.html">兼容性</a></li>
-					<li><a href="accessibility.html">可用性</a></li>
-					<li><a href="pure-android.html">纯粹的 Android</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
-					<li><a href="../building-blocks/lists.html">列表</a></li>
-					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
-					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
-					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
-					<li><a href="../building-blocks/buttons.html">按钮</a></li>
-					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
-					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
-					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
-					<li><a href="../building-blocks/switches.html">开关</a></li>
-					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
-					<li><a href="../building-blocks/pickers.html">选择器</a></li>
-				</ul>
-			</div>
-			<br class="clear" />
 		</div>
 		<div id="content">
 			<div class="contentNav topNav">
@@ -119,6 +59,12 @@
 				</div>
 			</div>
 			<div id="mainContent">
+				<a class="noticeDev" href="http://developer.android.com/training/notify-user/index.html" target="_blank">
+					<div>
+						<h3>开发者文档</h3>
+						<p>Notifying the User</p>
+					</div>
+				</a>
 				<p>通知系统使用户得知应用中重要的事情，例如有新信息到来或者日历事件提醒。将通知作为一个新的通道，提醒用户重要的事情或者记录下用户没有注意到的事情。</p>
 				<h4>Jelly Bean 的新变化</h4>
 				<p>在 Jelly Bean 中，通知系统做了一次被引入 Android 以来最重大的结构性和功能性升级。</p>
@@ -149,7 +95,7 @@
 					<div class="clear"></div>
 				</div>
 				<h4>扩展布局</h4>
-				<p>在 Jelly Bean 中你可以为通知提供更多事件的细节。你可以通过扩展布局显示消息的前几行或者图片的预览。这样用户可以看多更多的内容 - 有时甚至可以看到整个消息。用户可以通过 pinch-zoom 或者双手指滑动来打开扩展布局。Android 为单条消息提供了两种扩展布局 (文字和图像) 供您开发应用时使用。</p>
+				<p>在 Jelly Bean 中你可以为通知提供更多事件的细节。你可以通过扩展布局显示消息的前几行或者图片的预览。这样用户可以看多更多的内容 - 有时甚至可以看到整个消息。用户可以通过 pinch-zoom 或者双手指滑动来打开扩展布局。Android 为单条消息提供了两种扩展布局 (文字和图像) 供你开发应用时使用。</p>
 				<img class="nomarginRight" src="notifications_pattern_expandable.png" />
 				<h4>操作</h4>
 				<div>
@@ -191,9 +137,9 @@
 					<div class="clear"></div>
 				</div>
 				<h4>去正确的地方</h4>
-				<p>用户触摸通知后，打开您的应用并且将用户带到可以直接操作该通知内容的界面上。大多数情况下，应当是一个详细信息视图 (例如一条消息)，不过也有可能是多条内容的列表 (处理 合并的通知 时)。如果进入的不是您应用的顶级屏幕，那么在后退历史中增加导航路径，使用户可以通过“返回”键回到您应用的顶级屏幕。更多信息，请参考 导航 一节的 系统到应用的导航。</p>
+				<p>用户触摸通知后，打开你的应用并且将用户带到可以直接操作该通知内容的界面上。大多数情况下，应当是一个详细信息视图 (例如一条消息)，不过也有可能是多条内容的列表 (处理 合并的通知 时)。如果进入的不是应用的顶级屏幕，那么在后退历史中增加导航路径，使用户可以通过“返回”键回到应用的顶级屏幕。更多信息，请参考 导航 一节的 系统到应用的导航。</p>
 				<h4>正确设置通知的优先级</h4>
-				<p>从 Jelly Bean 开始，Android 为通知增加了优先级标志。这样您可以使重要的通知相对于其它通知，总是显示在第一个。请通过以下的表格仔细选择通知的优先级:</p>
+				<p>从 Jelly Bean 开始，Android 为通知增加了优先级标志。这样你可以使重要的通知相对于其它通知，总是显示在第一个。请通过以下的表格仔细选择通知的优先级:</p>
 				<table>
 					<tr>
 						<th>优先级</th><th>用户</th>
@@ -221,7 +167,7 @@
 				</table>
 				<img class="nomarginRight" src="notifications_pattern_priority.png" />
 				<h4>合并通知</h4>
-				<p>如果已经有正在等待处理的相同类型通知了，那么您应用不应当在创建一条新的通知，而是将多条通知合并。</p>
+				<p>如果已经有正在等待处理的相同类型通知了，那么你的应用不应当再创建一条新的通知，而是将多条通知合并。</p>
 				<p>合并的通知提供了总体的信息描述，并且告知用户有多少条通知正在等待处理。</p>
 				<p><span class="highlight">不要这么做</span>:</p>
 				<img class="nomarginRight" src="notifications_pattern_additional_fail.png" />
@@ -230,28 +176,28 @@
 				<p>你可以使用扩展布局为合并的通知提供更多信息。这样用户可以知道被合并的消息细节，并选择在应用中阅读通知内容。</p>
 				<img class="nomarginRight" src="notifications_expand_contract_msg.png" />
 				<h4>保证通知是可选的</h4>
-				<p>用户应当可以控制通知。您的应用应当提供选项让用户可以关掉通知或者选择通知的方式，包括是否震动之类的。</p>
+				<p>用户应当可以控制通知。你的应用应当提供选项让用户可以关掉通知或者选择通知的方式，包括是否震动之类的。</p>
 				<h4>使用独特的图标</h4>
 				<p>用户应当可以迅速的了解是哪个应用的通知正等待处理。</p>
 				<p class="good"><span class="highlight">应当这么做</span></p>
-				<p>观察已有的通知图标，为您的应用选择一个比较独特的。</p>
+				<p>观察已有的通知图标，为你的应用选择一个比较独特的。</p>
 				<p class="good"><span class="highlight">应当这么做</span></p>
 				<p>在通知中使用合适小图标样式，并且在通知操作中选择合适的 Holo Dark 操作图标。</p>
 				<p class="good"><span class="highlight">应当这么做</span></p>
-				<p>使您的图标保持简洁，不要使用难以分辨的细节。</p>
+				<p>使你的图标保持简洁，不要使用难以分辨的细节。</p>
 				<p class="wrong"><span class="highlight">不要这么做</span></p>
-				<p>使用彩色突出您的应用。</p>
+				<p>使用彩色突出你的应用。</p>
 				<h4>正确的闪烁通知指示灯</h4>
 				<p>许多 Android 都有个小灯，称之为通知指示灯，可以在屏幕关闭时告诉用户有通知在等待操作。有 MAX、HIGHT 和 DEFAULT 优先级的通知会闪烁指示灯，低优先级的 (LOW 和 MIN) 通知不应该闪烁指示灯。</p>
-				<p>用户对通知的控制应该包括指示灯。通知指示灯应当显示的是白色。您应用的通知不应该显示其它颜色，除非使用户指定的。</p>
+				<p>用户对通知的控制应该包括指示灯。通知指示灯应当显示的是白色。应用的通知不应该显示其它颜色，除非使用户指定的。</p>
 				<div class="contentHeaderWraper">
 					<h2>让用户真正关心的通知</h2>
 				</div>
-				<p>为了使应用应用起来感觉流畅、愉快和友好，您应当仔细的设计应用的通知。通知系统增强了您的应用，使您的应用更具特点。不必要的通知反而会使用户觉得讨厌</p>
+				<p>为了使应用应用起来感觉流畅、愉快和友好，你应当仔细的设计应用的通知。通知系统增强了你的应用，使你的应用更具特点。不必要的通知反而会使用户觉得讨厌</p>
 				<h4>何时显示通知</h4>
-				<p>让人们喜爱您的应用，那么值得了解的是用户的注意力是需要保护的。Android 通知系统的设计就是要尽量减小对用户注意力的影响，但是仍要注意同时是会打断用户的操作的。当您设计通知时，请仔细考虑是否值得去打断用户。如果你不确定的话，给用户选择是否弹出通知，或者设置优先级标志。</p>
+				<p>让人们喜爱你的应用，那么值得了解的是用户的注意力是需要保护的。Android 通知系统的设计就是要尽量减小对用户注意力的影响，但是仍要注意同时是会打断用户的操作的。当你设计通知时，请仔细考虑是否值得去打断用户。如果你不确定的话，给用户选择是否弹出通知，或者设置优先级标志。</p>
 				<p>好的应用只在需要它说话的时候才说话，但是有一些情况下有必要使用通知来打断用户。</p>
-				<p>通知主要被用在<span class="highlight">时间敏感的事件</span>上，特别是<span class="highlight">和其他人有关</span>的同步事件。例如聊天时的消息: 有另一个用户正等着您的回应。日历事件则是另一个例子，它需要通过通知引起用户的注意，因为这些事件不能错过，而且有时候也和他人有关系。</p>
+				<p>通知主要被用在<span class="highlight">时间敏感的事件</span>上，特别是<span class="highlight">和其他人有关</span>的同步事件。例如聊天时的消息: 有另一个用户正等着你的回应。日历事件则是另一个例子，它需要通过通知引起用户的注意，因为这些事件不能错过，而且有时候也和他人有关系。</p>
 				<img class="nomarginRight" src="notifications_pattern_real_time_people.png" />
 				<div>
 					<div class="column col7">
@@ -263,7 +209,7 @@
 							<li>不要用技术细节来打扰用户，比如保存、同步或者升级。如果应用可以自己处理，就不要问用户。</li>
 							<li>不要用应用的错误消息打扰用户，如果应用可以快速恢复，那就不要问用户。</li>
 							<li>不要搞没有内容的通知，也不要打广告。通知是用来告诉用户某个事件，而不是仅仅为了打开一个应用。</li>
-							<li>不要仅仅是将您的应用显示在用户眼前。这样的通知只会使您的用户疏远您的应用。如果想让您的用户持续看到您的应用，做个小工具让用户可以选择放在主屏幕上。</li>
+							<li>不要仅仅是将你的应用显示在用户眼前。这样的通知只会使你的用户疏远你的应用。如果想让你的用户持续看到你的应用，做个小工具让用户可以选择放在主屏幕上。</li>
 						</ul>
 					</div>
 					<div class="column col6 nomarginRight">
@@ -287,25 +233,16 @@
 				</div>
 				<div>
 					<div class="column col6">
-						<p>在平板上，通知区域被集成在屏幕底部的系统来中。通过触摸通知区域来打开通知抽屉。</p>
-					</div>
-					<div class="column col6 nomarginRight">
-						<img class="nomarginRight bigger" src="notifications_pattern_tablet.png" />
-					</div>
-					<div class="clear"></div>
-				</div>
-				<div>
-					<div class="column col6">
-						<img class="nomarginRight bigger" src="notifications_pattern_ongoing_music.png" />
-					</div>
-					<div class="column col6 nomarginRight">
 						<h4>正在进行的</h4>
 						<p>“正在进行的”通知使用户了解正在运行的后台进程。例如，音乐播放器可以显示正在播放的音乐。也可以用来显示需要长时间处理的操作，例如下载或编码视频。“正在进行的”通知不能被手动删除。</p>
+					</div>
+					<div class="column col6 nomarginRight">
+						<img class="nomarginRight bigger" src="notifications_pattern_ongoing_music.png" />
 					</div>
 					<div class="clear"></div>
 				</div>
 				<h4>使用对话框和 toasts 反馈信息而不要用通知</h4>
-				<p>如果您的应用不再当前的屏幕上，不要显示对话框或 toast。对话框和 toast 只用来显示应用中操作的结果。例如，用对话框确认操作，用 toast 提示操作成功。对于对话框和 toasts 使用的更多细节，请阅读 <a href="confirming-acknowledging.html">确认和提示</a> 一节.</p>
+				<p>如果你的应用不再当前的屏幕上，不要显示对话框或 toast。对话框和 toast 只用来显示应用中操作的结果。例如，用对话框确认操作，用 toast 提示操作成功。对于对话框和 toasts 使用的更多细节，请阅读 <a href="confirming-acknowledging.html">确认和提示</a> 一节.</p>
 			</div><!-- mainContent -->
 			<div class="contentNav bottomNav">
 				<div class="buttonWrapper">
@@ -315,9 +252,6 @@
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
-			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
-			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
-			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
 		</div>
 	</div>
 </body>

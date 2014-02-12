@@ -7,6 +7,14 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
 	<style type="text/css">
+	#content div.good {
+		background: url("ico_good.png") no-repeat scroll left 3px transparent;
+		padding-left: 20px;
+	}
+	#content div.wrong {
+		background: url("ico_wrong.png") no-repeat scroll left 3px transparent;
+		padding-left: 20px;
+	}
 	</style>
 	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
@@ -19,66 +27,6 @@
 			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
 		</div>
 		<div id="navWrapper">
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../index.html">开始</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
-					<li><a href="../get-started/principles.html">设计原则</a></li>
-					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../style/index.html">风格</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../style/devices-displays.html">设备和显示</a></li>
-					<li><a href="../style/themes.html">主题</a></li>
-					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
-					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
-					<li><a href="../style/typography.html">字体</a></li>
-					<li><a href="../style/color.html">颜色</a></li>
-					<li><a href="../style/iconography.html">图标</a></li>
-					<li><a href="../style/writing.html">写作风格</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../patterns/index.html">模式</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../patterns/new.html">Android 新特性</a></li>
-					<li><a href="../patterns/gestures.html">手势</a></li>
-					<li><a href="../patterns/app-structure.html">应用结构</a></li>
-					<li><a href="../patterns/navigation.html">导航</a></li>
-					<li><a href="../patterns/actionbar.html">操作栏</a></li>
-					<li><a href="../patterns/multi-pane-layouts.html">多视图布局</a></li>
-					<li><a href="../patterns/swipe-views.html">滑动视图</a></li>
-					<li><a href="../patterns/selection.html">选择</a></li>
-					<li><a href="../patterns/confirming-acknowledging.html">确认和提示</a></li>
-					<li><a href="../patterns/notifications.html">通知</a></li>
-					<li><a href="../patterns/widgets.html">小部件</a></li>
-					<li><a href="../patterns/settings.html">设置</a></li>
-					<li><a href="../patterns/help.html">帮助</a></li>
-					<li><a href="../patterns/compatibility.html">兼容性</a></li>
-					<li><a href="../patterns/accessibility.html">可用性</a></li>
-					<li><a href="../patterns/pure-android.html">纯粹的 Android</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList initShow">
-				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
-				<ul class="foldingContainer">
-					<li><a href="tabs.html">标签选项卡</a></li>
-					<li><a href="lists.html">列表</a></li>
-					<li><a href="grid-lists.html">网格列表</a></li>
-					<li><a href="scrolling.html">滚动容器</a></li>
-					<li><a href="spinners.html">下拉菜单 (Spinners)</a></li>
-					<li><a class="highlight" href="buttons.html">按钮</a></li>
-					<li><a href="text-fields.html">文本框</a></li>
-					<li><a href="seek-bars.html">滑块</a></li>
-					<li><a href="progress.html">进度条和活动</a></li>
-					<li><a href="switches.html">开关</a></li>
-					<li><a href="dialogs.html">对话框</a></li>
-					<li><a href="pickers.html">选择器</a></li>
-				</ul>
-			</div>
-			<br class="clear" />
 		</div>
 		<div id="content">
 			<div class="contentNav topNav">
@@ -90,29 +38,66 @@
 				</div>
 			</div>
 			<div id="mainContent">
-				<p>按钮包含了文本和图片，明确的表明了当用户触摸时会触发的操作。Android 提供了两种按钮:&nbsp;<span class="highlight">基础按钮</span>和<span class="highlight">无边框按钮</span>。这两种都支持文字和图片。</p>
-				<div>
-					<img class="nomarginRight" src="buttons_basic.png" />
-				</div>
-				<div class="contentHeaderWraper">
-					<h2>基础按钮</h2>
-				</div>
-				<p>基础按钮就像传统的按钮，有边框和背景色。Android 为基础按钮提供了两种样式:&nbsp;默认大小和小按钮。默认大小的按钮有较大的字号，适合在表单外使用。小按钮则适合于表单内的其它控件配合使用。它有较小的字号和较低的高度。需要和其它控件对齐时，小按钮比较适合。</p>
-				<img class="nomarginRight" src="buttons_default_small.png" />
-				<div>
-					<div class="column col6">
-						<p class="caption">Holo 深色主题和浅色主题中的默认大小按钮。</p>
+				<a class="noticeDev" href="http://developer.android.com/guide/topics/ui/controls/button.html" target="_blank">
+					<div>
+						<h3>开发者文档</h3>
+						<p>Buttons</p>
 					</div>
-					<div class="column col6 nomarginRight">
-						<p class="caption">Holo 深色主题和浅色主题中的小按钮。</p>
+				</a>
+				<p>按钮可以包含文本和图片，并且明确的表明了当用户触摸时会触发的操作。</p>
+				<div class="clear"></div>
+				<div>
+					<div class="column col3 center">
+						<img class="nomarginLR" height="64px" src="icon_magnifying_glass.png" />
+					</div>
+					<div class="column col3">
+						<img class="nomarginLR" width="160px" src="buttons_text.png" />
+					</div>
+					<div class="column col7 nomarginRight">
+						<img class="nomarginLR" width="400px" src="buttons_image_and_text.png" />
 					</div>
 					<div class="clear"></div>
 				</div>
-				<div class="contentHeaderWraper">
-					<h2>无边框按钮</h2>
+				<div>
+					<div class="column col3">
+						<p>通过明确的图片，使得仅包含图标的按钮也很容易理解。</p>
+					</div>
+					<div class="column col3">
+						<p>如果操作难以通过图片表示，或者该操作很重要，不能有任何歧义时，仅包含文本的按钮是不错的选择。</p>
+					</div>
+					<div class="column col7 nomarginRight">
+						<p>合适的图片和文本可以相得益彰，使得按钮的操作更加明晰。</p>
+						<p>例如 Google Now 中的生日贺卡按钮不仅表明了操作，也表明该操作将通过 Google+ 应用完成。</p>
+					</div>
+					<div class="clear"></div>
 				</div>
-				<p>无边框按钮类似于基础按钮，但是没有边框，背景则是透明的。无边框按钮支持文字和图标。无边框按钮视觉上更加轻巧，可以与其它内容融合在一起。</p>
-				<img class="nomarginLR" src="buttons_borderless.png" />
+				<h4>按钮的背景色如何设置</h4>
+				<div>
+					<div class="column col6">
+						<p>对于<strong>仅包含图标</strong>的按钮，不需要使用背景色。</p>
+						<div>
+							<div class="column col2">
+								<div class="wrong">不要这样做</div>
+								<img class="nomarginLR" style="padding-top:3px;" src="buttons_image_bg_dont.png" />
+							</div>
+							<div class="column col2 nomarginRight">
+								<div class="good">应当这么做</div>
+								<img class="nomarginLR" style="width:30px;padding-top:10px;" src="icon_alarm.png" />
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<div class="column col7 nomarginRight">
+						<p>对于<strong>包含文本</strong>的按钮，也不需要背景色。为了提示用户点击，可以使用清晰的文本说明和不同的颜色、格式。</p>
+						<p>如果一定要选择带有背景色的按钮，请仔细斟酌。因为这种按钮看起来比较沉重，一个屏幕上最好就放一到两个。它们比较适合一下情况:</p>
+						<ul class="circleList">
+							<li>用户一定需要使用的操作 (例如: 注册)。</li>
+							<li>非常重要的操作 (例如: 接受/拒绝)。</li>
+							<li>对用户有很大影响的操作 (例如: 清除所有数据、立即购买)。</li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
 			</div><!-- mainContent -->
 			<div class="contentNav bottomNav">
 				<div class="buttonWrapper">
@@ -122,9 +107,6 @@
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
-			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
-			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
-			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
 		</div>
 	</div>
 </body>

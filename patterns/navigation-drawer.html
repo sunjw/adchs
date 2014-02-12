@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 导航抽屉</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>导航抽屉&nbsp;<a class="originalLink" href="http://developer.android.com/design/patterns/navigation-drawer.html" target="_blank">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="actionbar.html">上一页</a><a class="buttonNext" href="multi-pane-layouts.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<a class="noticeDev" href="http://developer.android.com/training/implementing-navigation/nav-drawer.html" target="_blank">
+					<div>
+						<h3>开发者文档</h3>
+						<p>Creating a Navigation Drawer</p>
+					</div>
+				</a>
+				<p>导航抽屉是一个从屏幕左边滑入的面板，用于显示应用的主要导航项目。</p>
+				<h4>显示导航抽屉</h4>
+				<p>用户可以通过在屏幕左边缘滑入或者触摸操作栏的应用图标打开导航抽屉。</p>
+				<p>导航抽屉覆盖在内容之上，但不覆盖操作栏。当导航抽屉完全打开后，操作栏的标题需要更换为应用的名称，而不是显示当前视图的名称，并且关闭所有和当前视图相关的操作按钮。操作栏的“更多操作”菜单按钮不需要关闭，以保证用户可以随时访问“设置”和“帮助”。</p>
+				<img class="nomarginLR" src="navigation_drawer_overview.png" />
+				<p class="caption">用户通过触摸导航抽屉提示打开导航抽屉。</p>
+				<p>因为导航抽屉是隐藏的，所以可以使你的应用界面更加清爽。你还可以通过导航抽屉，使用户从很深的操作页面直接回到应用的重要顶层视图。</p>
+				<img class="nomarginLR" src="navigation_drawer_open_from_lower.png" />
+				<p class="caption">在屏幕的任何位置从左向右滑动都可以打开导航抽屉。</p>
+				<h4>关闭导航抽屉</h4>
+				<p>当导航抽屉打开时，用户可以通过以下方式关闭它:</p>
+				<ul class="circleList">
+					<li>触摸导航抽屉以外的内容</li>
+					<li>从屏幕的任何位置向左滑动 (包括从屏幕的右边缘开始)</li>
+					<li>触摸应用操作栏的图标或者标题</li>
+					<li>按“返回”按钮</li>
+				</ul>
+				<div class="contentHeaderWraper">
+					<h2>在什么情景使用导航抽屉</h2>
+				</div>
+				<p>导航抽屉作为顶层导航控件，不仅仅是下拉菜单 (spinners) 和标签的简单替换。你应当根据应用的实际需求选择何种导航控件。阅读 <a href="../patterns/app-structure.html">应用结构</a> 一节，了解更多细节。</p>
+				<p>以下的一些情景就比较适合使用导航抽屉:</p>
+				<h4>有超过 3 个顶层视图</h4>
+				<p>导航抽屉比较适合同时显示多个导航目标。如果你的应用有超过 3 个顶层视图，应当选择导航抽屉；如果不超过 3 个，固定标签则是更合适的选择。</p>
+				<h4>在深层视图之间导航</h4>
+				<p>如果你的应用需要在深层次的视图之间导航，导航抽屉会是比较好的选择。因为在应用的任何位置都可以访问导航抽屉，所以如果需要从深层次的视图直接切换到其它视图中，导航抽屉比较便捷。</p>
+				<img class="nomarginLR" src="navigation_drawer_cross_nav.png" />
+				<p class="caption">通过导航抽屉在深层视图之间导航。</p>
+				<h4>非常深层次的导航</h4>
+				<p>如果你的应用有非常深层次的视图，用户使用“向上”或“返回”按钮导航到顶层视图就变得比较麻烦。此时如果提供导航抽屉这种更容易访问的方案，就会使得应用中的导航变的更加容易。</p>
+				<img class="nomarginLR" src="navigation_drawer_quick_to_top.png" />
+				<p class="caption">使用导航抽屉可以直接的回到应用的顶层视图，不需要多次使用“向上”或“返回”按钮。</p>
+				<div class="contentHeaderWraper">
+					<h2>导航项目</h2>
+				</div>
+				<p>导航抽屉主要用于显示应用中的重要视图，所以放置在导航抽屉中的项目都是用户经常使用的。一般情况下，导航抽屉中放置的都是应用的顶层视图。</p>
+				<p>如果你的应用有很深层次的视图，也可以将一些经常访问的深层次视图放入导航抽屉。</p>
+				<img class="nomarginLR" src="navigation_drawer_navigation_hubs.png" />
+				<p class="caption">导航抽屉中显示了应用的常用视图，包括顶层视图和一些深层次视图。</p>
+				<div>
+					<div class="column col8">
+						<p>为了提示导航抽屉的存在，所有导航抽屉中的视图都应该在操作栏的应用图标旁显示导航抽屉提示。当用户触摸应用图标时，导航抽屉从屏幕左边滑入。</p>
+						<p>其它视图的操作栏则显示标准的“向上”图标，导航抽屉此时仅能通过在屏幕边缘向左滑动打开。</p>
+					</div>
+					<div class="column col5 nomarginRight">
+						<img class="nomarginLR" src="navigation_drawer_indicator_big.png" />
+						<p class="caption">带有导航抽屉提示的应用图标。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>导航抽屉内容</h2>
+				</div>
+				<p>确保导航抽屉用于应用的视图导航，并且导航抽屉中的每项占一行。</p>
+				<div>
+					<div class="column col8">
+						<h4>标题栏、图标和数字提示</h4>
+						<p>你可以在导航抽屉中放置标题栏，通过不同的标题组织导航项目。标题栏不需要对触摸操作有反馈。</p>
+						<p>可以在导航项目前面放置图标，在最后放置数字提示，数字提示用于显示对应视图中变化的项目。</p>
+					</div>
+					<div class="column col5 nomarginRight">
+						<img class="nomarginLR" src="navigation_drawer_titles_icons.png" />
+						<p class="caption">使用标题栏和图标组织导航抽屉项目。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col8">
+						<img class="nomarginLR" src="navigation_drawer_collapse.png" />
+						<p class="caption">可折叠导航项目的右侧是折叠项目开关。</p>
+					</div>
+					<div class="column col5 nomarginRight">
+						<h4>可折叠的导航项目</h4>
+						<p>如果你有很多次级的功能视图，考虑使用可折叠的导航项目，以减少空间占用。可折叠的导航项目将变成两个部分，左边是父视图的导航按钮，右边则是折叠项目的开关。</p>
+						<p>在启动时，是否显示折叠的项目内容取决于你的应用需求。不过我们推荐一直显示顶层视图项目，如果有很多的折叠项目，那么将它们都折叠起来，以保证用户能看到顶层视图项目。</p>
+						<p>当用户在深层次视图打开导航抽屉时，展开相关的折叠项目，并高亮当前视图，使得用户明了自己所处的位置。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>导航抽屉和操作栏</h2>
+				</div>
+				<p>当导航抽屉打开时，用户的主要目的是选择不同的应用视图。注意导航抽屉并不覆盖操作栏，但用户可能不会注意到此时操作栏和导航抽屉的项目没有什么关系。</p>
+				<p>为了减少混栏，当导航抽屉打开时，请按以下指导调整操作栏内容:</p>
+				<ul class="circleList">
+					<li>显示应用图标</li>
+					<li>显示应用名称</li>
+					<li>在操作栏上移除与当前视图相关的操作按钮 (例如“新建”和“刷新”)，但可以保持全局操作按钮，例如“搜索”。</li>
+					<li>“更多操作”菜单中仍然显示导航目标，例如“设置”和“帮助”。</li>
+				</ul>
+				<img class="nomarginLR" src="navigation_drawer_open_overflow.png" />
+				<p class="caption">当导航抽屉打开时，清理操作栏，移除上下文相关的操作按钮，并显示应用的名称。</p>
+				<div>
+					<div class="column col6">
+						<img class="nomarginLR" src="navigation_drawer_nav_and_actions.png" />
+						<p class="caption">将操作按钮放置于操作栏右边或者“更多操作”菜单中。</p>
+					</div>
+					<div class="column col6 nomarginRight">
+						<p>不要将操作按钮放置在导航抽屉中，操作按钮应当始终放置在操作栏上。请记住不是所有应用都使用导航抽屉模式，所以为了保持一致性，请和其它应用一样，将操作按钮放置在操作栏右边或者“更多操作”菜单中。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div>
+					<div class="column col6">
+						<p>对于一些导航目标也同样适用统一的模式，例如对于“设置”和“帮助”，请将它们放置于“更多操作”菜单中。</p>
+					</div>
+					<div class="column col6 nomarginRight">
+						<img class="nomarginLR" src="navigation_drawer_settings_help.png" />
+						<p class="caption">将“设置”和“帮助”放置于“更多操作”菜单中。</p>
+					</div>
+					<div class="clear"></div>
+				</div>
+				<h4>上下文操作栏</h4>
+				<p>有时用户处在上下文操作栏 (CAB) 状态中，例如正在选择文字或者项目，准备执行操作。当显示上下文操作栏时，仍然可以通过在屏幕边缘向右滑动打开导航抽屉。请注意，此时打开导航抽屉后，应当关闭上下文操作栏，显示标准的操作栏。当导航抽屉关闭后，重新显示上下文操作栏。</p>
+				<img class="nomarginLR" src="navigation_drawer_CAB.png" />
+				<p class="caption">当导航抽屉打开后，隐藏上下文操作栏。</p>
+				<p>如果用户选择了项目，却通过导航抽屉离开该视图，请在离开视图后自动取消之前的选择。</p>
+				<div class="contentHeaderWraper">
+					<h2>交互细节</h2>
+				</div>
+				<h4>首次启动时提示导航抽屉</h4>
+				<p>当你的应用首次启动时，请打开导航抽屉，直到用户手动关闭它。这样确保用户了解如何使用导航抽屉，并且看到导航抽屉中有哪些项目。以后的应用启动可以不再自动打开导航抽屉。</p>
+				<img class="nomarginLR" src="navigation_drawer_first_run.png" />
+				<p class="caption">应用首次启动时，自动打开导航抽屉，确保用户了解如何使用导航抽屉。</p>
+				<h4>给用户小提示</h4>
+				<p>当用户触摸屏幕左边缘的时候 (左边缘 20dp 之内的位置)，稍稍显示一点导航抽屉，提供有效的反馈，并且提示用户。</p>
+				<img class="nomarginLR" src="navigation_drawer_peek.png" />
+				<p class="caption">当触摸屏幕左边缘时，略微打开导航抽屉。</p>
+				<h4>高亮</h4>
+				<p>如果当前视图是导航抽屉中的一项，打开导航抽屉时高亮该项目，如果不是则不要高亮任何项目。</p>
+				<div class="contentHeaderWraper">
+					<h2>导航抽屉对全局导航的影响</h2>
+				</div>
+				<p>导航抽屉是 Android 的一种顶层导航模式，同时还有标签栏导航模式和下拉菜单 (spinner) 导航模式，所以为了保持一致性，使用导航抽屉的应用仍然需要遵守“返回”和“向上”按钮的设计要求。</p>
+				<p>请注意以下几点:</p>
+				<h4>在顶层视图使用“返回”按钮</h4>
+				<p>在顶层视图触摸“返回”按钮时，不要打开导航抽屉，而是根据设计要求返回当前任务的上一个应用或者返回“主屏幕”。</p>
+				<img class="nomarginLR" src="navigation_drawer_top_out.png" />
+				<p class="caption">“返回”按钮不会打开导航菜单，而是按照导航设计要求回到之前的屏幕。</p>
+				<h4>跨越多级视图的导航后使用“返回”按钮</h4>
+				<p>如果用户通过导航抽屉直接进入深层次的视图，并且该视图有父视图，那么“返回”按钮栈应当被清空，且触摸“返回”按钮后返回其父视图。该导航行为类似于直接从通知进入应用的深层次视图。</p>
+				<img class="nomarginLR" src="navigation_drawer_reset_backstack.png" />
+				<p class="caption">如果目标视图有父视图，清空“返回”按钮栈。</p>
+				<div class="contentHeaderWraper">
+					<h2>样式</h2>
+				</div>
+				<p>导航抽屉的宽度可以根据应用的内容做出调整，但是请保持在 240dp 到 320dp 之间，其中每个项目的高度也不应低于 48dp。请参考 <a href="../style/metrics-grids.html">度量单位和网格</a> 设计导航抽屉的布局。</p>
+				<img class="nomarginLR" src="navigation_drawer_layout.png" />
+				<p class="caption">导航抽屉的布局原则。</p>
+				<p>选择适合应用的导航抽屉背景色，例如以下两个例子的背景色分别适用于浅色 Holo 主题和深色 Holo 主题。</p>
+				<img class="nomarginLR" src="navigation_drawer_holo_dark_light.png" />
+				<p class="caption">浅色 Holo 主题和深色 Holo 主题中的导航抽屉。</p>
+				<div class="contentHeaderWraper">
+					<h2>检查清单</h2>
+				</div>
+				<p>无论您使用标准的导航抽屉还是自己实现的类似导航栏，请注意保持以下的设计模式:</p>
+				<ul class="circleList">
+					<li>
+						<p>始终显示操作栏，并根据需要调整内容。</p>
+					</li>
+					<li>
+						<p>导航抽屉覆盖在内容之上。</p>
+					</li>
+					<li>
+						<p>导航抽屉中的所有视图都在操作栏提供带有导航抽屉提示的应用图标，并可以通过触摸图标打开导航抽屉。</p>
+					</li>
+					<li>
+						<p>使用新设计的滑入滑出动画。</p>
+					</li>
+					<li>
+						<p>不包含在导航抽屉中的视图都在操作栏提供标准的“向上”按钮。</p>
+					</li>
+					<li>
+						<p>保持标准的“向上”和“返回”按钮行为。</p>
+					</li>
+				</ul>
+			</div><!-- mainContent -->
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="actionbar.html">上一页</a><a class="buttonNext" href="multi-pane-layouts.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+		</div>
+	</div>
+</body>
+</html>

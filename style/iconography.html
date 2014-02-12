@@ -15,6 +15,27 @@
 		background: url('ico_web.png') left top no-repeat;
 		padding-left: 40px;
 	}
+	#mainContent table {
+		margin: 0 0 10px 0;
+	}
+	table {
+		background-color: #F7F7F7;
+		border: 0 none;
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	th,td {
+		padding: 4px 12px;
+		text-align: left;
+		border: 1px solid #DDDDDD;
+	}
+	th {
+		background-color: #999999;
+		color: #FFFFFF;
+	}
+	td {
+		vertical-align: top;
+	}
 	</style>
 	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
@@ -27,83 +48,30 @@
 			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
 		</div>
 		<div id="navWrapper">
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../index.html">开始</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
-					<li><a href="../get-started/principles.html">设计原则</a></li>
-					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList initShow">
-				<div class="trigger"><a href="../style/index.html">风格</a></div>
-				<ul class="foldingContainer">
-					<li><a href="devices-displays.html">设备和显示</a></li>
-					<li><a href="themes.html">主题</a></li>
-					<li><a href="touch-feedback.html">触摸反馈</a></li>
-					<li><a href="metrics-grids.html">度量单位和网格</a></li>
-					<li><a href="typography.html">字体</a></li>
-					<li><a href="color.html">颜色</a></li>
-					<li><a class="highlight" href="iconography.html">图标</a></li>
-					<li><a href="writing.html">写作风格</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../patterns/index.html">模式</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../patterns/new.html">Android 新特性</a></li>
-					<li><a href="../patterns/gestures.html">手势</a></li>
-					<li><a href="../patterns/app-structure.html">应用结构</a></li>
-					<li><a href="../patterns/navigation.html">导航</a></li>
-					<li><a href="../patterns/actionbar.html">操作栏</a></li>
-					<li><a href="../patterns/multi-pane-layouts.html">多视图布局</a></li>
-					<li><a href="../patterns/swipe-views.html">滑动视图</a></li>
-					<li><a href="../patterns/selection.html">选择</a></li>
-					<li><a href="../patterns/confirming-acknowledging.html">确认和提示</a></li>
-					<li><a href="../patterns/notifications.html">通知</a></li>
-					<li><a href="../patterns/widgets.html">小部件</a></li>
-					<li><a href="../patterns/settings.html">设置</a></li>
-					<li><a href="../patterns/help.html">帮助</a></li>
-					<li><a href="../patterns/compatibility.html">兼容性</a></li>
-					<li><a href="../patterns/accessibility.html">可用性</a></li>
-					<li><a href="../patterns/pure-android.html">纯粹的 Android</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
-					<li><a href="../building-blocks/lists.html">列表</a></li>
-					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
-					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
-					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
-					<li><a href="../building-blocks/buttons.html">按钮</a></li>
-					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
-					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
-					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
-					<li><a href="../building-blocks/switches.html">开关</a></li>
-					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
-					<li><a href="../building-blocks/pickers.html">选择器</a></li>
-				</ul>
-			</div>
-			<br class="clear" />
 		</div>
 		<div id="content">
 			<div class="contentNav topNav">
 				<div class="contentHeaderWraper">
-					<h2>图标&nbsp;<a class="originalLink" href="http://developer.android.com/design/style/iconography.html">Original Version</a></h2>
+					<h2>图标&nbsp;<a class="originalLink" href="http://developer.android.com/design/style/iconography.html" target="_blank">Original Version</a></h2>
 				</div>
 				<div class="buttonWrapper">
-					<a class="buttonPrev" href="color.html">上一页</a><a class="buttonNext" href="writing.html">下一页</a>
+					<a class="buttonPrev" href="color.html">上一页</a><a class="buttonNext" href="branding.html">下一页</a>
 				</div>
 			</div>
 			<div id="mainContent">
 				<img class="nomarginLR" src="iconography_overview.png" />
-				<p>图标就是一个表示屏幕内容并为操作、状态和应用提供第一印象的小图片。</p>
+				<p>图标就是一个表示屏幕内容并为操作、状态和应用提供第一印象的小幅图片。</p>
+				<p>在为应用设计图标时，需要牢记设备是多种多样的，这就带来了不同的像素密度（详见 <a href="devices-displays.html">设备与显示</a> ）。为了应对这一问题，提供不同尺寸的图标是个不错的主意。Android 会根据你提供的图标来针对不同设备优化选择。</p>
+				<p>由于所有图标都需要适配不同的像素密度，这里引入 <acronym title="density-independent pixels">dp</acronym> 这一单位，它以中等尺寸，MDPI的屏幕为基准提供像素密度无关的表示。</p>
+				<img src="devices_displays_density@2x.png" alt="" height="160">
+				<p>在设计图标时，对于五种主流的像素密度（MDPI、HDPI、XHDPI、XXHDPI 和 XXXHDPI）应按照 <strong>2:3:4:6:8 的比例进行缩放</strong>。例如，一个启动图标的尺寸为48x48 dp，这表示在 MDPI 的屏幕上其实际尺寸应为 48x48 px，在 HDPI 的屏幕上其实际大小是 MDPI 的 1.5 倍 (72x72 px)，在 XDPI 的屏幕上其实际大小是 MDPI 的 2 倍 (96x96 px)，依此类推。</p>
+				<div class="noteInfo">
+					<p><strong>提示：</strong>虽然 Android 也支持低像素密度 (LDPI) 的屏幕，但无需为此费神，系统会自动将 HDPI 尺寸的图标缩小到 1/2 进行匹配。
+				</div>
 				<div class="contentHeaderWraper">
 					<h2>启动图标</h2>
 				</div>
-				<p>启动图标在“主屏幕”和“所有应用”中代表您应用。因为用户可以设置“主屏幕”的壁纸，所以要确保您的启动图标在任何背景上都清晰可见。</p>
+				<p>启动图标在“主屏幕”和“所有应用”中代表你的应用。因为用户可以设置“主屏幕”的壁纸，所以要确保你的启动图标在任何背景上都清晰可见。</p>
 				<div>
 					<div class="column col4">
 						<img class="nomarginLR" src="iconography_launcher_size.png" />
@@ -154,8 +122,8 @@
 					<h2>操作栏</h2>
 				</div>
 				<p>操作栏图标是一个图像按钮，用来表示用户在应用中可以执行的重要操作。每一个图标都使用一个简单的隐喻来代表将要执行的操作，用户应当一目了然。</p>
-				<p>内置的图标应当用来表示一些确定的通用操作，例如“刷新”和“分享”。下载链接提供了一个图标包，其中的图标可以缩放到多种屏幕分辨率，并且适合于浅色和深色的 Holo 主题。图标包中还有没有样式化的图标，可以和您自己的主题搭配，并且提供了 Adobe&reg; Illustrator&reg; 源文件，您可以自己修改。</p>
-				<p><a href="https://dl-ssl.google.com/android/design/Android_Design_Icons_20120229.zip" target="_blank">下载操作栏图标包</a></p>
+				<p>内置的图标应当用来表示一些确定的通用操作，例如“刷新”和“分享”。下载链接提供了一个图标包，其中的图标可以缩放到多种屏幕分辨率，并且适合于浅色和深色的 Holo 主题。图标包中还有没有样式化的图标，可以和你自己的主题搭配，并且提供了 Adobe&reg; Illustrator&reg; 源文件，你可以自己修改。</p>
+				<p><a href="http://developer.android.com/downloads/design/Android_Design_Icons_20131106.zip" target="_blank">下载操作栏图标包</a></p>
 				<div>
 					<div class="column col4">
 						<img class="nomarginLR" src="iconography_actionbar_size.png" />
@@ -210,7 +178,7 @@
 				<div class="contentHeaderWraper">
 					<h2>小图标和上下文图标</h2>
 				</div>
-				<p>在您应用的主体区域中，使用小图标表示操作或者特定的状态。例如在 Gmail 应用中，每条信息都有一个星型图标用来标记“重要”。</p>
+				<p>在应用的主体区域中，使用小图标表示操作或者特定的状态。例如在 Gmail 应用中，每条信息都有一个星型图标用来标记“重要”。</p>
 				<div>
 					<div class="column col4">
 						<img class="nomarginLR" src="iconography_small_size.png" />
@@ -261,7 +229,7 @@
 				<div class="contentHeaderWraper">
 					<h2>通知栏图标</h2>
 				</div>
-				<p>如果您的应用会产生通知，提供一个图标给系统显示在状态栏上，表示有一条新的通知。</p>
+				<p>如果你的应用会产生通知，提供一个图标给系统显示在状态栏上，表示有一条新的通知。</p>
 				<div>
 					<div class="column col4">
 						<img class="nomarginLR" src="iconography_notification_size.png" />
@@ -294,32 +262,118 @@
 					</div>
 					<div class="column col4 normarginRight">
 						<h4>样式</h4>
-						<p>使用简单的平面的图标，应当和您应用的启动图标视觉上相似。</p>
+						<p>使用简单的平面的图标，应当和应用的启动图标视觉上相似。</p>
 					</div>
 					<div class="clear"></div>
 				</div>
 				<div>
 					<div class="column col4">
 						<h4>颜色</h4>
-						<p>通知单图标必须是白色的，这样系统可以缩放和加深您的图标。</p>
+						<p>通知单图标必须是白色的，这样系统可以缩放和加深你的图标。</p>
 					</div>
 					<div class="column col8">
 						<img class="nomarginLR" src="iconography_notification_example.png" />
-					</div>
+					</div>			
 					<div class="clear"></div>
 				</div>
+				<div class="contentHeaderWraper">
+					<h2>设计小技巧</h2>
+				</div>
+				<p>以下这些小技巧可能对你创建图标或其他图片资源有所帮助。这里我们假定你也使用诸如 Adobe&reg; Photoshop&reg; 这类的位图或矢量图编辑程序。</p>
+				<h4>尽可能使用矢量图</h4>
+				<p>Adobe&reg; Photoshop&reg; 这类图像编辑工具运行用户混合使用矢量图和位图。尽可能的使用使用矢量图，这样在需要放大图标时就可以避免细节上的损失。使用矢量图的另一个好处是为能更方便的为像素密度低的屏幕剪裁图标元素。</p>
+				<h4>使用更大的画布</h4>
+				<p>为了更好的适配不同的像素密度，最好使用数倍于目标图标尺寸的画布。例如，启动图标在 MDPI、HDPI、XHDPI 和 XXHDPI 下的宽度为 48、72、96 和 144 px，使用 864x864 px 的画板可以降低缩放图标时的工作量。</p>
+
+				<h4>缩放时，按需重绘位图图层</h4>
+				<p>如果需要放大的图标中包含位图图层，这些图层需要进行手动重绘，以便在更高的像素密度下获得更好的显示效果。例如，为 MDPI 所绘制的 60x60 px 的圆，在适配 HDPI 屏幕时需重绘成 90x90 px。</p>
+
+				<h4>图标命名约定</h4>
+				<p>遵守一定的图标命名约定有助于图标文件的管理。我们可以为不同类型的图标指定不同的命名前缀：</p>
+				<table>
+					<tr>
+						<th>图标类型</th>
+						<th>命名前缀</th>
+						<th>例</th>
+					</tr>
+					<tr>
+						<td>图标</td>
+						<td><code>ic_</code></td>
+						<td><code>ic_star.png</code></td>
+					</tr>
+					<tr>
+						<td>启动图标</td>
+						<td><code>ic_launcher</code></td>
+						<td><code>ic_launcher_calendar.png</code></td>
+					</tr>
+					<tr>
+						<td>菜单图标和操作栏图标</td>
+						<td><code>ic_menu</code></td>
+						<td><code>ic_menu_archive.png</code></td>
+					</tr>
+					<tr>
+						<td>状态栏图标</td>
+						<td><code>ic_stat_notify</code></td>
+						<td><code>ic_stat_notify_msg.png</code></td>
+					</tr>
+					<tr>
+						<td>标签选项卡图标</td>
+						<td><code>ic_tab</code></td>
+						<td><code>ic_tab_recent.png</code></td>
+					</tr>
+					<tr>
+						<td>对话框图标</td>
+						<td><code>ic_dialog</code></td>
+						<td><code>ic_dialog_info.png</code></td>
+					</tr>
+				</table>
+				<p>此处给出的命名约定只是作为示例，你可以根据需求建立自己的命名约定。</p>
+				<h4>按像素密度对图标进行归档</h4>
+				<p>支持多像素密度意味着同一图标会有不同的版本。为了方便管理，我们建议按照像素密度对相应的图标文件进行归档保存。例如：</p>
+<!-- DO NOT format this block -->
+<pre class="prettyprint">art/...
+    mdpi/...
+        _pre_production/...
+            <em>working_file</em>.psd
+        <em>finished_asset</em>.png
+    hdpi/...
+        _pre_production/...
+            <em>working_file</em>.psd
+        <em>finished_asset</em>.png
+    xhdpi/...
+        _pre_production/...
+            <em>working_file</em>.psd
+        <em>finished_asset</em>.png
+    xxhdpi/...
+        _pre_production/...
+            <em>working_file</em>.psd
+        <em>finished_asset</em>.png</pre>
+<!-- DO NOT format this block -->
+				<p>这一归档方式与应用内保存图标文件的方式相似，可以方便的进行文件复制。此外由于不同像素密度下的同一图标文件必须使用同一个文件名，借助这一归档方式我们可以方便的检查文件命名的一致性。</p>
+				<p>作为参考，这里也给出应用内保存图标文件的方式：</p>
+<!-- DO NOT format this block -->					
+<pre class="prettyprint">res/...
+    drawable-ldpi/...
+        <em>finished_asset</em>.png
+    drawable-mdpi/...
+        <em>finished_asset</em>.png
+    drawable-hdpi/...
+        <em>finished_asset</em>.png
+    drawable-xhdpi/...
+        <em>finished_asset</em>.png</pre>
+<!-- DO NOT format this block -->
+				<p>关于应用内资源文件保存方式的更多内容，参见 <a href="http://developer.android.com/guide/topics/resources/providing-resources.html" target="_blank">Providing Resources</a> .</p>
+				<h4>删除最终版本中无关的元信息</h4>
+				<p>虽然 Android SDK 工具在打包应用时会自动压缩 PNG 文件，我们应该养成删除无关元信息的良好习惯。借助 <a href="http://optipng.sourceforge.net/" target="_blank">OptiPNG</a> 和 <a href="http://pmt.sourceforge.net/pngcrush/" target="_blank">Pngcrush</a> 这样的工具，可以实现元信息删除和文件尺寸压缩这样的操作。</p>
 			</div>
 			<div class="contentNav bottomNav">
 				<div class="buttonWrapper">
-					<a class="buttonPrev" href="color.html">上一页</a><a class="buttonNext" href="writing.html">下一页</a>
+					<a class="buttonPrev" href="color.html">上一页</a><a class="buttonNext" href="branding.html">下一页</a>
 				</div>
 			</div>
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
-			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
-			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
-			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
 		</div>
 	</div>
 </body>

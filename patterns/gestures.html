@@ -23,66 +23,6 @@
 			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
 		</div>
 		<div id="navWrapper">
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../index.html">开始</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
-					<li><a href="../get-started/principles.html">设计原则</a></li>
-					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../style/index.html">风格</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../style/devices-displays.html">设备和显示</a></li>
-					<li><a href="../style/themes.html">主题</a></li>
-					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
-					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
-					<li><a href="../style/typography.html">字体</a></li>
-					<li><a href="../style/color.html">颜色</a></li>
-					<li><a href="../style/iconography.html">图标</a></li>
-					<li><a href="../style/writing.html">写作风格</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList initShow">
-				<div class="trigger"><a href="index.html">模式</a></div>
-				<ul class="foldingContainer">
-					<li><a href="new.html">Android 新特性</a></li>
-					<li><a class="highlight" href="gestures.html">手势</a></li>
-					<li><a href="app-structure.html">应用结构</a></li>
-					<li><a href="navigation.html">导航</a></li>
-					<li><a href="actionbar.html">操作栏</a></li>
-					<li><a href="multi-pane-layouts.html">多视图布局</a></li>
-					<li><a href="swipe-views.html">滑动视图</a></li>
-					<li><a href="selection.html">选择</a></li>
-					<li><a href="confirming-acknowledging.html">确认和提示</a></li>
-					<li><a href="notifications.html">通知</a></li>
-					<li><a href="widgets.html">小部件</a></li>
-					<li><a href="settings.html">设置</a></li>
-					<li><a href="help.html">帮助</a></li>
-					<li><a href="compatibility.html">兼容性</a></li>
-					<li><a href="accessibility.html">可用性</a></li>
-					<li><a href="pure-android.html">纯粹的 Android</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
-					<li><a href="../building-blocks/lists.html">列表</a></li>
-					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
-					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
-					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
-					<li><a href="../building-blocks/buttons.html">按钮</a></li>
-					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
-					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
-					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
-					<li><a href="../building-blocks/switches.html">开关</a></li>
-					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
-					<li><a href="../building-blocks/pickers.html">选择器</a></li>
-				</ul>
-			</div>
-			<br class="clear" />
 		</div>
 		<div id="content">
 			<div class="contentNav topNav">
@@ -94,7 +34,7 @@
 				</div>
 			</div>
 			<div id="mainContent">
-				<p>手势使得用户可以操作您的应用中的对象。下面的表格展示了 Android 支持的主要手势。</p>
+				<p>手势使得用户可以操作你的应用中的对象。下面的表格展示了 Android 支持的主要手势。</p>
 				<div>
 					<div class="column col4">
 						<img class="nomarginLR" src="gesture_touch.png" />
@@ -154,14 +94,18 @@
 							</li>
 						</ul>
 					</div>
-					<div class="column col4 nomarginRight">
-						<img class="nomarginLR" src="gesture_pinchopen.png" />
-						<h4>Pinch open</h4>
-						<p>放大内容</p>
+					<div class="column col4">
+						<img class="nomarginLR" src="gesture_pinchclose.png" />
+						<h4>双击拖动</h4>
+						<p>放大或者缩小点击区域的内容。</p>
 						<ul>
 							<li class="iconAction">
 								<p><span class="highlight">操作</span><br />
-								用两个手指按住，向相互远离的方向移动，抬起</p>
+								点击松开后立刻再次按住屏幕上下拖动:</p>
+								<ul class="circleList">
+									<li>向上滑动放大区域内容</li>
+									<li>向下滑动缩小区域内容</li>
+								</ul>
 							</li>
 						</ul>
 					</div>
@@ -169,9 +113,20 @@
 				</div>
 				<div>
 					<div class="column col4">
+						<img class="nomarginLR" src="gesture_pinchopen.png" />
+						<h4>放大 (Pinch open)</h4>
+						<p>放大内容。</p>
+						<ul>
+							<li class="iconAction">
+								<p><span class="highlight">操作</span><br />
+								用两个手指按住，向相互远离的方向移动，抬起</p>
+							</li>
+						</ul>
+					</div>
+					<div class="column col4">
 						<img class="nomarginLR" src="gesture_pinchclose.png" />
-						<h4>Pinch close</h4>
-						<p>缩小内容</p>
+						<h4>缩小 (Pinch close)</h4>
+						<p>缩小内容。</p>
 						<ul>
 							<li class="iconAction">
 								<p><span class="highlight">操作</span><br />
@@ -190,9 +145,6 @@
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
-			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
-			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
-			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
 		</div>
 	</div>
 </body>

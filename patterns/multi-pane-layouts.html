@@ -20,66 +20,6 @@
 			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
 		</div>
 		<div id="navWrapper">
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../index.html">开始</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
-					<li><a href="../get-started/principles.html">设计原则</a></li>
-					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../style/index.html">风格</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../style/devices-displays.html">设备和显示</a></li>
-					<li><a href="../style/themes.html">主题</a></li>
-					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
-					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
-					<li><a href="../style/typography.html">字体</a></li>
-					<li><a href="../style/color.html">颜色</a></li>
-					<li><a href="../style/iconography.html">图标</a></li>
-					<li><a href="../style/writing.html">写作风格</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList initShow">
-				<div class="trigger"><a href="index.html">模式</a></div>
-				<ul class="foldingContainer">
-					<li><a href="new.html">Android 新特性</a></li>
-					<li><a href="gestures.html">手势</a></li>
-					<li><a href="app-structure.html">应用结构</a></li>
-					<li><a href="navigation.html">导航</a></li>
-					<li><a href="actionbar.html">操作栏</a></li>
-					<li><a class="highlight" href="multi-pane-layouts.html">多视图布局</a></li>
-					<li><a href="swipe-views.html">滑动视图</a></li>
-					<li><a href="selection.html">选择</a></li>
-					<li><a href="confirming-acknowledging.html">确认和提示</a></li>
-					<li><a href="notifications.html">通知</a></li>
-					<li><a href="widgets.html">小部件</a></li>
-					<li><a href="settings.html">设置</a></li>
-					<li><a href="help.html">帮助</a></li>
-					<li><a href="compatibility.html">兼容性</a></li>
-					<li><a href="accessibility.html">可用性</a></li>
-					<li><a href="pure-android.html">纯粹的 Android</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
-					<li><a href="../building-blocks/lists.html">列表</a></li>
-					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
-					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
-					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
-					<li><a href="../building-blocks/buttons.html">按钮</a></li>
-					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
-					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
-					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
-					<li><a href="../building-blocks/switches.html">开关</a></li>
-					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
-					<li><a href="../building-blocks/pickers.html">选择器</a></li>
-				</ul>
-			</div>
-			<br class="clear" />
 		</div>
 		<div id="content">
 			<div class="contentNav topNav">
@@ -87,24 +27,30 @@
 					<h2>多视图布局&nbsp;<a class="originalLink" href="http://developer.android.com/design/patterns/multi-pane-layouts.html" target="_blank">Original Version</a></h2>
 				</div>
 				<div class="buttonWrapper">
-					<a class="buttonPrev" href="actionbar.html">上一页</a><a class="buttonNext" href="swipe-views.html">下一页</a>
+					<a class="buttonPrev" href="navigation-drawer.html">上一页</a><a class="buttonNext" href="swipe-views.html">下一页</a>
 				</div>
 			</div>
 			<div id="mainContent">
-				<p>为 Android 开发应用时，要注意有各种屏幕尺寸的设备能够运行 Android 系统。确保您的应用在各种设备上始终能够提供平衡且美观的布局。</p>
-				<p>通过“面板”可以帮助您做的这一点。当屏幕上有很多横向空间时，多个“面板”可以组合成一个复合视图，而在小屏幕上，则可以将它们分割成多个视图。</p>
+				<a class="noticeDev" href="http://developer.android.com/training/basics/fragments/index.html" target="_blank">
+					<div>
+						<h3>开发者文档</h3>
+						<p>Building a Dynamic UI with Fragments</p>
+					</div>
+				</a>
+				<p>为 Android 开发应用时，要注意有各种屏幕尺寸的设备能够运行 Android 系统。确保你的应用在各种设备上始终能够提供平衡且美观的布局。</p>
+				<p>通过“面板”可以帮助你做的这一点。当屏幕上有很多横向空间时，多个“面板”可以组合成一个复合视图，而在小屏幕上，则可以将它们分割成多个视图。</p>
 				<div class="contentHeaderWraper">
 					<h2>将多个面板组合在同一屏幕中</h2>
 				</div>
 				<p>在小型设备上，应用的内容可以被分为一个主要的列表和详细信息视图。触摸列表中的项目，将切换到对应的详细信息。</p>
 				<img class="nomarginLR" src="multipane_views.png" />
-				<p>由于平板比手机拥有更大的屏幕，您可以通过“面板”将项目列表和详细信息放在一个单独的复合视图中。这样可以更加充分的利用屏幕空间，并且使应用中的导航更加容易。</p>
+				<p>由于平板比手机拥有更大的屏幕，你可以通过“面板”将项目列表和详细信息放在一个单独的复合视图中。这样可以更加充分的利用屏幕空间，并且使应用中的导航更加容易。</p>
 				<img class="nomarginLR" src="multipane_view_tablet.png" />
 				<p>一般情况下，在屏幕左边显示列表，右边显示列表中被选中项目的详细信息。保持左边列表中被选中的状态，使得面板间的关系更加明确。</p>
 				<div class="contentHeaderWraper">
 					<h2>复合视图以及屏幕方向</h2>
 				</div>
-				<p>无论屏幕是什么竖着还是横着的，视图中的功能应该是一样的。如果您使用了复合视图，那么在旋转屏幕的时候，仍然保持复合视图，不要分割成多个视图。有很多方法可以确保屏幕旋转的情况下，功能保持不变。</p>
+				<p>无论屏幕是什么竖着还是横着的，视图中的功能应该是一样的。如果你使用了复合视图，那么在旋转屏幕的时候，仍然保持复合视图，不要分割成多个视图。有很多方法可以确保屏幕旋转的情况下，功能保持不变。</p>
 				<div>
 					<div class="column col8">
 						<img class="nomarginLR" src="multipane_stretch.png" />
@@ -150,13 +96,13 @@
 				</div>
 				<ul class="circleList">
 					<li>
-						<p>预先为不同的屏幕尺寸和方向设计好您应用的布局。</p>
+						<p>预先为不同的屏幕尺寸和方向设计好应用的布局。</p>
 					</li>
 					<li>
-						<p>仔细考虑在不同的屏幕方向时，何种复合视图的布局是您应用最好的选择。</p>
+						<p>仔细考虑在不同的屏幕方向时，何种复合视图的布局是应用最好的选择。</p>
 					</li>
 					<li>
-						<p>寻找各种可能，将您应用的视图组合成复合视图。</p>
+						<p>寻找各种可能，将应用的视图组合成复合视图。</p>
 					</li>
 					<li>
 						<p>确保在屏幕旋转后，仍然提供相同的功能。</p>
@@ -165,15 +111,12 @@
 			</div><!-- mainContent -->
 			<div class="contentNav bottomNav">
 				<div class="buttonWrapper">
-					<a class="buttonPrev" href="actionbar.html">上一页</a><a class="buttonNext" href="swipe-views.html">下一页</a>
+					<a class="buttonPrev" href="navigation-drawer.html">上一页</a><a class="buttonNext" href="swipe-views.html">下一页</a>
 				</div>
 			</div>
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
-			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
-			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
-			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
 		</div>
 	</div>
 </body>

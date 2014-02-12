@@ -23,66 +23,6 @@
 			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
 		</div>
 		<div id="navWrapper">
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../index.html">开始</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
-					<li><a href="../get-started/principles.html">设计原则</a></li>
-					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../style/index.html">风格</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../style/devices-displays.html">设备和显示</a></li>
-					<li><a href="../style/themes.html">主题</a></li>
-					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
-					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
-					<li><a href="../style/typography.html">字体</a></li>
-					<li><a href="../style/color.html">颜色</a></li>
-					<li><a href="../style/iconography.html">图标</a></li>
-					<li><a href="../style/writing.html">写作风格</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../patterns/index.html">模式</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../patterns/new.html">Android 新特性</a></li>
-					<li><a href="../patterns/gestures.html">手势</a></li>
-					<li><a href="../patterns/app-structure.html">应用结构</a></li>
-					<li><a href="../patterns/navigation.html">导航</a></li>
-					<li><a href="../patterns/actionbar.html">操作栏</a></li>
-					<li><a href="../patterns/multi-pane-layouts.html">多视图布局</a></li>
-					<li><a href="../patterns/swipe-views.html">滑动视图</a></li>
-					<li><a href="../patterns/selection.html">选择</a></li>
-					<li><a href="../patterns/confirming-acknowledging.html">确认和提示</a></li>
-					<li><a href="../patterns/notifications.html">通知</a></li>
-					<li><a href="../patterns/widgets.html">小部件</a></li>
-					<li><a href="../patterns/settings.html">设置</a></li>
-					<li><a href="../patterns/help.html">帮助</a></li>
-					<li><a href="../patterns/compatibility.html">兼容性</a></li>
-					<li><a href="../patterns/accessibility.html">可用性</a></li>
-					<li><a href="../patterns/pure-android.html">纯粹的 Android</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList initShow">
-				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
-				<ul class="foldingContainer">
-					<li><a class="highlight" href="tabs.html">标签选项卡</a></li>
-					<li><a href="lists.html">列表</a></li>
-					<li><a href="grid-lists.html">网格列表</a></li>
-					<li><a href="scrolling.html">滚动容器</a></li>
-					<li><a href="spinners.html">下拉菜单 (Spinners)</a></li>
-					<li><a href="buttons.html">按钮</a></li>
-					<li><a href="text-fields.html">文本框</a></li>
-					<li><a href="seek-bars.html">滑块</a></li>
-					<li><a href="progress.html">进度条和活动</a></li>
-					<li><a href="switches.html">开关</a></li>
-					<li><a href="dialogs.html">对话框</a></li>
-					<li><a href="pickers.html">选择器</a></li>
-				</ul>
-			</div>
-			<br class="clear" />
 		</div>
 		<div id="content">
 			<div class="contentNav topNav">
@@ -95,7 +35,15 @@
 			</div>
 			<div id="mainContent">
 				<img class="nomarginLR" src="tabs_overview.png" />
+				<a class="noticeDev" href="http://developer.android.com/training/implementing-navigation/lateral.html" target="_blank">
+					<div>
+						<h3>开发者文档</h3>
+						<p>Creating Swipe Views with Tabs</p>
+					</div>
+				</a>
 				<p>将标签放置在操作栏中，可以使用户更容易的查看、切换应用中的视图和功能，或者浏览不同的数据。</p>
+				<p>阅读 <a href="../patterns/swipe-views.html">滑动视图</a> 一节，了解更多关于通过手势在标签之间导航的细节。</p>
+				<div class="clear"></div>
 				<div class="contentHeaderWraper">
 					<h2>滚动标签</h2>
 				</div>
@@ -104,7 +52,7 @@
 						<p>滚动标签控件和一般的标签控件相比，它可以放置更多的标签。通过在视图中左右滑动，切换不同的标签。</p>
 					</div>
 					<div class="column col7 nomarginRight">
-						<video width="400" class="clickPlay" autoplay>
+						<video width="400" height="120" class="clickPlay" autoplay>
 							<source src="http://developer.android.com/design/media/tabs_scrolly.mp4" type="video/mp4">
 							<source src="http://developer.android.com/design/media/tabs_scrolly.webm" type="video/webm">
 							<source src="http://developer.android.com/design/media/tabs_scrolly.ogv" type="video/ogg">
@@ -121,12 +69,7 @@
 				<img class="nomarginLR" src="tabs_standard.png" />
 				<p class="caption">Holo 深色主题和浅色主题中的标签。</p>
 				<img class="nomarginLR" src="tabs_youtube.png" />
-				<p class="caption">YouTube 应用中的标签。</p>
-				<div class="contentHeaderWraper">
-					<h2>堆叠标签</h2>
-				</div>
-				<p>如果切换视图对于您的应用很重要，您可以将标签放置在副操作栏中。这样在较小的屏幕上也能提供很好的视图切换体验。</p>
-				<img class="nomarginLR" src="tabs_stacked.png" />
+				<p class="caption">Google Play Movies 应用中的标签。</p>
 			</div><!-- mainContent -->
 			<div class="contentNav bottomNav">
 				<div class="buttonWrapper">
@@ -136,9 +79,6 @@
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
-			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
-			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
-			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
 		</div>
 	</div>
 </body>

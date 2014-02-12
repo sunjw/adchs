@@ -20,66 +20,6 @@
 			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
 		</div>
 		<div id="navWrapper">
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../index.html">开始</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
-					<li><a href="../get-started/principles.html">设计原则</a></li>
-					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../style/index.html">风格</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../style/devices-displays.html">设备和显示</a></li>
-					<li><a href="../style/themes.html">主题</a></li>
-					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
-					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
-					<li><a href="../style/typography.html">字体</a></li>
-					<li><a href="../style/color.html">颜色</a></li>
-					<li><a href="../style/iconography.html">图标</a></li>
-					<li><a href="../style/writing.html">写作风格</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../patterns/index.html">模式</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../patterns/new.html">Android 新特性</a></li>
-					<li><a href="../patterns/gestures.html">手势</a></li>
-					<li><a href="../patterns/app-structure.html">应用结构</a></li>
-					<li><a href="../patterns/navigation.html">导航</a></li>
-					<li><a href="../patterns/actionbar.html">操作栏</a></li>
-					<li><a href="../patterns/multi-pane-layouts.html">多视图布局</a></li>
-					<li><a href="../patterns/swipe-views.html">滑动视图</a></li>
-					<li><a href="../patterns/selection.html">选择</a></li>
-					<li><a href="../patterns/confirming-acknowledging.html">确认和提示</a></li>
-					<li><a href="../patterns/notifications.html">通知</a></li>
-					<li><a href="../patterns/widgets.html">小部件</a></li>
-					<li><a href="../patterns/settings.html">设置</a></li>
-					<li><a href="../patterns/help.html">帮助</a></li>
-					<li><a href="../patterns/compatibility.html">兼容性</a></li>
-					<li><a href="../patterns/accessibility.html">可用性</a></li>
-					<li><a href="../patterns/pure-android.html">纯粹的 Android</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList initShow">
-				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
-				<ul class="foldingContainer">
-					<li><a href="tabs.html">标签选项卡</a></li>
-					<li><a href="lists.html">列表</a></li>
-					<li><a class="highlight" href="grid-lists.html">网格列表</a></li>
-					<li><a href="scrolling.html">滚动容器</a></li>
-					<li><a href="spinners.html">下拉菜单 (Spinners)</a></li>
-					<li><a href="buttons.html">按钮</a></li>
-					<li><a href="text-fields.html">文本框</a></li>
-					<li><a href="seek-bars.html">滑块</a></li>
-					<li><a href="progress.html">进度条和活动</a></li>
-					<li><a href="switches.html">开关</a></li>
-					<li><a href="dialogs.html">对话框</a></li>
-					<li><a href="pickers.html">选择器</a></li>
-				</ul>
-			</div>
-			<br class="clear" />
 		</div>
 		<div id="content">
 			<div class="contentNav topNav">
@@ -92,6 +32,12 @@
 			</div>
 			<div id="mainContent">
 				<img class="nomarginLR" src="gridview_overview.png" />
+				<a class="noticeDev" href="http://developer.android.com/guide/topics/ui/layout/gridview.html" target="_blank">
+					<div>
+						<h3>开发者文档</h3>
+						<p>Grid View</p>
+					</div>
+				</a>
 				<p>网格列表是另一种列表视图形式。当数据可以通过图片表达的时候，就很适合使用网格列表。与简单的列表不同，网格列表可以垂直滚动也可以水平滚动。</p>
 				<div class="contentHeaderWraper">
 					<h2>基本网格列表</h2>
@@ -103,7 +49,7 @@
 						<img class="nomarginLR" src="gridview_vertical.png" />
 					</div>
 					<div class="column col6 nomarginRight">
-						<h4>垂直滚动的</h4>
+						<h4>垂直滚动</h4>
 						<p>垂直滚动的网格列表按照一般的西方阅读顺序排列: 从左往右，从上到下。显示列表时，可以切断当前屏幕中最下面一行，提示用户向下滑动还有更多内容。请注意，当用户旋转屏幕时，仍然保持这种模式。</p>
 					</div>
 					<div class="clear"></div>
@@ -113,7 +59,7 @@
 						<img class="nomarginLR" src="gridview_horizontal.png" />
 					</div>
 					<div class="column col6 nomarginRight">
-						<h4>水平滚动的</h4>
+						<h4>水平滚动</h4>
 						<p>水平滚动的网格列表，高度是固定的。不同于垂直滚动列表，水平滚动列表采用先从上到下，再从左往右的排列顺序。同样适用切断边界项目的方法，提示用户右边还有内容。</p>
 						<p>不要同时使用滚动标签和水平滚动列表。它们都使用相同的左右滑动手势，会引起冲突。使用滚动标签时，配合使用垂直滚动列表。</p>
 					</div>
@@ -122,14 +68,14 @@
 				<div class="contentHeaderWraper">
 					<h2>带有标签的网格列表</h2>
 				</div>
-				<p>使用标签为您的网格列表显示更多的上下文信息。</p>
+				<p>使用标签为你的网格列表显示更多的上下文信息。</p>
 				<div>
 					<div class="column col7">
 						<img class="nomarginRight" src="gridview_style.png" />
 					</div>
 					<div class="column col6 nomarginRight">
 						<h4>样式</h4>
-						<p>使用半透明背景的标签栏显示信息。您可以控制标签的大小比例，确保文字足够清晰同时展现亮丽的图片内容。</p>
+						<p>使用半透明背景的标签栏显示信息。你可以控制标签的大小比例，确保文字足够清晰同时展现亮丽的图片内容。</p>
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -142,9 +88,6 @@
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
-			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
-			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
-			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
 		</div>
 	</div>
 </body>

@@ -20,66 +20,6 @@
 			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
 		</div>
 		<div id="navWrapper">
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../index.html">开始</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
-					<li><a href="../get-started/principles.html">设计原则</a></li>
-					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../style/index.html">风格</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../style/devices-displays.html">设备和显示</a></li>
-					<li><a href="../style/themes.html">主题</a></li>
-					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
-					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
-					<li><a href="../style/typography.html">字体</a></li>
-					<li><a href="../style/color.html">颜色</a></li>
-					<li><a href="../style/iconography.html">图标</a></li>
-					<li><a href="../style/writing.html">写作风格</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList initShow">
-				<div class="trigger"><a href="index.html">模式</a></div>
-				<ul class="foldingContainer">
-					<li><a class="highlight" href="new.html">Android 新特性</a></li>
-					<li><a href="gestures.html">手势</a></li>
-					<li><a href="app-structure.html">应用结构</a></li>
-					<li><a href="navigation.html">导航</a></li>
-					<li><a href="actionbar.html">操作栏</a></li>
-					<li><a href="multi-pane-layouts.html">多视图布局</a></li>
-					<li><a href="swipe-views.html">滑动视图</a></li>
-					<li><a href="selection.html">选择</a></li>
-					<li><a href="confirming-acknowledging.html">确认和提示</a></li>
-					<li><a href="notifications.html">通知</a></li>
-					<li><a href="widgets.html">小部件</a></li>
-					<li><a href="settings.html">设置</a></li>
-					<li><a href="help.html">帮助</a></li>
-					<li><a href="compatibility.html">兼容性</a></li>
-					<li><a href="accessibility.html">可用性</a></li>
-					<li><a href="pure-android.html">纯粹的 Android</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
-					<li><a href="../building-blocks/lists.html">列表</a></li>
-					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
-					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
-					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
-					<li><a href="../building-blocks/buttons.html">按钮</a></li>
-					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
-					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
-					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
-					<li><a href="../building-blocks/switches.html">开关</a></li>
-					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
-					<li><a href="../building-blocks/pickers.html">选择器</a></li>
-				</ul>
-			</div>
-			<br class="clear" />
 		</div>
 		<div id="content">
 			<div class="contentNav topNav">
@@ -91,8 +31,43 @@
 				</div>
 			</div>
 			<div id="mainContent">
+				<p>让我们简略了解一下新版 Android 引入了哪些设计模式...</p>
 				<div class="contentHeaderWraper">
-					<h2>果冻豆 Jelly Bean - Android 4.1</h2>
+					<h2>Android 4.4 KitKat</h2>
+				</div>
+				<div>
+					<div class="column col7">
+						<h4>自我标识</h4>
+						<p>Android 系统有一贯的设计风格，不过你也可以根据品牌形象的需要，对样式进行自定义。</p>
+						<p>使用你的标识色替换 Android UI 框架默认风格的蓝色，就可以统一的对按钮、进度条、滑块、标签和滚动条等进行自定义。</p>
+						<p>在操作栏展示应用的图标和名称，使得用户始终能看到它们。</p>
+						<p>推荐阅读 <a href="../style/branding.html">自我标识</a> 一节，了解如何在应用中突出你的品牌形象，并将其融入 Android 应用的视觉元素之中。</p>
+					</div>
+					<div class="column col6 nomarginRight">
+						<img class="nomarginLR" src="branding_googlemusic.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<h4>触摸反馈</h4>
+				<p>Android KitKat 之前的版本中，默认触摸反馈是一种充满活力的蓝色。而且所有的触摸反馈都有明显的色彩对比，所以有可能和你的标识色相冲突。</p>
+				<p>Android KitKat 开始，触摸反馈变得比较微妙，触摸仅仅带来控件背景色的微小变化。这样做有两个好处: (1) 符合 <a href="../get-started/principles.html">设计原则 - 给予鼓励</a> 的原则；(2) 更加容易突出你品牌的形象，不会与系统的设计风格混淆。阅读 <a href="../style/touch-feedback.html">触摸反馈</a> 一节，了解更多细节。</p>
+				<img class="nomarginLR" src="touch_feedback_reaction_response.png" />
+				<h4>全屏模式</h4>
+				<p>Android KitKat 增强了应用的全屏模式，可以满足你的不同需求。阅读 <a href="../patterns/fullscreen.html">全屏模式</a> 一节，了解更多细节。</p>
+				<img class="nomarginLR" src="fullscreen_landing.png" />
+				<h4>手势</h4>
+				<div>
+					<div class="column col7">
+						<p>新的 <a href="../patterns/gestures.html">手势</a> 一节介绍了 Android KitKat 的新手势: <strong>双击</strong>和<strong>双击拖动</strong>。这两个手势用于调整视图内容的大小。</p>
+					</div>
+					<div class="column col6 nomarginRight">
+						<img class="nomarginLR" src="gesture_doubletouch.png" />
+						<img class="nomarginLR" src="gesture_doubletouchdrag.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>Android 4.1 果冻豆 Jelly Bean</h2>
 				</div>
 				<div>
 					<div class="column col7">
@@ -145,9 +120,9 @@
 				</div>
 				<div>
 					<div class="column col11">
-						<h4>可用性</h4>
+						<h4>无障碍性</h4>
 						<p>Android 的一大使命就是整理全世界的信息，并使其可以被所有人访问。我们的使命不会因为用户有所残疾而改变，无论是视觉障碍、色盲、听力损失或者其他不便。</p>
-						<p>新的 <a href="accessibility .html">无障碍性</a> 一节提供了关于如何使您的应用符合无障碍性的指导:</p>
+						<p>新的 <a href="accessibility.html">无障碍性</a> 一节提供了关于如何使你的应用符合无障碍性的指导:</p>
 						<ul class="circleList">
 							<li>
 								<p>使导航更加直观</p>
@@ -192,7 +167,7 @@
 				<div>
 					<div class="column col7">
 						<h4>操作栏</h4>
-						<p>操作栏对于 Android 应用来说是最重要的元素。它为平台提供了统一的导航，并且可以展示您应用中的操作。</p>
+						<p>操作栏对于 Android 应用来说是最重要的元素。它为平台提供了统一的导航，并且可以展示应用中的操作。</p>
 						<p>&nbsp;</p>
 					</div>
 					<div class="column col6 nomarginRight">
@@ -203,7 +178,7 @@
 				<div>
 					<div class="column col7">
 						<h4>多视图布局</h4>
-						<p>在 Android 的世界，为不同的屏幕尺寸和比例设计您的应用是很重要的。多视图布局可以将在小型设备上需要多个视图才能完成的操作组合在同一个界面中，展示在更大屏幕的平板上。</p>
+						<p>在 Android 的世界，为不同的屏幕尺寸和比例设计你的应用是很重要的。多视图布局可以将在小型设备上需要多个视图才能完成的操作组合在同一个界面中，展示在更大屏幕的平板上。</p>
 						<p>&nbsp;</p>
 					</div>
 					<div class="column col6 nomarginRight">
@@ -230,9 +205,6 @@
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
-			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
-			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
-			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
 		</div>
 	</div>
 </body>

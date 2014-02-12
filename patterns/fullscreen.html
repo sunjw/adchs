@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Android Design - 全屏模式</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:regular,medium,thin,italic,mediumitalic" />
+	<link rel="stylesheet" type="text/css" href="../css/style.css" />
+	<link rel="stylesheet" type="text/css" href="../css/folding.css" />
+	<style type="text/css">
+
+	</style>
+	<script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.common.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.folding.min.js"></script>
+	<script type="text/javascript" src="../js/adchs.js"></script>
+</head>
+<body>
+	<div id="pageWrapper">
+		<div id="header">
+			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
+		</div>
+		<div id="navWrapper">
+		</div>
+		<div id="content">
+			<div class="contentNav topNav">
+				<div class="contentHeaderWraper">
+					<h2>全屏模式&nbsp;<a class="originalLink" href="http://developer.android.com/design/patterns/fullscreen.html" target="_blank">Original Version</a></h2>
+				</div>
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="swipe-views.html">上一页</a><a class="buttonNext" href="selection.html">下一页</a>
+				</div>
+			</div>
+			<div id="mainContent">
+				<p>诸如视频、游戏、照片库、书籍以及幻灯片等内容，使用全屏模式展示可以获得最好的用户体验。这是因为在全屏模式下用户能更好的专注于内容，而不会受到应用控制控件的视觉干扰也不会意外的退出应用。</p>
+				<img class="nomarginLR" src="fullscreen_landing.png" />
+				<p>Android 4.4 允许应用以两种方式进入全屏模式：横置屏幕 (Lean Back) 和沉浸模式(Immersive)。无论使用何种方式，进入全屏模式后所有的系统栏都会被隐藏。这两种方式的不同在于用户需要用不同的方式调出隐藏的系统栏。</p>
+				<div>
+					<div class="column col6">
+						<h4>横置屏幕</h4>
+						<p>点击屏幕上的任何位置，调出系统栏。</p>
+						<img class="nomarginLR" width="310px" src="fullscreen_leanback.png" />
+					</div>
+					<div class="column col6 nomarginRight">
+						<h4>沉浸模式</h4>
+						<p>从屏幕的上/下边缘外向屏幕内滑动，调出隐藏的系统栏。</p>
+						<img class="nomarginLR" width="160px" src="fullscreen_immersive_swipe_bottom.png" />
+						<img class="nomarginLR" width="160px" src="fullscreen_immersive_swipe_top.png" />
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="contentHeaderWraper">
+					<h2>横置屏幕</h2>
+				</div>
+				<p>横置屏幕进入全屏模式适用于基本无需交互的内容消费类应用，比如视频类应用。</p>
+				<p>这种方式下，用户横置屏幕，观看屏幕上的内容。当需要退出时，只需点击屏幕，调出系统栏。</p>
+				<img class="nomarginLR" width="310px" src="fullscreen_leanback.png" />
+				<div class="contentHeaderWraper">
+					<h2>沉浸模式</h2>
+				</div>
+				<p>沉浸模式适用于需要频繁交互的全屏应用。例如，游戏、照片库、书籍以及幻灯片。</p>
+				<p>这种方式下，当用户需要调出隐藏的系统栏时，需要从屏幕的上/下边缘外向屏幕内滑动。由于要借助这样更为审慎的手势 (deliberate gesture) ，用户可以沉浸在应用中而不会因为意外的误操作而退出。</p>
+				<img class="nomarginLR" width="160px" src="fullscreen_immersive_swipe_bottom.png" />
+				<img class="nomarginLR" width="160px" src="fullscreen_immersive_swipe_top.png" />
+				<p>当一个应用第一次进入全屏模式时，用户会看到如何调出系统栏的提示信息。</p>
+				<p>如果存在用户沉浸于内容时不需要显示的应用控件，这些控件应与系统栏同时隐藏。</p>
+				<p>您或许只是因为沉浸模式能够带来更大的显示空间而使用它。需要注意的是，如果用户需要频繁的从应用中跳出，请谨慎使用沉浸模式。</p>
+				<div class="contentHeaderWraper">
+					<h2>一个变种：从屏幕的上/下边缘外向屏幕内滑动也能影响应用</h2>
+				</div>
+				<p>使用沉浸模式时，屏幕的上/下边缘外向屏幕内滑动这样的操作是由 Android 系统响应的。应用无法获知这样的操作是否发生。</p>
+				<p>但在一些应用中，用户偶然需要通过这样的操作与应用交互。例如，在一些游戏或绘图应用中。对于有此类需求的应用，可以使用沉浸模式的一个变种：当用户进行从屏幕的上/下边缘外向屏幕内滑动这样的操作时系统会调出系统栏，同时将操作传递给应用，由应用做出响应。</p>
+				<p>例如，在一个绘图应用中，如果用户从屏幕的边缘开始画一条线，系统会导出系统栏，并将将相应操作传递给应用，完成画线操作。</p>
+				<p>在这一变种中，为了减少对用户的视觉干扰，系统栏会半透明显示。此外，如果用户在几秒内没有进一步操作或者在系统栏以外的区域进行操作，系统栏都会自动隐藏。</p>
+				<div class="contentHeaderWraper">
+					<h2>原有的熄灯模式该如何处理？</h2>
+				</div>
+				<p>Android 4.4 之前，设计指南引入了熄灯模式 (Lights Out mode)，在这一模式下如果用户没有操作，几秒后操作栏和状态栏都会被隐藏，导航栏上的图标也会淡化。</p>
+				<p>Android 4.4 之后，请使用横置屏幕和沉浸模式替代原有的熄灯模式。之在需要保持对低版本兼容性时使用它。</p>
+			</div><!-- mainContent -->
+			<div class="contentNav bottomNav">
+				<div class="buttonWrapper">
+					<a class="buttonPrev" href="swipe-views.html">上一页</a><a class="buttonNext" href="selection.html">下一页</a>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="footer">
+		</div>
+	</div>
+</body>
+</html>

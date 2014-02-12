@@ -51,6 +51,7 @@ li {
 }
 img {
 	border: 0;
+	max-width: 100%;
 }
 code {
 	color: #006600;
@@ -69,10 +70,10 @@ code {
     padding-left: 210px;
 	font-size: 48px;
 	border-bottom: 1px solid #33B5E5;
-	background: url('../imgs/android_robot.png') 35px 25px no-repeat;
+	background: url('../imgs/android_robot.png') 35px 10px no-repeat;
 }
 #header a {
-	color: #555555;
+	color: #333333;
     display: block;
     position: relative;
     text-decoration: none;
@@ -160,6 +161,9 @@ code {
 	list-style-type: disc;
 	margin-left: 15px;
 }
+#content .circleList li ul li {
+	list-style-type: circle
+}
 #content .caption,#content .videoInstruction {
 	font: 400 14px/20px Roboto,sans-serif,黑体;
 	font-style: italic;
@@ -176,15 +180,14 @@ code {
 	height: 30px;
 	line-height: 30px;
 	margin-bottom: 10px;
-	border-bottom: 1px solid #33B5E5;
-	overflow: hidden;
 }
-.contentNav,.contentHeaderWraper,.topNav {
-	border-bottom: 1px solid #CCCCCC;
+.topNav {
+	margin-bottom: 35px;
 }
 .bottomNav {
 	border-top: 1px solid #CCCCCC;
 	border-bottom: none;
+	margin-top: 10px;
 }
 .contentNav .contentHeaderWraper {
 	float: left;
@@ -206,13 +209,15 @@ code {
 #content a.buttonNext,#content a.buttonPrev {
 	color: #258AAF;
 }
+#mainContent .contentHeaderWraper {
+	border-bottom: 1px solid #CCCCCC;
+}
 .contentHeaderWraper h2 {
 	color: black;
     font-size: 18px;
     height: 30px;
     line-height: 30px;
     margin-bottom: 10px;
-    padding-left: 10px;
     padding-right: 10px
 }
 .contentHeaderWraper h2 .originalLink {
@@ -221,7 +226,7 @@ code {
 }
 
 #mainContent p,#mainContent ul,#mainContent img,#mainContent h4 {
-	margin: 0 10px 10px 10px;
+	margin: 0 0 10px 0;
 }
 #mainContent ul li p,#mainContent ul li img,#mainContent ul li h4 {
 	margin: 0 0 10px 0;
@@ -273,19 +278,72 @@ code {
 	width: 640px;
 }
 
+#content .noteInfo,#content .noteDev {
+	padding-left: 10px;
+	margin-bottom: 15px;
+}
+#content .noteInfo {
+	border-left: 4px solid #258AAF;
+}
+#content .noteDev {
+	border-left: 4px solid #FF8800;
+}
+#content .noteDev p {
+	margin: 0 0 5px 0;
+}
+
+#content a.noticeDev {
+	border: 1px solid #DDDDDD;
+    clear: right;
+    float: right;
+    margin: 0 0 20px 20px;
+    min-height: 50px;
+    width: 238px;
+	text-decoration: none;
+}
+#content a.noticeDevLeft {
+	float: left;
+	margin-left: 0;
+}
+#content a.noticeDev div {
+	background: url("../imgs/notice-developers.png") 10px 10px no-repeat;
+    min-height: 40px;
+    padding: 10px 10px 10px 60px;
+}
+#content a.noticeDev h3 {
+	color: #000000 !important;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 18px;
+}
+#content a.noticeDev p {
+	line-height: 14px;
+	margin: 0;
+}
+
+#content pre {
+	margin: 0 0 10px 0;
+	background-color: #F7F7F7;
+    border: 1px solid #DDDDDD;
+    padding: 10px;
+    color: #000000;
+    font: 13px/1.5 monospace;
+}
+
 #footer {
 	color: #999999;
     font-size: 12px;
     line-height: 15px;
-    margin-left: 190px;
-    margin-top: 80px;
+    margin-left: 200px;
+    margin-top: 60px;
     padding-bottom: 40px;
 }
-#footer #copyright {
-	margin-bottom: 10px;
+#footer .lastLine {
+	margin-top: 10px;
+	height: 65px;
 }
 #footer a {
-	color: #777777;
+	color: #999999;
 }
 #footer a:hover {
 	color: #7AA1B0;
@@ -301,4 +359,14 @@ acronym {
 	color: white;
 	border-radius: 4px;
 	opacity: 0.9;
+}
+
+#backToTop {
+	display: none;
+}
+#backToTop a {
+	display: block;
+	text-decoration: none;
+	width: 160px;
+	background: url('../imgs/gototop.png') center -5px no-repeat;
 }

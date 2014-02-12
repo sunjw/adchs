@@ -53,66 +53,6 @@
 			<a href="../index.html">Android Design&nbsp;<span class="headerChs">Android 设计指南非官方简体中文版</span></a>
 		</div>
 		<div id="navWrapper">
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../index.html">开始</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../get-started/create-vistion.html">创新的视觉效果</a></li>
-					<li><a href="../get-started/principles.html">设计原则</a></li>
-					<li><a href="../get-started/ui-overview.html">UI 概览</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../style/index.html">风格</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../style/devices-displays.html">设备和显示</a></li>
-					<li><a href="../style/themes.html">主题</a></li>
-					<li><a href="../style/touch-feedback.html">触摸反馈</a></li>
-					<li><a href="../style/metrics-grids.html">度量单位和网格</a></li>
-					<li><a href="../style/typography.html">字体</a></li>
-					<li><a href="../style/color.html">颜色</a></li>
-					<li><a href="../style/iconography.html">图标</a></li>
-					<li><a href="../style/writing.html">写作风格</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList initShow">
-				<div class="trigger"><a href="index.html">模式</a></div>
-				<ul class="foldingContainer">
-					<li><a href="new.html">Android 新特性</a></li>
-					<li><a href="gestures.html">手势</a></li>
-					<li><a href="app-structure.html">应用结构</a></li>
-					<li><a href="navigation.html">导航</a></li>
-					<li><a href="actionbar.html">操作栏</a></li>
-					<li><a href="multi-pane-layouts.html">多视图布局</a></li>
-					<li><a href="swipe-views.html">滑动视图</a></li>
-					<li><a href="selection.html">选择</a></li>
-					<li><a href="confirming-acknowledging.html">确认和提示</a></li>
-					<li><a href="notifications.html">通知</a></li>
-					<li><a href="widgets.html">小部件</a></li>
-					<li><a class="highlight" href="settings.html">设置</a></li>
-					<li><a href="help.html">帮助</a></li>
-					<li><a href="compatibility.html">兼容性</a></li>
-					<li><a href="accessibility.html">可用性</a></li>
-					<li><a href="pure-android.html">纯粹的 Android</a></li>
-				</ul>
-			</div>
-			<div class="divListwHeader foldingList">
-				<div class="trigger"><a href="../building-blocks/index.html">控件</a></div>
-				<ul class="foldingContainer">
-					<li><a href="../building-blocks/tabs.html">标签选项卡</a></li>
-					<li><a href="../building-blocks/lists.html">列表</a></li>
-					<li><a href="../building-blocks/grid-lists.html">网格列表</a></li>
-					<li><a href="../building-blocks/scrolling.html">滚动容器</a></li>
-					<li><a href="../building-blocks/spinners.html">下拉菜单 (Spinners)</a></li>
-					<li><a href="../building-blocks/buttons.html">按钮</a></li>
-					<li><a href="../building-blocks/text-fields.html">文本框</a></li>
-					<li><a href="../building-blocks/seek-bars.html">滑块</a></li>
-					<li><a href="../building-blocks/progress.html">进度条和活动</a></li>
-					<li><a href="../building-blocks/switches.html">开关</a></li>
-					<li><a href="../building-blocks/dialogs.html">对话框</a></li>
-					<li><a href="../building-blocks/pickers.html">选择器</a></li>
-				</ul>
-			</div>
-			<br class="clear" />
 		</div>
 		<div id="content">
 			<div class="contentNav topNav">
@@ -124,7 +64,13 @@
 				</div>
 			</div>
 			<div id="mainContent">
-				<p>用户可以在设置屏幕中调整偏好，改变您应用的行为。设置可以让用户:</p>
+				<a class="noticeDev" href="http://developer.android.com/guide/topics/ui/settings.html" target="_blank">
+					<div>
+						<h3>开发者文档</h3>
+						<p>Settings</p>
+					</div>
+				</a>
+				<p>用户可以在设置屏幕中调整偏好，改变应用的行为。设置可以让用户:</p>
 				<ul class="circleList">
 					<li>
 						不用在某些重要的时刻被同样的问题一遍又一遍的打断。通过设置设定好在特定情况下的默认操作。(参考“设计原则”中的 <a href="../get-started/principles.html#decide-for-me">帮哥做决定，但让哥来拍板</a>)
@@ -136,25 +82,25 @@
 				<div class="contentHeaderWraper">
 					<h2 id="flow-structure">布局和结构</h2>
 				</div>
-				<h4>在更多操作菜单中提供设置按钮</h4>
-				<p>设置按钮在 UI 中不是很重要，因为不是经常用到。即使 <a href="../patterns/actionbar.html">操作栏</a> 上还有空间，也不要把设置按钮放在操作栏上。始终将设置放置在更多操作菜单中的帮助旁边。</p>
+				<h4>在“更多操作”菜单中提供设置按钮</h4>
+				<p>设置按钮在 UI 中不是很重要，因为不是经常用到。即使 <a href="../patterns/actionbar.html">操作栏</a> 上还有空间，也不要把设置按钮放在操作栏上。始终将设置放置在“更多操作”菜单中的帮助旁边。</p>
 				<img class="nomarginLR" src="settings_overflow.png" />
 				<p>&nbsp;</p>
 				<h4>不要把什么都放在设置里</h4>
 				<p>因为设置总是在主界面之外，所以似乎放再多的东西也不会挤占 UI 的空间。嗯，听起来是个不错的消息，但是还是要注意一下。</p>
-				<p>设置看起来是一个堆放各种东西的地方，就像杂物间里面塞满了东西。您不会在那里花很多时间，所以似乎可以不用去仔细考虑项目的排列和摆放。但是用户虽然很少访问设置，但是仍然对于设置屏幕抱有很高的期待。过多的设置项表示用户要做出大量的选择，太多的选择则会使人失去方向。</p>
+				<p>设置看起来是一个堆放各种东西的地方，就像杂物间里面塞满了东西。你不会在那里花很多时间，所以似乎可以不用去仔细考虑项目的排列和摆放。但是用户虽然很少访问设置，但是仍然对于设置屏幕抱有很高的期待。过多的设置项表示用户要做出大量的选择，太多的选择则会使人失去方向。</p>
 				<p>所以不要让用户做出高难度的选择，而且仔细考虑是不是需要一个选项。对于设置中的一个选项，都应当按照下面的流程图仔细考虑:</p>
 				<img class="nomarginLR" src="settings_flowchart.png" />
 				<div>
 					<div class="column col5">
-						<p id="group-settings"><span class="highlight">如果您还是有一大堆设置项，那么分组是个好选择</span></p>
-						<p>人类能够短时间内记住的项目一般是 7&plusmn;2 项。如果您给出了个超过 10 条项目的设置 (在通过上面的流程图筛选后)，用户会觉得难以浏览、理解和对它们做出选择。 </p>
-						<p>您可以将这些设置分组，把长列表变成短列表。同一组中相似的选项以下面的某一种方式排列:</p>
+						<p id="group-settings"><span class="highlight">如果你还是有一大堆设置项，那么分组是个好选择</span></p>
+						<p>人类能够短时间内记住的项目一般是 7&plusmn;2 项。如果你给出了个超过 10 条项目的设置 (在通过上面的流程图筛选后)，用户会觉得难以浏览、理解和对它们做出选择。 </p>
+						<p>你可以将这些设置分组，把长列表变成短列表。同一组中相似的选项以下面的某一种方式排列:</p>
 						<ul>
 							<li>1.&nbsp;<span class="highlight">放在同一个分隔符下</span></li>
 							<li>2.&nbsp;<span class="highlight">放在另一个屏幕中</span></li>
 						</ul>
-						<p>您可以任意组合使用上面两种分组方式来合理组织您应用的设置项。</p>
+						<p>你可以任意组合使用上面两种分组方式来合理组织应用的设置项。</p>
 						<p>例如，Android 设置应用的主屏幕，每一个设置项都有对应的子屏幕，并且都是通过分隔符分组的。</p>
 					</div>
 					<div class="column col8 nomarginRight">
@@ -163,7 +109,7 @@
 					<div class="clear"></div>
 				</div>
 				<p>&nbsp;</p>
-				<p>分组不是一门精确的科学，但是还是有一些指导方法，基于您应用中设置的数量。</p>
+				<p>分组不是一门精确的科学，但是基于应用中设置的数量还是有一些指导方法可以参考。</p>
 				<p>&nbsp;</p>
 				<div>
 					<div class="column col2">
@@ -196,7 +142,7 @@
 						<p>通过以下方法来减少分组数量:</p>
 						<ul class="circleList">
 							<li>如果有多于 2 个选项是给高级用户的，那么在主设置屏幕中放置一个“高级”按钮，将这些选项放置在点击后出现的子屏幕中。</li>
-							<li>找出“配对”的选项，尽量按照下面的“设计模式”将它们合并。例如您可以把两条有联系的单选项合并为一个多选项。</li>
+							<li>找出“配对”的选项，尽量按照下面的“设计模式”将它们合并。例如你可以把两条有联系的单选项合并为一个多选项。</li>
 						</ul>
 					</div>
 					<div class="clear"></div>
@@ -206,7 +152,7 @@
 						<h4>多余 16 项</h4>
 					</div>
 					<div class="column col11 nomarginRight">
-						<p>如果您可以把 4 项以上的选项组合在一组中，可以将它们放置在子屏幕中，在主屏幕用一个按钮连接到那里，这样可以有效的减少主屏幕中的设置项。</p>
+						<p>如果你可以把 4 项以上的选项组合在一组中，可以将它们放置在子屏幕中，在主屏幕用一个按钮连接到那里，这样可以有效的减少主屏幕中的设置项。</p>
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -329,7 +275,7 @@
 				<div class="contentHeaderWraper">
 					<h2 id="defaults">默认值</h2>
 				</div>
-				<p>仔细考虑选项的默认值。因为每个选项都会影响您应用的行为，默认值将会影响用户对您应用的第一印象。尽管用户可以调整选项，但是他们仍然希望应用能够提供一个正确的起始状态。您可以通过以下的步骤来考虑默认值:</p>
+				<p>仔细考虑选项的默认值。因为每个选项都会影响应用的行为，默认值将会影响用户对应用的第一印象。尽管用户可以调整选项，但是他们仍然希望应用能够提供一个正确的起始状态。你可以通过以下的步骤来考虑默认值:</p>
 				<ul class="circleList">
 					<li>
 						如果没有默认值，用户最倾向于选择哪个值？
@@ -354,7 +300,7 @@
 					<h2 id="writing">写作指导</h2>
 				</div>
 				<h4>标题要清晰简明</h4>
-				<p>写出一个好的标题是有难度的，因为空间有限，您只有一行而且很短的宽度。按照下面的指导，帮助你写出简明、有意义能够快速浏览的标题:</p>
+				<p>写出一个好的标题是有难度的，因为空间有限，你只有一行而且很短的宽度。按照下面的指导，帮助你写出简明、有意义能够快速浏览的标题:</p>
 				<ul class="circleList">
 					<li>用一般句式书写标题 (例如只有第一个字母和特殊名词才大写)</li>
 					<li>不要在标题中使用指导性动词，比如“设置”、“修改”、“编辑”、“管理”、“使用”或者“选择”，因为用户已经知道他们在下面的选项中可以做出的调整。</li>
@@ -422,7 +368,7 @@
 				<h4>写作示例</h4>
 				<p>以下的例子是我们在 ICS 设置应用中一些修改过的标题。</p>
 				<div class="exampleItem nopaddingLeft">
-					<div class="column col8 nomarginRight">
+					<div class="column col8">
 						<div class="column col4">
 							<div class="wrong">以前</div>
 							<table>
@@ -447,17 +393,14 @@
 						</div>
 						<div class="clear"></div>
 					</div>
-					<div class="column nomarginRight">
-						<div class="column col5 nomarginRight">
-							<p>&nbsp;</p>
-							<p>这个单选框设置中，我们不再采用“使用”一词，并且重新编写了标题，使其更容易被用户理解。</p>
-						</div>
-						<div class="clear"></div>
+					<div class="column col4 nomarginRight">
+						<p>&nbsp;</p>
+						<p>这个单选框设置中，我们不再采用“使用”一词，并且重新编写了标题，使其更容易被用户理解。</p>
 					</div>
 					<div class="clear"></div>
 				</div>
 				<div class="exampleItem nopaddingLeft">
-					<div class="column col8 nomarginRight">
+					<div class="column col8">
 						<div class="column col4">
 							<div class="wrong">以前</div>
 							<table>
@@ -486,16 +429,14 @@
 						</div>
 						<div class="clear"></div>
 					</div>
-					<div class="column nomarginRight">
-						<div class="column col5 nomarginRight">
-							<p>&nbsp;</p>
-							<p>这个多选设置中，我们使用更友好的词语作为标题，并且用当前的状态代替了详细描述。并且我们不仅仅显示当前的值，还加上了些描述信息，防止用户以为是“休眠 10 分钟”。</p>
-						</div>
+					<div class="column col4 nomarginRight">
+						<p>&nbsp;</p>
+						<p>这个多选设置中，我们使用更友好的词语作为标题，并且用当前的状态代替了详细描述。并且我们不仅仅显示当前的值，还加上了些描述信息，防止用户以为是“休眠 10 分钟”。</p>
 					</div>
 					<div class="clear"></div>
 				</div>
 				<div class="exampleItem nopaddingLeft">
-					<div class="column col8 nomarginRight">
+					<div class="column col8">
 						<div class="column col4">
 							<div class="wrong">以前</div>
 							<table>
@@ -524,16 +465,14 @@
 						</div>
 						<div class="clear"></div>
 					</div>
-					<div class="column nomarginRight">
-						<div class="column col5 nomarginRight">
-							<p>&nbsp;</p>
-							<p>这个设置将用户导航到一个子屏幕，选择屏幕锁定的方式。我们不再采用“设置”一词，并且使用当前选择的值代替了详细描述。如果用户没有选择值，副标题将显示“无”。</p>
-						</div>
+					<div class="column col4 nomarginRight">
+						<p>&nbsp;</p>
+						<p>这个设置将用户导航到一个子屏幕，选择屏幕锁定的方式。我们不再采用“设置”一词，并且使用当前选择的值代替了详细描述。如果用户没有选择值，副标题将显示“无”。</p>
 					</div>
 					<div class="clear"></div>
 				</div>
 				<div class="exampleItem nopaddingLeft">
-					<div class="column col8 nomarginRight">
+					<div class="column col8">
 						<div class="column col4">
 							<div class="wrong">以前</div>
 							<table>
@@ -562,12 +501,10 @@
 						</div>
 						<div class="clear"></div>
 					</div>
-					<div class="column nomarginRight">
-						<div class="column col5 nomarginRight">
-							<p>&nbsp;</p>
-							<p>这个单选框设置中，我们之前使用了过于技术性的描述，但是最后仍然保留了“NFC”作为标题，因为: (1) 我们找不到更加简明且正确替换词语 (2) 在未来的几年中，用户将会普遍了解这个术语的意思。.</p>
-							<p>不过，我们重写了详细描述。让它不再像以前一样充满了技术细节，而是更多的描述 NFC 的用途。我们不再描述 NFC 代表的意思，因为对于大多数用户来说根本没有意义，而且还占地方。</p>
-						</div>
+					<div class="column col4 nomarginRight">
+						<p>&nbsp;</p>
+						<p>这个单选框设置中，我们之前使用了过于技术性的描述，但是最后仍然保留了“NFC”作为标题，因为: (1) 我们找不到更加简明且正确替换词语 (2) 在未来的几年中，用户将会普遍了解这个术语的意思。.</p>
+						<p>不过，我们重写了详细描述。让它不再像以前一样充满了技术细节，而是更多的描述 NFC 的用途。我们不再描述 NFC 代表的意思，因为对于大多数用户来说根本没有意义，而且还占地方。</p>
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -600,9 +537,6 @@
 		</div>
 		<div class="clear"></div>
 		<div id="footer">
-			<p><a href="http://adchs.sourceforge.net">Android Design 安卓设计非官方简体中文版</a>&nbsp;-&nbsp;<a href="http://www.sunjw.us/adchs" target="_blank">www.sunjw.us/adchs</a>&nbsp;-&nbsp;感谢&nbsp;<a href="http://www.topfun.us" target="_blank">topfun 同学</a>&nbsp;<a href="http://www.freemindworld.com" target="_blank">Li Fanxi</a>&nbsp;<a href="http://www.apkbus.com" target="_blank">安卓巴士</a>&nbsp;提供的&nbsp;<a href="http://www.topfun.us/adchs/">镜像1</a>&nbsp;<a href="http://www.freemindworld.com/adchs">镜像2</a>&nbsp;<a href="http://www.apkbus.com/design">镜像3</a>。</p>
-			<p id="copyright">没有特别说明的话，所有内容按照 <a href="http://creativecommons.org/licenses/by/2.5/" target="_blank">Creative Commons Attribution 2.5</a> 协议授权。<br />基于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href="http://developer.android.com/design/" target="_blank">Android Design</a>。Android 是 Google 的商标。</p>
-			<p>2012-2013&nbsp;-&nbsp;<a href="http://www.sunjw.us/blog" target="_blank">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;-&nbsp;<a href="http://www.sunjw.us/jsminnpp/" target="_blank">JSMinNpp</a>&nbsp;-&nbsp;<a href="http://www.twitter.com/sunjw" target="_blank" title="Follow me on Twitter"><img src="../imgs/twitter-small.png" alt="Follow me on Twitter"/></a>&nbsp;<a href="http://www.facebook.com/profile.php?id=1444809914" target="_blank" title="Follow me on Facebook"><img src="../imgs/fb-small.png" alt="Follow me on Facebook"/></a>&nbsp;<a href="http://weibo.com/nusjw" target="_blank" title="Follow me on Weibo"><img src="../imgs/weibo-small.png" alt="Follow me on Weibo"/></a>&nbsp;<a href="http://www.renren.com/sunjwvista" target="_blank" title="Follow me on Renren"><img src="../imgs/renren-small.png" alt="Follow me on Renren"/></a>&nbsp;-&nbsp;<g:plusone size="small"></g:plusone></p>
 		</div>
 	</div>
 </body>
