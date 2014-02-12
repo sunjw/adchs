@@ -4,7 +4,7 @@
 
 <http://adchs.github.io>
 
-![](screenshot.png)
+![](imgs/screenshot.png)
 
 ##镜像
 <http://www.sunjw.us/adchs>
