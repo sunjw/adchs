@@ -15,7 +15,7 @@ var menuContent = [
 			text : "开始",
 			url : "index.html"
 		}, {
-			text : "创新的视觉效果",
+			text : "视觉创意",
 			url : "get-started/create-vistion.html"
 		}, {
 			text : "设计原则",
