@@ -71,7 +71,7 @@
 					<li>调整显示特性 (例如缩放)</li>
 				</ul>
 				<h4>在同级屏幕之间导航</h4>
-				<p>如果你的应用可以从一个条目列表中进入某个条目的详细信息页面，那么应当考虑提供在相邻条目的详细信息页面之间的直接导航。例如在 Gmail 应用中，通过左右滑动邮件对话视图，可以在相同收件箱的上一条和下一条邮件对话之间导航。由于是在同一个屏幕中变换视图，所以这样的操作不会影响“向上”和“返回”的行为。</p>
+				<p>如果你的应用可以从一个列表进入其中某个条目的详细信息页面，那么应当考虑提供在相邻条目的详细信息页面之间的直接导航。例如在 Gmail 应用中，通过左右滑动邮件对话视图，可以在相同收件箱的上一条和下一条邮件对话之间导航。由于是在同一个屏幕中变换视图，所以这样的操作不会影响“向上”和“返回”的行为。</p>
 				<img class="nomarginLR" src="navigation_between_siblings_gmail.png" />
 				<p>但是要注意到，浏览“相关”但不相邻的详细信息时，“向上”和“返回”的行为会发生变化。例如，在 Play 商店中浏览同一开发者的其它应用或者同一位歌手的不同专辑。这样的操作会导致屏幕历史发生变化，那么“返回”按钮就会回到上一个浏览的条目，而不是条目列表。“向上”按钮则仍然会回到条目列表。</p>
 				<img class="nomarginLR" src="navigation_between_siblings_market1.png" />
@@ -106,7 +106,7 @@
 				<h4>Activity, Task 和 Intent</h4>
 				<p>Android 系统中，<span class="highlight">activity</span> 这个应用组件定义了一个包含信息和用户能够执行的所有相关操作的屏幕。你的应用就是一些 activity 的集合，包括了你编写的 activity 和从其它应用中复用的 activity。</p>
 				<p><span class="highlight">Task</span> 用于表示用户完成一个任务需要执行的 activity 队列。一个 task 可以只使用来自同一个应用的 activity，或者也可以使用来自不同应用的 activity。</p>
-				<p><span class="highlight">Intent</span> 作为一种机制，表示一个应用希望其它应用帮助它完成一个操作。应用中的 activity 可以向系统告知自己可以响应哪些 intent。例如比较常见的 intent “分享”，用户安装的许多应用可能都可以响应这个 intent 来完成操作。</p>
+				<p><span class="highlight">Intent</span> 作为一种机制，表示一个应用希望其它应用帮助它完成一个操作。应用中的 activity 可以向系统告知自己可以响应哪些 intent。例如比较常见的 intent “分享”，用户安装的许多应用可能都可以响应这个 intent 完成操作。</p>
 				<h4>例子: 在支持分享的应用之间导航</h4>
 				<p>为了了解 activity, task 和 intent 如何一起工作，我们来观察一个应用如何通过其它应用分享内容。例如，从主屏幕启动 Play 商店应用后，将会开始一个新的 Task A (如下图所示)。在 Play 商店中浏览并进入了一本图书的详细信息屏幕后，用户仍然处于同一个 task 之中，只是通过 activity 扩展了它。触摸分享，将会弹出一个列表，显示了其它应用注册的可以响应 Share intent 的 activity。</p>
 				<img class="nomarginLR" src="navigation_between_apps_inward.png" />
