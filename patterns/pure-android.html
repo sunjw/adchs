@@ -35,9 +35,9 @@
 				<p>&nbsp;</p>
 				<div>
 					<div class="column col5">
-						<h4>不要模仿其它平台的 UI 元素</h4>
+						<h4>不要模仿其他平台的 UI 元素</h4>
 						<p>不同的平台都会提供别具一格的、精心设计的、主题化的 UI 元素。例如在一些平台上鼓励使用圆角按钮，另一些则鼓励使用渐变标题栏。许多情况下，虽然元素的功能是一样的，但是设计方法截然不同。</p>
-						<p>当你为 Android 设计应用时，不要使用其它平台的 UI 元素，也不要模仿其它平台元素的行为。参考 <a href="../building-blocks/index.html">控件</a> 这一章了解 Android 主要的 UI 元素。同时，观察 Android 系统应用，了解这些元素是如何使用的。如果你要自定义 UI 元素，请按照你品牌的统一设计，不要照搬其它平台的设计。</p>
+						<p>当你为 Android 设计应用时，不要使用其他平台的 UI 元素，也不要模仿其他平台元素的行为。参考 <a href="../building-blocks/index.html">控件</a> 这一章了解 Android 主要的 UI 元素。同时，观察 Android 系统应用，了解这些元素是如何使用的。如果你要自定义 UI 元素，请按照你品牌的统一设计，不要照搬其他平台的设计。</p>
 					</div>
 					<div class="column col8 nomarginRight">
 						<img class="nomarginLR" src="migrating_ui_elements.png" />
@@ -48,9 +48,9 @@
 				<p>&nbsp;</p>
 				<div>
 					<div class="column col5">
-						<h4>不要使用专为其它平台设计的图标</h4>
+						<h4>不要使用专为其他平台设计的图标</h4>
 						<p>不同的平台都会提供常用功能的图标集，例如分享、新建和删除。</p>
-						<p>如果你正在将应用移植到 Android 平台，请不要使用专为其它平台设计的图标。</p>
+						<p>如果你正在将应用移植到 Android 平台，请不要使用专为其他平台设计的图标。</p>
 						<p>你可以在 Android SDK 中找到各种用途的图标。</p>
 					</div>
 					<div class="column col8 nomarginRight">
@@ -63,7 +63,7 @@
 				<div>
 					<div class="column col5">
 						<h4>不要使用底部的标签栏</h4>
-						<p>其它平台使用底部标签栏在应用中切换视图。Android 标签应当放在顶部的操作栏中。不过你可以在底部放置副操作栏。</p>
+						<p>其他平台使用底部标签栏在应用中切换视图。Android 标签应当放在顶部的操作栏中。不过你可以在底部放置副操作栏。</p>
 						<p>你应当按照该指导设计应用，提供统一的平台应用体验，区分操作栏和视图切换。</p>
 						<p>请参考 <a href="../patterns/actionbar.html">操作栏</a> 一节，了解如何合理的使用操作栏切换视图。</p>
 					</div>
@@ -76,12 +76,12 @@
 				<p>&nbsp;</p>
 				<div>
 					<div class="column col5">
-						<h4>不要通过硬编码连接其它应用</h4>
-						<p>有时你的应用需要使用其它应用提供的功能。例如通过社交网络或者短消息分享应用中的内容，或者在浏览器内打开链接。不要硬编码这些操作，否则就只能连接到一个特定的应用。你应该调用 Android 提供的 intent API 打开一个活动选择器 (activity chooser) ，它将会列出所有支持指定操作的应用。这样用户可以选择他们喜欢的应用完成操作。对于“分享”这一特殊操作，你应当考虑在操作栏中使用分享提供器 (Share Action Provider) 来完成操作，它可以使得用户更快的选择最近使用的分享应用。</p>
+						<h4>不要通过硬编码连接其他应用</h4>
+						<p>有时你的应用需要使用其他应用提供的功能。例如通过社交网络或者短消息分享应用中的内容，或者在浏览器内打开链接。不要硬编码这些操作，否则就只能连接到一个特定的应用。你应该调用 Android 提供的 intent API 打开一个活动选择器 (activity chooser) ，它将会列出所有支持指定操作的应用。这样用户可以选择他们喜欢的应用完成操作。对于“分享”这一特殊操作，你应当考虑在操作栏中使用分享提供器 (Share Action Provider) 来完成操作，它可以使得用户更快的选择最近使用的分享应用。</p>
 					</div>
 					<div class="column col8 nomarginRight">
 						<img class="nomarginLR" src="migrating_intents.png" />
-						<p class="caption">通过活动选择器 (activity chooser) 或者分享提供器 (Share Action Provider) 连接其它应用。</p>
+						<p class="caption">通过活动选择器 (activity chooser) 或者分享提供器 (Share Action Provider) 连接其他应用。</p>
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -89,7 +89,7 @@
 				<div>
 					<div class="column col5">
 						<h4>不要在操作栏中使用带有标题的返回按钮</h4>
-						<p>其它平台使用带有标题的返回按钮，使用户可以返回应用的上一层。Android 则使用操作栏的应用图标返回上一层，同时使用导航栏的返回按钮返回前一个屏幕。更多信息，请参考 <a href="../patterns/navigation.html">导航</a> 一节。</p>
+						<p>其他平台使用带有标题的返回按钮，使用户可以返回应用的上一层。Android 则使用操作栏的应用图标返回上一层，同时使用导航栏的返回按钮返回前一个屏幕。更多信息，请参考 <a href="../patterns/navigation.html">导航</a> 一节。</p>
 						<p>按照该指导设计应用，提供统一的导航体验。</p>
 					</div>
 					<div class="column col8 nomarginRight">
@@ -102,7 +102,7 @@
 				<div>
 					<div class="column col5">
 						<h4>不要在列表中使用向右箭头</h4>
-						<p>其它平台上，通常在列表中使用向右箭头提示用户触摸后有更多的内容。</p>
+						<p>其他平台上，通常在列表中使用向右箭头提示用户触摸后有更多的内容。</p>
 						<p>Android 不这么做。请不要使用向右的箭头，不要让用户猜测它的用处。</p>
 					</div>
 					<div class="column col8 nomarginRight">
