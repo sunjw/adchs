@@ -110,7 +110,7 @@
 				<h4>例子: 在支持分享的应用之间导航</h4>
 				<p>为了了解 activity, task 和 intent 如何一起工作，我们来观察一个应用如何通过其它应用分享内容。例如，从主屏幕启动 Play 商店应用后，将会开始一个新的 Task A (如下图所示)。在 Play 商店中浏览并进入了一本图书的详细信息屏幕后，用户仍然处于同一个 task 之中，只是通过 activity 扩展了它。触摸分享，将会弹出一个列表，显示了其它应用注册的可以响应 Share intent 的 activity。</p>
 				<img class="nomarginLR" src="navigation_between_apps_inward.png" />
-				<p>当用户选择通过 Gmail 分享后，Gmail 的撰写 activity 将会被加入 Task A，此时仍然没有创建新的 task。如果 Gamil 此时在后台已经有 task 在运行的话，将没有任何影响。</p>
+				<p>当用户选择通过 Gmail 分享后，Gmail 的撰写 activity 将会被加入 Task A，此时仍然没有创建新的 task。如果 Gmail 此时在后台已经有 task 在运行的话，将没有任何影响。</p>
 				<p>在撰写 activity 中，发送消息或者触摸“返回”后，用户将回到图书详细信息 activity 中。如果一直触摸“返回”，将在 Play 商店中导航，直至返回主屏幕。</p>
 				<img class="nomarginRight" src="navigation_between_apps_back.png" />
 				<p>不过，如果在撰写 activity 触摸了“向上”，那么表示用户想留在 Gmail 应用中。此时将会显示 Gmail 的会话列表，同时启动一个新的 Task B。新的 Task 的顶层总是主屏幕，所以在会话列表一直触摸“返回”将会回到主屏幕，而不会回到 Play 商店。</p>
