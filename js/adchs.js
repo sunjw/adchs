@@ -141,7 +141,7 @@ var menuContent = [
 			text : "滑块",
 			url : "building-blocks/seek-bars.html"
 		}, {
-			text : "进度条和活动",
+			text : "进度条和活动指示器",
 			url : "building-blocks/progress.html"
 		}, {
 			text : "开关",

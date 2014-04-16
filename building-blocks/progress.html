@@ -31,27 +31,27 @@
 		<div id="content">
 			<div class="contentNav topNav">
 				<div class="contentHeaderWraper">
-					<h2>进度条和活动&nbsp;<a class="originalLink" href="http://developer.android.com/design/building-blocks/progress.html" target="_blank">Original Version</a></h2>
+					<h2>进度条和活动指示器&nbsp;<a class="originalLink" href="http://developer.android.com/design/building-blocks/progress.html" target="_blank">Original Version</a></h2>
 				</div>
 				<div class="buttonWrapper">
 					<a class="buttonPrev" href="seek-bars.html">上一页</a><a class="buttonNext" href="switches.html">下一页</a>
 				</div>
 			</div>
 			<div id="mainContent">
-				<p>进度条和活动作为向用户给出的信号用以提示某个操作会花费较长的时间。</p>
+				<p>进度条和活动指示器作为向用户给出的信号用以提示某个操作会花费较长的时间。</p>
 				<div class="contentHeaderWraper">
 					<h2>进度条</h2>
 				</div>
 				<p>如果你可以知道当前任务完成的比例，那么使用进度条，让用户了解大约还需要多久才能完成。</p>
 				<img class="nomarginLR" src="progress_download.png" />
-				<p>进度条应当表示从 0% 到 100% 而且永远不会往回变成一个更小的值。如果有多个操作按顺序发生，使用进度条来表示整体的延时，如此才能在进度条到达 100% 时避免它又返回成 0% 。</p>
+				<p>进度条应当表示从 0% 到 100% ，而且永远不会往回变成一个更小的值。如果有多个操作按顺序发生，使用进度条来表示整体的延时。</p>
 				<img class="nomarginRight" src="progress_themes.png" />
 				<p class="caption">Holo 浅色主题和深色主题中的进度条。</p>
 				<div class="contentHeaderWraper">
 					<h2>活动指示器</h2>
 				</div>
 				<p>活动指示器用于那些不确定时间的操作。它们告诉用户要等一会儿操作才能完成，而不用将具体的细节说出来。</p>
-				<p>有两种活动指示器: 活动条和活动圈。这两种提供了自适应大小和 Holo Light/Holo Dark 两种主题。请在上下文周围选择合适的风格和大小。例如较大的活动圈比较适合大面积的空白区域而不是一个小对话框。每一个操作应该只使用一个活动提示器。</p>
+				<p>有两种活动指示器: 活动进度条和活动圈。这两种提供了自适应大小和 Holo Light/Holo Dark 两种主题。请在上下文周围选择合适的风格和大小。例如较大的活动圈比较适合大面积的空白区域而不是一个小对话框。每一个操作应该只使用一个活动提示器。</p>
 				<div>
 					<div class="column col6">
 						<img class="nomarginLR" src="progress_activity.png" />
@@ -59,8 +59,8 @@
 					<div class="column col7 nomarginRight">
 						<ul>
 							<li>
-								<h4>1. 活动条</h4>
-								<p>例子中，活动条 (Holo Dark 主题) 在用户开始下载时出现。因为连接服务器打开时下载的时间不确定。当下载开始后，则使用有明确百分比的进度条。</p>
+								<h4>1. 活动进度条</h4>
+								<p>例子中，活动进度条 (Holo Dark 主题) 在用户开始下载时出现。因为连接服务器打开时下载的时间不确定。当下载开始后，则使用有明确百分比的进度条。</p>
 							</li>
 						</ul>
 					</div>
@@ -101,9 +101,9 @@
 				</ul>
 				<p>我们还要标识出下载进度，因为下载比较慢。</p>
 				<p>Google Play 有时还要在比较紧凑的布局中表示这些状态，这种情况下我们不希望在封面图片上占用过多的空间。</p>
-				<p>因此我们设计了一个能在很小的空间中显示各种信息的自定义活动指示器，即便显示在内容上方也没有违和感。</p>
+				<p>因此我们使用了自定义活动指示器，通过小图钉的变化来表示当前项目的状态。</p>
 				<img class="nomarginRight" src="progress_activity_custom.png" />
-				<p>通过颜色区分下载状态，蓝色表示完成，灰色标识没有下载完成。图钉的外观提示了下载是永久的（白色、竖直）还是零时的（灰色、倾斜）。下载进度则通过饼图来显示。</p>
+				<p>通过颜色区分下载状态，蓝色表示完成，灰色标识没有下载完成。图钉的外观提示了下载是永久的（白色、竖直）还是临时的（灰色、倾斜）。下载进度则通过饼图来显示。</p>
 				<div>
 					<div class="column col9">
 						<img class="nomarginRight bigger" src="progress_activity_custom_app.png" />
@@ -114,7 +114,7 @@
 					<div class="clear"></div>
 				</div>
 				<p>&nbsp;</p>
-				<p>如果你觉得标准的活动指示器控件不能满足你的要求，需要自己设计一个。请保证它看起来像是 Android 的风格，可以借鉴一些标准指示器中的视觉特征。例如我们的自定义活动指示器使用了圆圈外形、相同的蓝色阴影和扁平的简单风格。</p>
+				<p>如果你觉得标准的活动指示器控件不能满足你的要求，需要自己设计一个，请保证它看起来像是 Android 的风格。可以借鉴一些标准指示器中的视觉特征。例如我们的自定义活动指示器使用了圆圈外形、相同的蓝色阴影和扁平的简单风格。</p>
 			</div><!-- mainContent -->
 			<div class="contentNav bottomNav">
 				<div class="buttonWrapper">
