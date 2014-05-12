@@ -348,7 +348,7 @@ code {
 }
 #footer ul.mirrorList li {
 	float: left;
-	padding: 8px 0 4px 12px;
+	padding: 8px 12px 6px 0;
 }
 #footer ul.mirrorList li a {
 	display: block;
