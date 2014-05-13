@@ -348,7 +348,12 @@ code {
 }
 #footer ul.mirrorList li {
 	float: left;
-	padding: 8px 12px 6px 0;
+	padding-right: 6px;
+	margin: 8px 6px 6px 0;
+}
+#footer ul.mirrorList li.epubDuokan {
+	border-right: 1px solid #BCBCBC;
+	margin-right: 12px;
 }
 #footer ul.mirrorList li a {
 	display: block;
@@ -357,8 +362,12 @@ code {
 #footer ul.mirrorList li a:hover,#footer ul.mirrorList li a.curMirror {
 	background-position: center top !important;
 }
+#footer ul.mirrorList li a.mirrorDuokan {
+	width: 89px;
+	background: url('../imgs/duokan-logo.png') center bottom no-repeat;
+}
 #footer ul.mirrorList li a.mirrorGithub {
-	width: 124px;
+	width: 102px;
 	background: url('../imgs/github-logo.png') center bottom no-repeat;
 }
 #footer ul.mirrorList li a.mirrorApkbus {
