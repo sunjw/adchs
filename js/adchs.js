@@ -379,7 +379,7 @@ function fillFooter() {
 		$(".mirrorApkbus").addClass("curMirror");
 	} else if (curMirror.indexOf("segmentfault.com") >= 0) {
 		$(".mirrorSegfault").addClass("curMirror");
-	} 
+	}
 
 	var imgCache1 = new Image();
 	var imgCache2 = new Image();
