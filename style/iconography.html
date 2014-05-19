@@ -66,7 +66,7 @@
 				<img src="devices_displays_density@2x.png" alt="" height="160">
 				<p>在设计图标时，对于五种主流的像素密度（MDPI、HDPI、XHDPI、XXHDPI 和 XXXHDPI）应按照 <strong>2:3:4:6:8 的比例进行缩放</strong>。例如，一个启动图标的尺寸为48x48 dp，这表示在 MDPI 的屏幕上其实际尺寸应为 48x48 px，在 HDPI 的屏幕上其实际大小是 MDPI 的 1.5 倍 (72x72 px)，在 XDPI 的屏幕上其实际大小是 MDPI 的 2 倍 (96x96 px)，依此类推。</p>
 				<div class="noteInfo">
-					<p><strong>提示：</strong>虽然 Android 也支持低像素密度 (LDPI) 的屏幕，但无需为此费神，系统会自动将 HDPI 尺寸的图标缩小到 1/2 进行匹配。
+					<p><strong>提示: </strong>虽然 Android 也支持低像素密度 (LDPI) 的屏幕，但无需为此费神，系统会自动将 HDPI 尺寸的图标缩小到 1/2 进行匹配。
 				</div>
 				<div class="contentHeaderWraper">
 					<h2>启动图标</h2>
@@ -92,7 +92,7 @@
 								<p>移动设备上的启动图标大小必须是 <span class="highlight">48x48 <acronym title="Density-independent pixels. One dp is one pixel on a 160 dpi screen.">dp</acronym></span>。</p>
 							</li>
 							<li class="iconWeb">
-								<p>在电子市场 (Market) 中显示的启动图标大小必须是 <span class="highlight">512x512 像素</span>。</p>
+								<p>在 Play 商店中显示的启动图标大小必须是 <span class="highlight">512x512 像素</span>。</p>
 							</li>
 						</ul>
 					</div>
@@ -122,7 +122,7 @@
 					<h2>操作栏</h2>
 				</div>
 				<p>操作栏图标是一个图像按钮，用来表示用户在应用中可以执行的重要操作。每一个图标都使用一个简单的隐喻来代表将要执行的操作，用户应当一目了然。</p>
-				<p>内置的图标应当用来表示一些确定的通用操作，例如“刷新”和“分享”。下载链接提供了一个图标包，其中的图标可以缩放到多种屏幕分辨率，并且适合于浅色和深色的 Holo 主题。图标包中还有没有样式化的图标，可以和你自己的主题搭配，并且提供了 Adobe&reg; Illustrator&reg; 源文件，你可以自己修改。</p>
+				<p>内置的图标应当用来表示一些确定的通用操作，例如“刷新”和“分享”。下面的下载链接提供了一个图标包，其中的图标可以缩放到多种屏幕分辨率，并且适合于浅色和深色的 Holo 主题。图标包中还有没有样式化的图标，可以和你自己的主题搭配，并且提供了 Adobe&reg; Illustrator&reg; 源文件，你可以自己修改。</p>
 				<p><a href="http://developer.android.com/downloads/design/Android_Design_Icons_20131106.zip" target="_blank">下载操作栏图标包</a></p>
 				<div>
 					<div class="column col4">
@@ -219,7 +219,7 @@
 					<div class="column col4">
 						<img class="nomarginLR" src="iconography_small_colors.png" />
 						<h4>颜色</h4>
-						<p>使用有目的小图标。例如在 Gmail 应用中，使用黄色的星型图标表示重要的信息。如果图标时可操作的，使用和背景色形成对比的颜色。</p>
+						<p>使用有目的的小图标。例如在 Gmail 应用中，使用黄色的星型图标表示重要的信息。如果图标是可操作的，使用和背景色形成对比的颜色。</p>
 					</div>
 					<div class="column col8">
 						<img class="nomarginLR" src="iconography_small_example.png" />
@@ -269,7 +269,7 @@
 				<div>
 					<div class="column col4">
 						<h4>颜色</h4>
-						<p>通知单图标必须是白色的，这样系统可以缩放和加深你的图标。</p>
+						<p>通知栏图标必须是白色的，这样系统可以缩放和加深你的图标。</p>
 					</div>
 					<div class="column col8">
 						<img class="nomarginLR" src="iconography_notification_example.png" />
@@ -281,7 +281,8 @@
 				</div>
 				<p>以下这些小技巧可能对你创建图标或其他图片资源有所帮助。这里我们假定你也使用诸如 Adobe&reg; Photoshop&reg; 这类的位图或矢量图编辑程序。</p>
 				<h4>尽可能使用矢量图</h4>
-				<p>Adobe&reg; Photoshop&reg; 这类图像编辑工具运行用户混合使用矢量图和位图。尽可能的使用使用矢量图，这样在需要放大图标时就可以避免细节上的损失。使用矢量图的另一个好处是为能更方便的为像素密度低的屏幕剪裁图标元素。</p>
+				<p>Adobe&reg; Photoshop&reg; 这类图像编辑工具允许用户混合使用矢量图和位图。尽可能的使用矢量图，这样在需要放大图标时就可以避免细节上的损失。</p>
+				<p>使用矢量图的另一个好处是能更方便的在低分辨率的屏幕上让边缘和角落与像素边界对齐。</p>
 				<h4>使用更大的画布</h4>
 				<p>为了更好的适配不同的像素密度，最好使用数倍于目标图标尺寸的画布。例如，启动图标在 MDPI、HDPI、XHDPI 和 XXHDPI 下的宽度为 48、72、96 和 144 px，使用 864x864 px 的画板可以降低缩放图标时的工作量。</p>
 
@@ -289,7 +290,7 @@
 				<p>如果需要放大的图标中包含位图图层，这些图层需要进行手动重绘，以便在更高的像素密度下获得更好的显示效果。例如，为 MDPI 所绘制的 60x60 px 的圆，在适配 HDPI 屏幕时需重绘成 90x90 px。</p>
 
 				<h4>图标命名约定</h4>
-				<p>遵守一定的图标命名约定有助于图标文件的管理。我们可以为不同类型的图标指定不同的命名前缀：</p>
+				<p>遵守一定的图标命名约定有助于图标文件的管理。我们可以为不同类型的图标指定不同的命名前缀:</p>
 				<table>
 					<tr>
 						<th>图标类型</th>
@@ -329,7 +330,7 @@
 				</table>
 				<p>此处给出的命名约定只是作为示例，你可以根据需求建立自己的命名约定。</p>
 				<h4>按像素密度对图标进行归档</h4>
-				<p>支持多像素密度意味着同一图标会有不同的版本。为了方便管理，我们建议按照像素密度对相应的图标文件进行归档保存。例如：</p>
+				<p>支持多像素密度意味着同一图标会有不同的版本。为了方便管理，我们建议按照像素密度对相应的图标文件进行归档保存。例如:</p>
 <!-- DO NOT format this block -->
 <pre class="prettyprint">art/...
     mdpi/...
@@ -350,7 +351,7 @@
         <em>finished_asset</em>.png</pre>
 <!-- DO NOT format this block -->
 				<p>这一归档方式与应用内保存图标文件的方式相似，可以方便的进行文件复制。此外由于不同像素密度下的同一图标文件必须使用同一个文件名，借助这一归档方式我们可以方便的检查文件命名的一致性。</p>
-				<p>作为参考，这里也给出应用内保存图标文件的方式：</p>
+				<p>作为参考，这里也给出应用内保存图标文件的方式:</p>
 <!-- DO NOT format this block -->					
 <pre class="prettyprint">res/...
     drawable-ldpi/...

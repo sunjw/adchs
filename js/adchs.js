@@ -141,7 +141,7 @@ var menuContent = [
 			text : "滑块",
 			url : "building-blocks/seek-bars.html"
 		}, {
-			text : "进度条和活动",
+			text : "进度条和活动指示器",
 			url : "building-blocks/progress.html"
 		}, {
 			text : "开关",
@@ -340,8 +340,8 @@ function initTooltip() {
 }
 
 // footer
-var footerLines = ["<a href=\"http://adchs.github.io/\">Android 设计指南非官方简体中文版</a>&nbsp;-&nbsp;<a href=\"http://www.sunjw.us/adchs\">镜像1</a>&nbsp;<a href=\"http://www.zhangzhibo.net/adchs\">镜像2</a>&nbsp;<a href=\"http://www.topfun.us/adchs/\">镜像3</a>&nbsp;<a href=\"http://www.freemindworld.com/adchs\">镜像4</a>&nbsp;<a href=\"http://www.apkbus.com/design\">镜像5</a>&nbsp;-&nbsp;感谢&nbsp;<a href=\"http://www.topfun.us\" target=\"_blank\">topfun</a>&nbsp;<a href=\"http://www.freemindworld.com\" target=\"_blank\">lifanxi</a>&nbsp;<a href=\"http://www.apkbus.com\" target=\"_blank\">安卓巴士</a>&nbsp;提供镜像",
-	"如无特别说明，所有内容按照 <a href=\"http://creativecommons.org/licenses/by/2.5/\" target=\"_blank\">Creative Commons Attribution 2.5</a> 协议授权<br />基于 <a href=\"http://developer.android.com/design/index.html\" target=\"_blank\">Android Design</a> 翻译而成，部分图片和设计样式也来自于 <a href=\"http://developer.android.com/design/index.html\" target=\"_blank\">Android Design</a>&nbsp;|&nbsp;Android 是 Google 的商标",
+var footerLines = ["如无特别说明，所有内容按照 <a href=\"http://creativecommons.org/licenses/by/2.5/\" target=\"_blank\">Creative Commons Attribution 2.5</a> 协议授权&nbsp;|&nbsp;感谢&nbsp;<a href=\"http://www.topfun.us\" target=\"_blank\">topfun</a>&nbsp;<a href=\"http://www.freemindworld.com\" target=\"_blank\">lifanxi</a>&nbsp;友情支持<br />基于 <a href=\"http://developer.android.com/design/index.html\" target=\"_blank\">Android Design</a> 翻译而成&nbsp;|&nbsp;部分图片和设计样式来自于 <a href=\"http://developer.android.com/design/index.html\" target=\"_blank\">Android Design</a>&nbsp;|&nbsp;Android 是 Google Inc. 的商标",
+	"<ul class=\"mirrorList\"><li class=\"epubDuokan\"><a class=\"mirrorDuokan\" href=\"http://www.duokan.com/book/47790\" title=\"购买多看版电子书 ￥1.99\" target=\"_blank\"></a></li><li><a class=\"mirrorGithub\" href=\"http://adchs.github.io/\" title=\"访问 GitHub 镜像\" target=\"_blank\"></a></li><li><a class=\"mirrorApkbus\" href=\"http://www.apkbus.com/design/\" title=\"访问 APKBUS 镜像\" target=\"_blank\"></a></li><li><a class=\"mirrorSegfault\" href=\"http://mirrors.segmentfault.com/adchs/\" title=\"访问 segmentfault 镜像\" target=\"_blank\"></a></li></ul><div class=\"clear\"></div>",
 	"2012-2014&nbsp;|&nbsp;<a href=\"http://www.sunjw.us/blog\" target=\"_blank\">Sun Junwen</a>&nbsp;-&nbsp;sunjw8888 at gmail.com&nbsp;&nbsp;<a href=\"http://weibo.com/nusjw\" target=\"_blank\" title=\"Follow me on Weibo\" class=\"imgLink\"><img src=\"imgs/weibo-gray-16.png\" alt=\"Follow me on Weibo\"/></a>&nbsp;<a href=\"http://www.twitter.com/sunjw\" target=\"_blank\" title=\"Follow me on Twitter\" class=\"imgLink\"><img src=\"imgs/twitter-gray-16.png\" alt=\"Follow me on Twitter\"/></a>&nbsp;|&nbsp;<a href=\"http://www.zhangzhibo.net/\" target=\"_blank\">Zhang Zhibo</a>&nbsp;-&nbsp;casparz at gmail.com&nbsp;&nbsp;<a href=\"http://weibo.com/icaspar\" target=\"_blank\" title=\"Follow me on Weibo\" class=\"imgLink\"><img src=\"imgs/weibo-gray-16.png\" alt=\"Follow me on Weibo\"/></a>&nbsp;<a href=\"http://www.twitter.com/imcaspar/\" target=\"_blank\" title=\"Follow me on Twitter\" class=\"imgLink\"><img src=\"imgs/twitter-gray-16.png\" alt=\"Follow me on Twitter\"/></a>&nbsp;|&nbsp;<a href=\"http://www.sunjw.us/jstoolnpp/\" target=\"_blank\">JSToolNpp</a><br/><br/><g:plusone size=\"large\"></g:plusone>"];
 
 function fillFooter() {
@@ -363,13 +363,22 @@ function fillFooter() {
 			line = replaceAll(line, "imgs/", "../imgs/");
 		}
 
-		var lineCont = $("<p/>");
+		var lineCont = $("<div/>");
 		lineCont.html(line);
 		if (i + 1 == lines) {
 			lineCont.addClass("lastLine");
 		}
 
 		footerCont.append(lineCont);
+	}
+
+	var curMirror = location.href;
+	if (curMirror.indexOf("adchs.github.io") >= 0) {
+		$(".mirrorGithub").addClass("curMirror");
+	} else if (curMirror.indexOf("apkbus.com") >= 0) {
+		$(".mirrorApkbus").addClass("curMirror");
+	} else if (curMirror.indexOf("segmentfault.com") >= 0) {
+		$(".mirrorSegfault").addClass("curMirror");
 	}
 
 	var imgCache1 = new Image();

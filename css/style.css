@@ -338,6 +338,46 @@ code {
     margin-top: 60px;
     padding-bottom: 40px;
 }
+#footer .mirrorTitle {
+	float: left;
+	height: 34px;
+	line-height: 50px;
+}
+#footer ul.mirrorList {
+	float: left;
+}
+#footer ul.mirrorList li {
+	float: left;
+	padding-right: 6px;
+	margin: 8px 6px 6px 0;
+}
+#footer ul.mirrorList li.epubDuokan {
+	border-right: 1px solid #BCBCBC;
+	margin-right: 12px;
+}
+#footer ul.mirrorList li a {
+	display: block;
+	height: 26px;
+}
+#footer ul.mirrorList li a:hover,#footer ul.mirrorList li a.curMirror {
+	background-position: center top !important;
+}
+#footer ul.mirrorList li a.mirrorDuokan {
+	width: 89px;
+	background: url('../imgs/duokan-logo.png') center bottom no-repeat;
+}
+#footer ul.mirrorList li a.mirrorGithub {
+	width: 102px;
+	background: url('../imgs/github-logo.png') center bottom no-repeat;
+}
+#footer ul.mirrorList li a.mirrorApkbus {
+	width: 79px;
+	background: url('../imgs/apkbus-logo.png') center bottom no-repeat;
+}
+#footer ul.mirrorList li a.mirrorSegfault {
+	width: 141px;
+	background: url('../imgs/segmentfault-logo.png') center bottom no-repeat;
+}
 #footer .lastLine {
 	margin-top: 10px;
 	height: 65px;
